@@ -6,8 +6,14 @@ arduino = serial.Serial("/dev/ttyACM0", 115200)
 while True:
 	# read a line from Arduino
 	result = arduino.readline()
-	# when sensor data was received
-	if len(result) == 5:
+	# when 1 bit register data was received
+	if len(result) == 3:
+		print "1 bit register:", result[0].encode('hex')
+	# when 2 bit register data was received
+	elif len(result) == 4:
+		print "2 bit register:", result[0].encode('hex'), result[1].encode('hex')
+	# when 3 bit ADC conversion data was received
+	elif len(result) == 5:
 		# add the 24 bits sensor data together
 		value = ord(result[0]) << 16 | ord(result[1]) << 8 | ord(result[2])
 		# erease the highest bit
