@@ -16,14 +16,8 @@ while True:
 	elif len(result) == 5:
 		# add the 24 bits sensor data together
 		value = ord(result[0]) << 16 | ord(result[1]) << 8 | ord(result[2])
-		# erease the highest bit
-		value = value & 0x7FFFFF
-		# when the highest bit is 0, the value is negative
-		if (ord(result[0]) ^ 0xFF) & 0x80:
-			# flip all the bits
-			value = value ^ 0x7FFFFF
-			# change the value to negative
-			value = -value
+		# convert from offset binary
+		value -= 8388608
 		# print the value in hexadecimal and decimal format
 		print "HEX:", result[0].encode('hex'), result[1].encode('hex'), result[2].encode('hex'), "DEC:", value
 	# when debub message was received
