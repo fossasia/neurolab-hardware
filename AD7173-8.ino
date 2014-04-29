@@ -98,11 +98,22 @@ AIN1/REF2+ --| 3.                                                               
 #define SETUPCON7_REG 0x27
 
 /* ADC values */
-//#define 31kHZ 0x00
-
-/* other configuration */
+#define HZ_1 0x16
+#define HZ_10 0x13
+#define KHZ_1 0x0A
+#define KHZ_2 0x09
+#define KHZ_5 0x08
+#define KHZ_10 0x07
+#define KHZ_15 0x06
+#define KHZ_31 0x00
+#define HZ_500 0x0B
 #define DEBUG_ENABLED true
+#define CONTINUOUS_READ_MODE 0
+#define SINGLE_CONVERSION_MODE 1
+#define CONTINUOUS_CONVERSION_MODE 2
 #define DATA_READY digitalRead(MISO) == LOW
+
+int adc_data_mode = CONTINUOUS_CONVERSION_MODE;
 
 /*
 ===================================
@@ -136,7 +147,7 @@ configures the ADC chip
 */
 int write_adc_register(byte reg, byte *value, int write_len) {
     /* when specified register is invalid */
-    if (reg < 0x00 || reg > 0xFF) {
+    if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
             Serial.println("register out of range");
         }
@@ -150,8 +161,7 @@ int write_adc_register(byte reg, byte *value, int write_len) {
     for (int i = 0; i < write_len; i++) {
         SPI.transfer(value[i]);
     }
-    /* when debug enabled
-    /* return if ADC id was valid */
+    /* when debug enabled */
     if (DEBUG_ENABLED) {
         Serial.println("wrote to ADC register: ");
         for (int i = 0; i < write_len; i++) {
@@ -173,7 +183,7 @@ reads the ADC channels
 */
 int read_adc_register(byte reg, byte *value, int read_len) {
     /* when specified register is invalid */
-    if (reg < 0x00 || reg > 0xFF) {
+    if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
             Serial.println("register out of range");
         }
@@ -200,16 +210,75 @@ int read_adc_register(byte reg, byte *value, int read_len) {
 }
 
 /*
+==================================
+sets the adc data conversion rate
+@param int - speed of conversion
+@return int - error code
+==================================
+*/
+int set_adc_data_speed(int speed) {
+    byte value[2];
+    read_adc_register(FILTCON0_REG, value, 2);
+    value[0] &= 0xE0;
+    value[0] |= speed >> 7;
+    value[1] |= speed;
+    write_adc_register(FILTCON0_REG, value, 2);
+    return 0;
+}
+
+/*
+===========================
+sets the adc data read mode
+@param int - data read mode
+@return int - error code
+===========================
+*/
+int set_adc_data_mode(int mode) {
+    byte value[2];
+    if (mode == CONTINUOUS_READ_MODE) {
+        /* set the adc to continuous read mode, the data register can be read directly when DATA_READY */
+        set_adc_data_mode(CONTINUOUS_CONVERSION_MODE);
+        read_adc_register(IFMODE_REG, value, 2);
+        value[1] |= 0x08;
+        write_adc_register(IFMODE_REG, value, 2);
+    } else if (mode == SINGLE_CONVERSION_MODE) {
+        /* set the adc to single conversion mode, the conversion has to be triggered manually */
+        read_adc_register(IFMODE_REG, value, 2);
+        value[1] &= 0xF7;
+        write_adc_register(IFMODE_REG, value, 2);
+        read_adc_register(ADCMODE_REG, value, 2);
+        value[1] &= 0x8F;
+        value[1] |= 0x10;
+        write_adc_register(ADCMODE_REG, value, 2);
+    } else if (mode == CONTINUOUS_CONVERSION_MODE) {
+        /* set the adc to continuous conversion mode, the communication register has to be notified for a read */
+        read_adc_register(IFMODE_REG, value, 2);
+        value[1] &= 0xF7;
+        write_adc_register(IFMODE_REG, value, 2);
+        read_adc_register(ADCMODE_REG, value, 2);
+        value[1] &= 0x8F;
+        value[1] |= 0x00;
+        write_adc_register(ADCMODE_REG, value, 2);
+    } else {
+        /* unknown data read mode */
+        return 1;
+    }
+    return 0;
+}
+
+/*
 ==========================================
 reads the ADC conversion result
 @return byte[] - the ADC conversion result
 ==========================================
 */
 int read_adc_data(byte *value) {
-    /* send communication register id 0x00 */
-    SPI.transfer(0x00);
-    /* send read command to the data register 0x04 */
-    SPI.transfer(0x40 | DATA_REG);
+    if (adc_data_mode == CONTINUOUS_CONVERSION_MODE) {
+        /* send communication register id 0x00 */
+        SPI.transfer(0x00);
+        /* send read command to the data register 0x04 */
+        SPI.transfer(0x40 | DATA_REG);
+    }
     /* read the received value 24 bits */
     value[0] = SPI.transfer(0x00);
     value[1] = SPI.transfer(0x00);
@@ -244,6 +313,7 @@ bool init_adc() {
      /* read the ADC device ID */
     read_adc_register(ID_REG, id, 2);
     /* check if the id matches 0x30DX, where X is don't care */
+    id[1] &= 0xF0;
     bool valid_id = id[0] == 0x30 && id[1] == 0xD0;
     
     /* when debug enabled */
@@ -293,19 +363,34 @@ void setup() {
 }
 
 void loop() {
-    /* when ADC conversion is finished */
-    if (DATA_READY) {
-        /* read ADC conversion result */
-        byte value[3];
-        read_adc_data(value);
-        /* when ADC is out of sync */
-        if (value == 0) {
-            reset_adc();
-            resync_adc();
-            if (DEBUG_ENABLED) {
-                Serial.println("ADC resetted :)");
-            }
+    byte value[4][3];
+    /* read 4 adc channels */
+    for (int i = 0; i < 4; i++) {
+        /* when ADC conversion is finished */
+        if (DATA_READY) {
+            /* read ADC conversion result */
+            read_adc_data(value[i]);
         }
-        delay(100);
     }
+    /* convert the result into the desired protocol */
+    int ch0 = (value[0][0] << 2) | (value[0][1] & 0x03);
+    ch0 -= 512;
+    ch0 *= 2;
+    char str[3];
+    sprintf(str, "%d", ch0);
+    Serial.print(str);
+    Serial.write(0x09);
+
+    int ch1 = (value[2][0] << 2) | (value[2][1] & 0x03);
+    ch1 -= 512;
+    ch1 *= 2;
+    sprintf(str, "%d", ch1);
+    Serial.print(str);
+    Serial.write(0x09);
+
+    Serial.print(0x200);
+    Serial.write(0x09);
+
+    Serial.print(0x200);
+    Serial.write(0x0D);
 }
