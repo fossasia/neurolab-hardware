@@ -132,8 +132,9 @@ cancels the current transaction to resync the ADC
 ==================================================
 */
 void resync_adc() {
+    /* toggle the chip select */
     digitalWrite(SS, HIGH);
-    delay(100);
+    delay(1);
     digitalWrite(SS, LOW);
 }
 
@@ -210,6 +211,36 @@ int read_adc_register(byte reg, byte *value, int read_len) {
 }
 
 /*
+=================================
+enables or disables ADC channels
+@param byte - channel
+@param bool - status
+@return int - error code
+=================================
+*/
+int set_channel(byte channel, bool status) {
+    /* when channel out of range */
+    if (channel < 0x10 || channel > 0x1F) {
+        if (DEBUG_ENABLED) {
+            Serial.println("channel out of range");
+        }
+        return 1;
+    }
+    byte value[2];
+    /* read specified channel configuration */
+    read_adc_register(channel, value, 2);
+    /* clear the enable bit */
+    value[0] &= ~(1 << 7);
+    /* enable or disable this channel */
+    value[0] |= (status << 7);
+    /* set the correct analog inputs */
+    byte ain = (channel & 0x0F);
+    value[1] = (ain << 5) | (ain + 1);
+    /* update specified channel configuration */
+    write_adc_register(channel, value, 2);
+}
+
+/*
 ==================================
 sets the adc data conversion rate
 @param int - speed of conversion
@@ -235,32 +266,34 @@ sets the adc data read mode
 */
 int set_adc_data_mode(int mode) {
     byte value[2];
+    /* diable continuous read mode */
+    read_adc_register(IFMODE_REG, value, 2);
+    value[1] &= 0xF7;
+    write_adc_register(IFMODE_REG, value, 2);
+
+    /* when continuous read mode */
     if (mode == CONTINUOUS_READ_MODE) {
         /* set the adc to continuous read mode, the data register can be read directly when DATA_READY */
         set_adc_data_mode(CONTINUOUS_CONVERSION_MODE);
         read_adc_register(IFMODE_REG, value, 2);
         value[1] |= 0x08;
         write_adc_register(IFMODE_REG, value, 2);
+    /* when single conversion mode */
     } else if (mode == SINGLE_CONVERSION_MODE) {
-        /* set the adc to single conversion mode, the conversion has to be triggered manually */
-        read_adc_register(IFMODE_REG, value, 2);
-        value[1] &= 0xF7;
-        write_adc_register(IFMODE_REG, value, 2);
+        /* set the adc to single conversion mode, the ADC conversion has to be triggered manually */
         read_adc_register(ADCMODE_REG, value, 2);
         value[1] &= 0x8F;
         value[1] |= 0x10;
         write_adc_register(ADCMODE_REG, value, 2);
+    /* when continuous conversion mode */
     } else if (mode == CONTINUOUS_CONVERSION_MODE) {
-        /* set the adc to continuous conversion mode, the communication register has to be notified for a read */
-        read_adc_register(IFMODE_REG, value, 2);
-        value[1] &= 0xF7;
-        write_adc_register(IFMODE_REG, value, 2);
+        /* set the adc to continuous conversion mode, the communication register has to be notified for a ADC read */
         read_adc_register(ADCMODE_REG, value, 2);
         value[1] &= 0x8F;
         value[1] |= 0x00;
         write_adc_register(ADCMODE_REG, value, 2);
+    /* unknown data read mode */
     } else {
-        /* unknown data read mode */
         return 1;
     }
     return 0;
