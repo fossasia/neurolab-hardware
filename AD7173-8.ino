@@ -246,7 +246,7 @@ int enable_adc_channel(byte channel, bool status) {
     /* enable or disable this channel */
     value[0] |= (status << 7);
     /* set the correct analog inputs */
-    byte ain = ((channel & 0x0F) << 2);
+    byte ain = ((channel & 0x0F) << 1);
     value[1] = (ain << 5) | (ain + 1);
     /* update specified channel configuration */
     write_adc_register(channel, value, 2);
@@ -282,7 +282,7 @@ int set_adc_data_mode(int mode) {
     byte if_mode_value[2];
     byte adc_mode_value[2];
     /* read current values */
-    read_adc_register(IFMODE_REG, value, 2);
+    read_adc_register(IFMODE_REG, if_mode_value, 2);
     read_adc_register(ADCMODE_REG, adc_mode_value, 2);
 
     /* when continuous read mode */
