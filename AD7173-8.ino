@@ -98,21 +98,33 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #define SETUPCON7_REG 0x27
 
 /* ADC values */
-#define HZ_1 0x16
-#define HZ_10 0x13
-#define KHZ_1 0x0A
-#define KHZ_2 0x09
-#define KHZ_5 0x08
-#define KHZ_10 0x07
-#define KHZ_15 0x06
-#define KHZ_31 0x00
-#define HZ_500 0x0B
-#define DEBUG_ENABLED true
+#define SPS_1 0x16
+#define SPS_2 0x15
+#define SPS_5 0x14
+#define SPS_10 0x13
+#define SPS_16 0x12
+#define SPS_20 0x11
+#define SPS_50 0x10
+#define SPS_60 0x0F
+#define SPS_100 0x0E
+#define SPS_200 0x0D
+#define SPS_381 0x0C
+#define SPS_504 0x0B
+#define SPS_1007 0x0A
+#define SPS_2597 0x09
+#define SPS_5208 0x08
+#define SPS_10417 0x07
+#define SPS_15625 0x06
+#define SPS_31250 0x00
 #define CONTINUOUS_READ_MODE 0
 #define SINGLE_CONVERSION_MODE 1
 #define CONTINUOUS_CONVERSION_MODE 2
 #define DATA_READY digitalRead(MISO) == LOW
 
+/* enable/disable debug */
+#define DEBUG_ENABLED 1
+
+/* default adc data conversion mode */
 int adc_data_mode = CONTINUOUS_CONVERSION_MODE;
 
 /*
@@ -218,7 +230,7 @@ enables or disables ADC channels
 @return int - error code
 =================================
 */
-int set_channel(byte channel, bool status) {
+int enable_adc_channel(byte channel, bool status) {
     /* when channel out of range */
     if (channel < 0x10 || channel > 0x1F) {
         if (DEBUG_ENABLED) {
@@ -234,10 +246,12 @@ int set_channel(byte channel, bool status) {
     /* enable or disable this channel */
     value[0] |= (status << 7);
     /* set the correct analog inputs */
-    byte ain = (channel & 0x0F);
+    byte ain = ((channel & 0x0F) << 2);
     value[1] = (ain << 5) | (ain + 1);
     /* update specified channel configuration */
     write_adc_register(channel, value, 2);
+    /* return error code */
+    return 0;
 }
 
 /*
@@ -247,55 +261,61 @@ sets the adc data conversion rate
 @return int - error code
 ==================================
 */
-int set_adc_data_speed(int speed) {
+int set_adc_data_speed(byte data_speed) {
     byte value[2];
     read_adc_register(FILTCON0_REG, value, 2);
-    value[0] &= 0xE0;
-    value[0] |= speed >> 7;
-    value[1] |= speed;
+    value[1] &= 0xE0;
+    value[1] |= data_speed;
     write_adc_register(FILTCON0_REG, value, 2);
+    /* return error code */
     return 0;
 }
 
 /*
-===========================
-sets the adc data read mode
+==================================
+sets the adc data converison mode
 @param int - data read mode
 @return int - error code
-===========================
+==================================
 */
 int set_adc_data_mode(int mode) {
-    byte value[2];
-    /* diable continuous read mode */
+    byte if_mode_value[2];
+    byte adc_mode_value[2];
+    /* read current values */
     read_adc_register(IFMODE_REG, value, 2);
-    value[1] &= 0xF7;
-    write_adc_register(IFMODE_REG, value, 2);
+    read_adc_register(ADCMODE_REG, adc_mode_value, 2);
 
     /* when continuous read mode */
     if (mode == CONTINUOUS_READ_MODE) {
+        /* enable continuouse conversion mode */
+        adc_mode_value[1] &= 0x8F;
         /* set the adc to continuous read mode, the data register can be read directly when DATA_READY */
-        set_adc_data_mode(CONTINUOUS_CONVERSION_MODE);
-        read_adc_register(IFMODE_REG, value, 2);
-        value[1] |= 0x08;
-        write_adc_register(IFMODE_REG, value, 2);
+        if_mode_value[1] |= 0x08;
+        adc_data_mode = CONTINUOUS_READ_MODE;
     /* when single conversion mode */
     } else if (mode == SINGLE_CONVERSION_MODE) {
+        /* diable continuous read mode */
+        if_mode_value[1] &= 0xF7;
         /* set the adc to single conversion mode, the ADC conversion has to be triggered manually */
-        read_adc_register(ADCMODE_REG, value, 2);
-        value[1] &= 0x8F;
-        value[1] |= 0x10;
-        write_adc_register(ADCMODE_REG, value, 2);
+        adc_mode_value[1] &= 0x8F;
+        adc_mode_value[1] |= 0x10;
+        adc_data_mode = SINGLE_CONVERSION_MODE;
     /* when continuous conversion mode */
     } else if (mode == CONTINUOUS_CONVERSION_MODE) {
+        /* diable continuous read mode */
+        if_mode_value[1] &= 0xF7;
         /* set the adc to continuous conversion mode, the communication register has to be notified for a ADC read */
-        read_adc_register(ADCMODE_REG, value, 2);
-        value[1] &= 0x8F;
-        value[1] |= 0x00;
-        write_adc_register(ADCMODE_REG, value, 2);
-    /* unknown data read mode */
+        adc_mode_value[1] &= 0x8F;
+        adc_data_mode = CONTINUOUS_CONVERSION_MODE;
+    /* unknown data conversion mode */
     } else {
+        /* return error code */
         return 1;
     }
+    /* write the specified value */
+    write_adc_register(IFMODE_REG, if_mode_value, 2);
+    write_adc_register(ADCMODE_REG, adc_mode_value, 2);
+    /* return error code */
     return 0;
 }
 
@@ -309,7 +329,7 @@ int read_adc_data(byte *value) {
     if (adc_data_mode == CONTINUOUS_CONVERSION_MODE) {
         /* send communication register id 0x00 */
         SPI.transfer(0x00);
-        /* send read command to the data register 0x04 */
+        /* send read command 0x40 to the data register 0x04 */
         SPI.transfer(0x40 | DATA_REG);
     }
     /* read the received value 24 bits */
@@ -370,60 +390,25 @@ void setup() {
     /* initiate ADC */
     init_adc();
     /* set ADC configuration */
-    byte value[2];
-    /* read initial register values */
-    read_adc_register(CH0_REG, value, 2);
-    read_adc_register(FILTCON0_REG, value, 2);
-    /* write new values to registers */
-    /* set ch1 - 3 enabled */
-    value[0] = 0x80;
-    value[1] = 0x01;
-    write_adc_register(CH1_REG, value, 2);
-    write_adc_register(CH2_REG, value, 2);
-    write_adc_register(CH3_REG, value, 2);
-    /* set the samplingrate, register FILTCON0 0x28, reset  0x0000 */
-    /* last 5 bytes, 0x0000 - 31kHz, 0x0004 5208Hz */
-    value[0] = 0x00;
-    value[1] = 0x04;
-    write_adc_register(FILTCON0_REG, value, 2);
-    /* read set register values */
-    read_adc_register(CH1_REG, value, 2);
-    read_adc_register(CH2_REG, value, 2);
-    read_adc_register(CH3_REG, value, 2);
-    read_adc_register(FILTCON0_REG, value, 2);
+    /* enable ch0 and ch1 */
+    enable_adc_channel(CH0_REG, true);
+    enable_adc_channel(CH1_REG, true);
+    /* set the adc data mode */
+    set_adc_data_mode(CONTINUOUS_READ_MODE);
+    /* set the adc samplingrate to 1007 Hz*/
+    set_adc_data_speed(SPS_1007);
     /* wait for ADC */
     delay(100);
 }
 
 void loop() {
-    byte value[4][3];
-    /* read 4 adc channels */
-    for (int i = 0; i < 4; i++) {
-        /* when ADC conversion is finished */
-        if (DATA_READY) {
-            /* read ADC conversion result */
-            read_adc_data(value[i]);
-        }
+    byte data[3];
+    /* when ADC conversion is finished */
+    if (DATA_READY) {
+        /* read ADC conversion result */
+        read_adc_data(data);
+        Serial.write(data[0]);
+        Serial.write(data[1]);
+        Serial.write(data[2]);
     }
-    /* convert the result into the desired protocol */
-    int ch0 = (value[0][0] << 2) | (value[0][1] & 0x03);
-    ch0 -= 512;
-    ch0 *= 2;
-    char str[3];
-    sprintf(str, "%d", ch0);
-    Serial.print(str);
-    Serial.write(0x09);
-
-    int ch1 = (value[2][0] << 2) | (value[2][1] & 0x03);
-    ch1 -= 512;
-    ch1 *= 2;
-    sprintf(str, "%d", ch1);
-    Serial.print(str);
-    Serial.write(0x09);
-
-    Serial.print(0x200);
-    Serial.write(0x09);
-
-    Serial.print(0x200);
-    Serial.write(0x0D);
 }
