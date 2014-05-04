@@ -128,6 +128,18 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 int adc_data_mode = CONTINUOUS_CONVERSION_MODE;
 
 /*
+===========================
+print bytes in nice format
+@param byte - byte to print
+===========================
+*/
+void print_byte(byte value) {
+    char format[10];
+    sprintf(format, "0x%.2X ", value);
+    Serial.print(format);
+}
+
+/*
 ===================================
 resets the ADC to the default state
 ===================================
@@ -162,7 +174,8 @@ int write_adc_register(byte reg, byte *value, int write_len) {
     /* when specified register is invalid */
     if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
-            Serial.println("register out of range");
+            print_byte(reg);
+            Serial.println("write register out of range");
         }
         return 1;
     }
@@ -176,10 +189,12 @@ int write_adc_register(byte reg, byte *value, int write_len) {
     }
     /* when debug enabled */
     if (DEBUG_ENABLED) {
-        Serial.println("wrote to ADC register: ");
+        Serial.print("write: ");
         for (int i = 0; i < write_len; i++) {
-            Serial.write(value[i]);
+            print_byte(value[i]);
         }
+        Serial.print("to reg: ");
+        print_byte(reg);
         Serial.println();
     }
     /* return error code */
@@ -198,7 +213,8 @@ int read_adc_register(byte reg, byte *value, int read_len) {
     /* when specified register is invalid */
     if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
-            Serial.println("register out of range");
+            print_byte(reg);
+            Serial.println("read register out of range");
         }
         return 1;
     }
@@ -212,10 +228,12 @@ int read_adc_register(byte reg, byte *value, int read_len) {
     }
     /* when debug enabled */
     if (DEBUG_ENABLED) {
-        Serial.println("received ADC register result: ");
+        Serial.print("read: ");
         for (int i = 0; i < read_len; i++) {
-            Serial.write(value[i]);
+            print_byte(value[i]);
         }
+        Serial.print("from reg: ");
+        print_byte(reg);
         Serial.println();
     }
     /* return error code */
@@ -234,7 +252,8 @@ int enable_adc_channel(byte channel, bool status) {
     /* when channel out of range */
     if (channel < 0x10 || channel > 0x1F) {
         if (DEBUG_ENABLED) {
-            Serial.println("channel out of range");
+            print_byte(channel);
+            Serial.println("enable channel out of range");
         }
         return 1;
     }
@@ -338,11 +357,11 @@ int read_adc_data(byte *value) {
     value[2] = SPI.transfer(0x00);
     /* when debug enabled */
     if (DEBUG_ENABLED) {
-        Serial.println("received ADC conversion result: ");
-        Serial.write(value[0]);
-        Serial.write(value[1]);
-        Serial.write(value[2]);
-        Serial.println();
+        Serial.print("read: ");
+        print_byte(value[0]);
+        print_byte(value[1]);
+        print_byte(value[2]);
+        Serial.println("from reg: 0x04");
     }
     /* return error code */
     return 0;
@@ -374,9 +393,9 @@ bool init_adc() {
         if (valid_id) {
             Serial.println("ADC device ID is valid :)");
         } else {
-            Serial.println("ADC device ID is invalid :(");
-            Serial.write(id[0]);
-            Serial.write(id[1]);
+            Serial.print("ADC device ID is invalid :( ");
+            print_byte(id[1]);
+            print_byte(id[0]);
             Serial.println();
         }
     }
@@ -389,6 +408,8 @@ void setup() {
     Serial.begin(115200);
     /* initiate ADC */
     init_adc();
+    /* reset ADC to default state */
+    reset_adc();
     /* set ADC configuration */
     /* enable ch0 and ch1 */
     enable_adc_channel(CH0_REG, true);
@@ -407,8 +428,8 @@ void loop() {
     if (DATA_READY) {
         /* read ADC conversion result */
         read_adc_data(data);
-        Serial.write(data[0]);
-        Serial.write(data[1]);
-        Serial.write(data[2]);
+        //Serial.write(data[0]);
+        //Serial.write(data[1]);
+        //Serial.write(data[2]);
     }
 }
