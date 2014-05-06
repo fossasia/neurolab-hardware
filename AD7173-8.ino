@@ -330,8 +330,8 @@ int set_adc_data_mode(int mode) {
     }
     adc_data_mode = mode;
     /* write the specified value */
-    write_adc_register(IFMODE_REG, if_mode_value, 2);
     write_adc_register(ADCMODE_REG, adc_mode_value, 2);
+    write_adc_register(IFMODE_REG, if_mode_value, 2);
     /* return error code */
     return 0;
 }
