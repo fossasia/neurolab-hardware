@@ -306,11 +306,10 @@ int set_adc_data_mode(int mode) {
 
     /* when continuous read mode */
     if (mode == CONTINUOUS_READ_MODE) {
-        /* enable continuouse conversion mode */
-        adc_mode_value[1] &= 0x8F;
         /* set the adc to continuous read mode, the data register can be read directly when DATA_READY */
         if_mode_value[1] |= 0x08;
-        adc_data_mode = CONTINUOUS_READ_MODE;
+        /* enable continuouse conversion mode */
+        adc_mode_value[1] &= 0x8F;
     /* when single conversion mode */
     } else if (mode == SINGLE_CONVERSION_MODE) {
         /* diable continuous read mode */
@@ -318,19 +317,18 @@ int set_adc_data_mode(int mode) {
         /* set the adc to single conversion mode, the ADC conversion has to be triggered manually */
         adc_mode_value[1] &= 0x8F;
         adc_mode_value[1] |= 0x10;
-        adc_data_mode = SINGLE_CONVERSION_MODE;
     /* when continuous conversion mode */
     } else if (mode == CONTINUOUS_CONVERSION_MODE) {
         /* diable continuous read mode */
         if_mode_value[1] &= 0xF7;
         /* set the adc to continuous conversion mode, the communication register has to be notified for a ADC read */
         adc_mode_value[1] &= 0x8F;
-        adc_data_mode = CONTINUOUS_CONVERSION_MODE;
     /* unknown data conversion mode */
     } else {
         /* return error code */
         return 1;
     }
+    adc_data_mode = mode;
     /* write the specified value */
     write_adc_register(IFMODE_REG, if_mode_value, 2);
     write_adc_register(ADCMODE_REG, adc_mode_value, 2);
@@ -345,7 +343,7 @@ reads the ADC conversion result
 ==========================================
 */
 int read_adc_data(byte *value) {
-    if (adc_data_mode == CONTINUOUS_CONVERSION_MODE) {
+    if (adc_data_mode != CONTINUOUS_READ_MODE) {
         /* send communication register id 0x00 */
         SPI.transfer(0x00);
         /* send read command 0x40 to the data register 0x04 */
