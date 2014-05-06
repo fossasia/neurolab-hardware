@@ -122,7 +122,7 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #define DATA_READY digitalRead(MISO) == LOW
 
 /* enable/disable debug */
-#define DEBUG_ENABLED 1
+#define DEBUG_ENABLED 1+
 
 /* default adc data conversion mode */
 int adc_data_mode = CONTINUOUS_CONVERSION_MODE;
@@ -307,7 +307,7 @@ int set_adc_data_mode(int mode) {
     /* when continuous read mode */
     if (mode == CONTINUOUS_READ_MODE) {
         /* set the adc to continuous read mode, the data register can be read directly when DATA_READY */
-        if_mode_value[1] |= 0x08;
+        if_mode_value[1] |= 0x80;
         /* enable continuouse conversion mode */
         adc_mode_value[1] &= 0x8F;
     /* when single conversion mode */
