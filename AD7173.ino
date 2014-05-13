@@ -69,6 +69,7 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #define GAIN6_REG 0x3E
 #define GAIN7_REG 0x3F
 #define IFMODE_REG 0x02
+#define STATUS_REG 0x00
 #define ADCMODE_REG 0x01
 #define OFFSET0_REG 0x30
 #define OFFSET1_REG 0x31
@@ -206,7 +207,7 @@ configures the ADC chip
 @param int - the length of bytes to write
 =========================================
 */
-int write_adc_register(byte reg, byte *value, int write_len) {
+int set_adc_register(byte reg, byte *value, int write_len) {
     /* when specified register is invalid */
     if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
@@ -245,7 +246,7 @@ reads the ADC channels
 @return byte[] - the ADC register read result
 =============================================
 */
-int read_adc_register(byte reg, byte *value, int read_len) {
+int get_adc_register(byte reg, byte *value, int read_len) {
     /* when specified register is invalid */
     if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
@@ -295,7 +296,7 @@ int enable_adc_channel(byte channel, bool status, byte ain1 = NULL, byte ain2 = 
     }
     byte value[2];
     /* read specified channel configuration */
-    read_adc_register(channel, value, 2);
+    get_adc_register(channel, value, 2);
     /* clear the enable bit */
     value[0] &= ~(1 << 7);
     /* enable or disable this channel */
@@ -322,7 +323,7 @@ int enable_adc_channel(byte channel, bool status, byte ain1 = NULL, byte ain2 = 
     }
 
     /* update specified channel configuration */
-    write_adc_register(channel, value, 2);
+    set_adc_register(channel, value, 2);
     /* return error code */
     return 0;
 }
@@ -337,13 +338,13 @@ sets the ADC data conversion rate
 int set_adc_filter_speed(byte filtcon, byte data_speed) {
     byte value[2];
     /* read the current register value */
-    read_adc_register(filtcon, value, 2);
+    get_adc_register(filtcon, value, 2);
     /* set the speed to default */
     value[1] &= 0xE0;
     /* set the desired speed */
     value[1] |= data_speed;
     /* write the new register value */
-    write_adc_register(filtcon, value, 2);
+    set_adc_register(filtcon, value, 2);
     /* return error code */
     return 0;
 }
@@ -359,13 +360,13 @@ sets the ADC setup coding mode
 int set_adc_setup_codig(byte setupcon, int coding_mode) {
     byte value[2];
     /* read the current register value */
-    read_adc_register(setupcon, value, 2);
+    get_adc_register(setupcon, value, 2);
     /* set the coding mode to default */
     value[0] &= 0x7F;
     /* set the desired coding */
     value[0] |= (coding_mode << 7);
     /* write the new register value */
-    write_adc_register(setupcon, value, 2);
+    set_adc_register(setupcon, value, 2);
     /* set to new coding mode */
     adc_setup_coding_output = coding_mode;
     /* return error code */
@@ -383,8 +384,8 @@ int set_adc_data_mode(int mode) {
     byte if_mode_value[2];
     byte adc_mode_value[2];
     /* read current register values */
-    read_adc_register(IFMODE_REG, if_mode_value, 2);
-    read_adc_register(ADCMODE_REG, adc_mode_value, 2);
+    get_adc_register(IFMODE_REG, if_mode_value, 2);
+    get_adc_register(ADCMODE_REG, adc_mode_value, 2);
     /* set to default read mode */
     adc_mode_value[1] &= 0x8F;
 
@@ -409,8 +410,8 @@ int set_adc_data_mode(int mode) {
     }
     adc_data_mode = mode;
     /* write the desired register value */
-    write_adc_register(ADCMODE_REG, adc_mode_value, 2);
-    write_adc_register(IFMODE_REG, if_mode_value, 2);
+    set_adc_register(ADCMODE_REG, adc_mode_value, 2);
+    set_adc_register(IFMODE_REG, if_mode_value, 2);
     /* return error code */
     return 0;
 }
@@ -421,7 +422,7 @@ reads the ADC conversion result
 @return byte[] - the ADC conversion result
 ==========================================
 */
-int read_adc_data(byte *value) {
+int get_adc_data(byte *value) {
     /* when not in continuous read mode, send the read command */
     if (adc_data_mode != CONTINUOUS_READ_MODE) {
         /* send communication register id 0x00 */
@@ -433,6 +434,7 @@ int read_adc_data(byte *value) {
     value[0] = SPI.transfer(0x00);
     value[1] = SPI.transfer(0x00);
     value[2] = SPI.transfer(0x00);
+
     /* when debug enabled */
     if (DEBUG_ENABLED) {
         Serial.print("read: ");
@@ -441,6 +443,22 @@ int read_adc_data(byte *value) {
         print_byte(value[2]);
         Serial.println("from reg: 0x04");
     }
+    /* return error code */
+    return 0;
+}
+
+/*
+===================================
+reads the current data channel
+@param byte - current data channel
+@return int - error code
+===================================
+*/
+int get_current_adc_data_channel(byte &channel) {
+    byte value[1];
+    /* read ADC status register */
+    get_adc_register(STATUS_REG, value, 1);
+    channel = value[0];
     /* return error code */
     return 0;
 }
@@ -461,7 +479,7 @@ bool init_adc() {
 
     byte id[2];
      /* read the ADC device ID */
-    read_adc_register(ID_REG, id, 2);
+    get_adc_register(ID_REG, id, 2);
     /* check if the id matches 0x30DX, where X is don't care */
     id[1] &= 0xF0;
     bool valid_id = id[0] == 0x30 && id[1] == 0xD0;
@@ -507,7 +525,12 @@ void loop() {
     /* when ADC conversion is finished */
     if (DATA_READY) {
         /* read ADC conversion result */
-        read_adc_data(data);
+        get_adc_data(data);
+        byte current_channel;
+        get_current_adc_data_channel(current_channel);
+        if (current_channel == CH0_REG) {
+            /* something lol... */
+        }
         //Serial.write(data[0]);
         //Serial.write(data[1]);
         //Serial.write(data[2]);
