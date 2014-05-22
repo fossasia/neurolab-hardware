@@ -143,11 +143,11 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #define SPS_15625 0x06
 #define SPS_31250 0x00
 
-/* ADC setup coding (unipolar, bipolar) */
+/* ADC setup coding modes */
 #define BIPOLAR_CODED_OUTPUT 1
 #define UNIPOLAR_CODED_OUTPUT 0
 
-/* ADC data modes */
+/* ADC data conversion modes */
 #define CONTINUOUS_READ_MODE 0
 #define SINGLE_CONVERSION_MODE 1
 #define CONTINUOUS_CONVERSION_MODE 2
@@ -208,7 +208,7 @@ configures the ADC chip
 =========================================
 */
 int set_adc_register(byte reg, byte *value, int write_len) {
-    /* when specified register is invalid */
+    /* when desired register is invalid */
     if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
             print_byte(reg);
@@ -218,9 +218,9 @@ int set_adc_register(byte reg, byte *value, int write_len) {
     }
     /* send communication register id 0x00 */
     SPI.transfer(0x00);
-    /* send write command to the specified register 0x00 - 0xFF */
+    /* send write command to the desired register 0x00 - 0xFF */
     SPI.transfer(0x00 | reg);
-    /* write the specified amount of bytes */
+    /* write the desired amount of bytes */
     for (int i = 0; i < write_len; i++) {
         SPI.transfer(value[i]);
     }
@@ -247,7 +247,7 @@ reads the ADC channels
 =============================================
 */
 int get_adc_register(byte reg, byte *value, int read_len) {
-    /* when specified register is invalid */
+    /* when desired register is invalid */
     if (reg < 0x00 || reg > 0x3F) {
         if (DEBUG_ENABLED) {
             print_byte(reg);
@@ -257,9 +257,9 @@ int get_adc_register(byte reg, byte *value, int read_len) {
     }
     /* send communication register id 0x00 */
     SPI.transfer(0x00);
-    /* send read command to the specified register 0x00 - 0xFF */
+    /* send read command to the desired register 0x00 - 0xFF */
     SPI.transfer(0x40 | reg);
-    /* read the specified amount of bytes */
+    /* read the desired amount of bytes */
     for (int i = 0; i < read_len; i++) {
         value[i] = SPI.transfer(0x00);
     }
@@ -278,16 +278,18 @@ int get_adc_register(byte reg, byte *value, int read_len) {
 }
 
 /*
-=================================
+=====================================
 enables or disables ADC channels
 @param byte - channel
 @param bool - status
+@param byte - optional analog input 1
+@param byte - optional analog input 2
 @return int - error code
-=================================
+=====================================
 */
-int enable_adc_channel(byte channel, bool status, byte ain1 = NULL, byte ain2 = NULL) {
+int enable_adc_channel(int channel, bool status, byte ain1 = NULL, byte ain2 = NULL) {
     /* when channel out of range */
-    if (channel < 0x10 || channel > 0x1F) {
+    if (channel < 0 || channel > 15) {
         if (DEBUG_ENABLED) {
             print_byte(channel);
             Serial.println("enable channel out of range");
@@ -295,35 +297,43 @@ int enable_adc_channel(byte channel, bool status, byte ain1 = NULL, byte ain2 = 
         return 1;
     }
     byte value[2];
-    /* read specified channel configuration */
-    get_adc_register(channel, value, 2);
+    /* convert channel number to channel register value */
+    byte channel_reg = 0x10 | channel;
+    /* read desired channel configuration */
+    get_adc_register(channel_reg, value, 2);
     /* clear the enable bit */
     value[0] &= ~(1 << 7);
     /* enable or disable this channel */
     value[0] |= (status << 7);
-    /* set the correct analog inputs */
-    byte ain = ((channel & 0x0F) << 1);
+    /* define the default analog input */
+    byte ain = (channel << 1);
     /* set default AINs */
+    value[0] = 0xFC;
     value[1] = 0x00;
 
-    /* user desired values */
+    /* user desired analog input values */
     if (ain1 != NULL) {
+        value[0] |= (ain1 >> 3);
         value[1] |= (ain1 << 5);
-        /* when 2 AINs set */
+        /* when 2 analog input values were set */
         if (ain2 != NULL) {
             value[1] |= ain2;
         }
     /* set automatic values for BIPOLAR output */
     } else if (adc_setup_coding_output == BIPOLAR_CODED_OUTPUT) {
+        value[0] |= (ain >> 3);
         value[1] |= (ain << 5);
         value[1] |= (ain + 1);
     /* set automatic value for UNIPOLAR output */
     } else {
-        value[1] |= (ain << 5);
+        value[0] |= (channel >> 3);
+        value[1] |= (channel << 5);
+        value[1] |= channel;
     }
+    print_byte(value[1]);
 
-    /* update specified channel configuration */
-    set_adc_register(channel, value, 2);
+    /* update desired channel configuration */
+    set_adc_register(channel_reg, value, 2);
     /* return error code */
     return 0;
 }
@@ -454,11 +464,12 @@ reads the current data channel
 @return int - error code
 ===================================
 */
-int get_current_adc_data_channel(byte &channel) {
+int get_current_adc_data_channel(int &channel) {
     byte value[1];
     /* read ADC status register */
     get_adc_register(STATUS_REG, value, 1);
-    channel = value[0];
+    /* filter out channel register value */
+    channel = value[0] & 0x0F;
     /* return error code */
     return 0;
 }
@@ -502,19 +513,25 @@ bool init_adc() {
 void setup() {
     /* initiate serial communication */
     Serial.begin(115200);
-    /* initiate ADC */
+    /* initiate ADC, return true if device ID is valid */
     init_adc();
-    /* reset ADC to default state */
+    /* reset ADC registers to the default state */
     reset_adc();
     /* set ADC configuration */
-    /* enable ch0 and ch1 */
-    enable_adc_channel(CH0_REG, true, AIN0, AIN1);
-    enable_adc_channel(CH1_REG, true, AIN2, AIN3);
+    /* enable ch0 and ch1 and connect each to 2 analog inputs for bipolar input */
+    /* AIN0, AIN1, AIN2, AIN3, AIN4, AIN5, AIN6, AIN7, AIN8, AIN9, AIN10, AIN11, AIN12 */
+    /* AIN13, AIN14, AIN15, AIN16, REF_POS, REF_NEG, TEMP_SENSOR_POS, TEMP_SENSOR_NEG */
+    enable_adc_channel(0, true, AIN8, AIN9);
+    enable_adc_channel(1, true, AIN10, AIN11);
     /* set the ADC data mode */
+    /* CONTINUOUS_READ_MODE, SINGLE_CONVERSION_MODE, CONTINUOUS_CONVERSION_MODE */
     set_adc_data_mode(CONTINUOUS_READ_MODE);
     /* set the ADC filter samplingrate to 1007 Hz*/
+    /* SPS_1, SPS_2, SPS_5, SPS_10, SPS_16, SPS_20, SPS_50, SPS_60, SPS_100, SPS_200 */
+    /* SPS_381, SPS_504, SPS_1007, SPS_2597, SPS_5208, SPS_10417, SPS_15625, SPS_31250 */
     set_adc_filter_speed(FILTCON0_REG, SPS_1007);
     /* set the ADC setup coding to BIPLOAR output*/
+    /* BIPOLAR_CODED_OUTPUT, UNIPOLAR_CODED_OUTPUT */
     set_adc_setup_codig(SETUPCON0_REG, BIPOLAR_CODED_OUTPUT);
     /* wait for ADC */
     delay(10);
@@ -525,11 +542,12 @@ void loop() {
     /* when ADC conversion is finished */
     if (DATA_READY) {
         /* read ADC conversion result */
-        get_adc_data(data);
-        byte current_channel;
-        get_current_adc_data_channel(current_channel);
-        if (current_channel == CH0_REG) {
+        //get_adc_data(data);
+        int current_channel = 1;
+        //get_current_adc_data_channel(current_channel);
+        if (current_channel == 0) {
             /* something lol... */
+            Serial.println("channel 0 read");
         }
         //Serial.write(data[0]);
         //Serial.write(data[1]);
