@@ -127,7 +127,7 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/39776a.pdf</description>
 <smd name="38" x="-1.25" y="2.85" dx="0.5" dy="0.25" layer="1" roundness="50" rot="R270" stop="no"/>
 <smd name="39" x="-1.75" y="2.85" dx="0.5" dy="0.25" layer="1" roundness="50" rot="R270" stop="no"/>
 <smd name="40" x="-2.25" y="2.85" dx="0.5" dy="0.25" layer="1" roundness="50" rot="R270" stop="no"/>
-<smd name="EXP" x="0" y="0" dx="4.1" dy="4.1" layer="1"/>
+<smd name="41" x="0" y="0" dx="4.1" dy="4.1" layer="1"/>
 <text x="-3" y="3.915" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.95" y="-5.04" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="2.7525" y1="-2.4725" x2="3.0525" y2="-2.0275" layer="29" rot="R90"/>
@@ -220,12 +220,12 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/39776a.pdf</description>
 <wire x1="-25.4" y1="25.4" x2="-25.4" y2="-27.94" width="0.254" layer="94"/>
 <text x="-5.08" y="1.27" size="1.778" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="AIN16" x="-30.48" y="22.86" length="middle" direction="pwr"/>
-<pin name="AIN0/REF2-" x="-30.48" y="20.32" length="middle"/>
-<pin name="AIN1/REF2+" x="-30.48" y="17.78" length="middle"/>
-<pin name="AIN2" x="-30.48" y="15.24" length="middle" direction="pwr"/>
-<pin name="AIN3" x="-30.48" y="12.7" length="middle" direction="pwr"/>
-<pin name="REFOUT" x="-30.48" y="10.16" length="middle" direction="pwr"/>
+<pin name="AIN16" x="-30.48" y="22.86" length="middle" direction="in"/>
+<pin name="AIN0/REF2-" x="-30.48" y="20.32" length="middle" direction="in"/>
+<pin name="AIN1/REF2+" x="-30.48" y="17.78" length="middle" direction="in"/>
+<pin name="AIN2" x="-30.48" y="15.24" length="middle" direction="in"/>
+<pin name="AIN3" x="-30.48" y="12.7" length="middle" direction="in"/>
+<pin name="REFOUT" x="-30.48" y="10.16" length="middle" direction="out"/>
 <pin name="REGCAPA" x="-30.48" y="7.62" length="middle" direction="in"/>
 <pin name="AVSS" x="-30.48" y="5.08" length="middle" direction="in"/>
 <pin name="AVDD1" x="-30.48" y="2.54" length="middle" direction="in"/>
@@ -233,33 +233,34 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/39776a.pdf</description>
 <pin name="PDSW" x="-30.48" y="-2.54" length="middle" direction="in"/>
 <pin name="XTAL1" x="-30.48" y="-5.08" length="middle" direction="in"/>
 <pin name="XTAL2/CLKIO" x="-30.48" y="-7.62" length="middle" direction="in"/>
-<pin name="DOUT/RDY" x="-30.48" y="-10.16" length="middle" direction="pwr"/>
+<pin name="DOUT/RDY" x="-30.48" y="-10.16" length="middle" direction="out"/>
 <pin name="DIN" x="-30.48" y="-12.7" length="middle" direction="in"/>
-<pin name="SCLK" x="-30.48" y="-15.24" length="middle" direction="out"/>
+<pin name="SCLK" x="-30.48" y="-15.24" length="middle" direction="in"/>
 <pin name="CS" x="-30.48" y="-17.78" length="middle" direction="in"/>
 <pin name="ERROR" x="-30.48" y="-20.32" length="middle" direction="in"/>
 <pin name="SYNC" x="-30.48" y="-22.86" length="middle" direction="in"/>
 <pin name="IOVDD" x="-30.48" y="-25.4" length="middle" direction="in"/>
-<pin name="DGND" x="30.48" y="-25.4" length="middle" direction="pwr" rot="R180"/>
-<pin name="REGCAPD" x="30.48" y="-22.86" length="middle" direction="pwr" rot="R180"/>
-<pin name="GPIO0" x="30.48" y="-20.32" length="middle" direction="nc" rot="R180"/>
-<pin name="GPIO1" x="30.48" y="-17.78" length="middle" direction="pwr" rot="R180"/>
-<pin name="GPIO2" x="30.48" y="-15.24" length="middle" direction="pwr" rot="R180"/>
+<pin name="DGND" x="30.48" y="-25.4" length="middle" direction="in" rot="R180"/>
+<pin name="REGCAPD" x="30.48" y="-22.86" length="middle" direction="in" rot="R180"/>
+<pin name="GPIO0" x="30.48" y="-20.32" length="middle" rot="R180"/>
+<pin name="GPIO1" x="30.48" y="-17.78" length="middle" rot="R180"/>
+<pin name="GPIO2" x="30.48" y="-15.24" length="middle" rot="R180"/>
 <pin name="AIN4" x="30.48" y="-12.7" length="middle" direction="in" rot="R180"/>
 <pin name="AIN5" x="30.48" y="-10.16" length="middle" direction="in" rot="R180"/>
 <pin name="AIN6" x="30.48" y="-7.62" length="middle" direction="in" rot="R180"/>
-<pin name="AIN7" x="30.48" y="-5.08" length="middle" direction="out" rot="R180"/>
-<pin name="AIN8" x="30.48" y="-2.54" length="middle" direction="out" rot="R180"/>
-<pin name="AIN9" x="30.48" y="0" length="middle" direction="pwr" rot="R180"/>
-<pin name="AIN10" x="30.48" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="AIN7" x="30.48" y="-5.08" length="middle" direction="in" rot="R180"/>
+<pin name="AIN8" x="30.48" y="-2.54" length="middle" direction="in" rot="R180"/>
+<pin name="AIN9" x="30.48" y="0" length="middle" direction="in" rot="R180"/>
+<pin name="AIN10" x="30.48" y="2.54" length="middle" direction="in" rot="R180"/>
 <pin name="AIN11" x="30.48" y="5.08" length="middle" direction="in" rot="R180"/>
 <pin name="AIN12" x="30.48" y="7.62" length="middle" direction="in" rot="R180"/>
-<pin name="AIN13" x="30.48" y="10.16" length="middle" direction="pwr" rot="R180"/>
-<pin name="AIN14" x="30.48" y="12.7" length="middle" direction="pwr" rot="R180"/>
-<pin name="AIN15" x="30.48" y="15.24" length="middle" direction="pwr" rot="R180"/>
-<pin name="GPIO3" x="30.48" y="17.78" length="middle" direction="nc" rot="R180"/>
-<pin name="REF-" x="30.48" y="20.32" length="middle" direction="pwr" rot="R180"/>
-<pin name="REF+" x="30.48" y="22.86" length="middle" direction="nc" rot="R180"/>
+<pin name="AIN13" x="30.48" y="10.16" length="middle" direction="in" rot="R180"/>
+<pin name="AIN14" x="30.48" y="12.7" length="middle" direction="in" rot="R180"/>
+<pin name="AIN15" x="30.48" y="15.24" length="middle" direction="in" rot="R180"/>
+<pin name="GPIO3" x="30.48" y="17.78" length="middle" rot="R180"/>
+<pin name="REF-" x="30.48" y="20.32" length="middle" direction="in" rot="R180"/>
+<pin name="REF+" x="30.48" y="22.86" length="middle" direction="in" rot="R180"/>
+<pin name="EXP" x="0" y="-33.02" length="middle" direction="out" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -297,6 +298,7 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/39776a.pdf</description>
 <connect gate="G$1" pin="DIN" pad="15"/>
 <connect gate="G$1" pin="DOUT/RDY" pad="14"/>
 <connect gate="G$1" pin="ERROR" pad="18"/>
+<connect gate="G$1" pin="EXP" pad="41"/>
 <connect gate="G$1" pin="GPIO0" pad="23"/>
 <connect gate="G$1" pin="GPIO1" pad="24"/>
 <connect gate="G$1" pin="GPIO2" pad="25"/>
