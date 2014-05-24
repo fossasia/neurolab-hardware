@@ -171,6 +171,17 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 class AD7173Class {
 public:
     /*
+    =====================================
+    constructor
+    set default ADC setup coding mode
+    set default ADC data conversion mode
+    =====================================
+    */
+    AD7173Class() : _adc_data_mode(CONTINUOUS_CONVERSION_MODE), _adc_setup_coding_output(BIPOLAR_CODED_OUTPUT) {
+        /* ... */
+    }
+
+    /*
     ==============================================
     resets the ADC registers to the default state
     ==============================================
@@ -250,11 +261,11 @@ public:
     bool init();
 
 private:
-    /* default ADC data conversion mode */
-    int adc_data_mode = CONTINUOUS_CONVERSION_MODE;
+    /* ADC data conversion mode */
+    int _adc_data_mode;
 
-    /* default ADC setup coding mode */
-    int adc_setup_coding_output = BIPOLAR_CODED_OUTPUT;
+    /* ADC setup coding mode */
+    int _adc_setup_coding_output;
 
     /*
     ===========================

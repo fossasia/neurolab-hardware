@@ -121,7 +121,7 @@ int AD7173Class::enable_channel(int channel, bool status, byte ain1 = NULL, byte
             value[1] |= ain2;
         }
     /* set automatic values for BIPOLAR output */
-    } else if (adc_setup_coding_output == BIPOLAR_CODED_OUTPUT) {
+    } else if (_adc_setup_coding_output == BIPOLAR_CODED_OUTPUT) {
         value[0] |= (ain >> 3);
         value[1] |= (ain << 5);
         value[1] |= (ain + 1);
@@ -163,7 +163,7 @@ int AD7173Class::set_setup_codig(byte setupcon, int coding_mode) {
     /* write the new register value */
     set_register(setupcon, value, 2);
     /* set to new coding mode */
-    adc_setup_coding_output = coding_mode;
+    _adc_setup_coding_output = coding_mode;
     /* return error code */
     return 0;
 }
@@ -196,7 +196,7 @@ int AD7173Class::set_data_mode(int mode) {
         /* return error code */
         return 1;
     }
-    adc_data_mode = mode;
+    _adc_data_mode = mode;
     /* write the desired register value */
     set_register(ADCMODE_REG, adc_mode_value, 2);
     set_register(IFMODE_REG, if_mode_value, 2);
@@ -206,7 +206,7 @@ int AD7173Class::set_data_mode(int mode) {
 
 int AD7173Class::get_data(byte *value) {
     /* when not in continuous read mode, send the read command */
-    if (adc_data_mode != CONTINUOUS_READ_MODE) {
+    if (_adc_data_mode != CONTINUOUS_READ_MODE) {
         /* send communication register id 0x00 */
         SPI.transfer(0x00);
         /* send read command 0x40 to the data register 0x04 */
