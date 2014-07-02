@@ -219,8 +219,8 @@ public:
 	/*
 	=====================================
 	enables or disables ADC channels
-	@param byte - channel
-	@param bool - status
+	@param byte - channel register
+	@param bool - enable or disable
 	@param byte - optional analog input 1
 	@param byte - optional analog input 2
 	@return int - error code
@@ -231,11 +231,23 @@ public:
 	/*
 	==========================================
 	sets the ADC filters data conversion rate
-	@param int - speed of conversion
+	@param byte - filter register
+	@param byte - speed of conversion
 	@return int - error code
 	==========================================
 	*/
 	int set_filter_speed(byte, byte);
+
+	/*
+	==========================================
+	enables the ADC filters  enhancement
+	@param byte - filter register
+	@param bool - enable or disable
+	@param byte - configuration
+	@return int - error code
+	==========================================
+	*/
+	int enable_filter_enhancement(byte, bool, byte = NULL);
 
 	/*
 	================================

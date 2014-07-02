@@ -127,7 +127,7 @@ int AD7173Class::read_register(byte reg, byte *value, int read_len) {
 	return 0;
 }
 
-int AD7173Class::enable_channel(byte channel, bool status, byte ain1, byte ain2) {
+int AD7173Class::enable_channel(byte channel, bool enable, byte ain1, byte ain2) {
 	/* when channel out of range */
 	if (channel < CH0 || channel > CH15) {
 		/* when debug enabled */
@@ -144,7 +144,7 @@ int AD7173Class::enable_channel(byte channel, bool status, byte ain1, byte ain2)
 	/* clear the enable bit */
 	value[0] &= ~(1 << 7);
 	/* enable or disable this channel */
-	value[0] |= (status << 7);
+	value[0] |= (enable << 7);
 	/* define the default analog input */
 	byte ain = ((channel & 0x0F) << 1);
 	/* set to default state */
@@ -207,6 +207,18 @@ int AD7173Class::set_filter_speed(byte filter, byte data_speed) {
 	this->write_register(filter, value, 2);
 	/* return error code */
 	return 0;
+}
+
+int enable_filter_enhancement(byte filter, bool enable, byte configuration) {
+	byte value[2];
+	/* get the current register value */
+	this->read_register(filter, value, 2);
+	/* clear the enable bit */
+	value[0] &= ~(1 << 3);
+	/* enable or disable the filter enhancement */
+	value[0] |= (enable << 3);
+	/* write the new register value */
+	this->write_register(filter, value, 2);
 }
 
 int AD7173Class::set_setup_coding(byte setup, int coding_mode) {
