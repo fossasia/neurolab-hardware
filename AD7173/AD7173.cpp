@@ -63,7 +63,7 @@ int AD7173Class::write_register(byte reg, byte *value, int write_len) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
 			this->print_byte(reg);
-			Serial.println("write register: register out of range");
+			Serial.println("write_register: register out of range");
 		}
 		/* return error code */
 		return 1;
@@ -78,7 +78,7 @@ int AD7173Class::write_register(byte reg, byte *value, int write_len) {
 	}
 	/* when debug enabled */
 	if (DEBUG_ENABLED) {
-		Serial.print("write register: wrote [ ");
+		Serial.print("write_register: wrote [ ");
 		for (int i = 0; i < write_len; i++) {
 			this->print_byte(value[i]);
 		}
@@ -98,7 +98,7 @@ int AD7173Class::read_register(byte reg, byte *value, int read_len) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
 			this->print_byte(reg);
-			Serial.println("read register: register out of range");
+			Serial.println("read_register: register out of range");
 		}
 		/* return error code */
 		return 1;
@@ -113,7 +113,7 @@ int AD7173Class::read_register(byte reg, byte *value, int read_len) {
 	}
 	/* when debug enabled */
 	if (DEBUG_ENABLED) {
-		Serial.print("read register: read [ ");
+		Serial.print("read_register: read [ ");
 		for (int i = 0; i < read_len; i++) {
 			this->print_byte(value[i]);
 		}
@@ -133,7 +133,7 @@ int AD7173Class::enable_channel(byte channel, bool status, byte ain1, byte ain2)
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
 			this->print_byte(channel);
-			Serial.println("enable channel: channel out of range");
+			Serial.println("enable_channel: channel out of range");
 		}
 		/* return error code */
 		return 1;
@@ -154,7 +154,7 @@ int AD7173Class::enable_channel(byte channel, bool status, byte ain1, byte ain2)
 	/* when analog input 1 was given */
 	if (ain1 != NULL) {
 		/* set first analog input */
-		value[0] |= (ain1 >> 3);
+		value[0] |= (ain1 >> 4);
 		value[1] |= (ain1 << 5);
 		/* when unipolar coding */
 		if (this->m_adc_setup_coding_output == UNIPOLAR) {
@@ -168,13 +168,13 @@ int AD7173Class::enable_channel(byte channel, bool status, byte ain1, byte ain2)
 	/* when no analog inputs were given and in BIPOLAR mode */
 	} else if (this->m_adc_setup_coding_output == BIPOLAR) {
 		/* set automatic values for BIPOLAR output */
-		value[0] |= (ain >> 3);
+		value[0] |= (ain >> 4);
 		value[1] |= (ain << 5);
 		value[1] |= (ain + 1);
 	/* otherwise */
 	} else {
 		/* set automatic value for UNIPOLAR output */
-		value[0] |= ((channel & 0x0F) >> 3);
+		value[0] |= ((channel & 0x0F) >> 4);
 		value[1] |= ((channel & 0x0F) << 5);
 		value[1] |= (channel & 0x0F);
 	}
@@ -191,7 +191,7 @@ int AD7173Class::set_filter_speed(byte filter, byte data_speed) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
 			this->print_byte(filter);
-			Serial.println("set filter speed: filter out of range");
+			Serial.println("set_filter_speed: filter out of range");
 		}
 		/* return error code */
 		return 1;
@@ -215,7 +215,7 @@ int AD7173Class::set_setup_coding(byte setup, int coding_mode) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
 			this->print_byte(setup);
-			Serial.println("set setup coding: setup out of range");
+			Serial.println("set_setup_coding: setup out of range");
 		}
 		/* return error code */
 		return 1;
@@ -241,7 +241,7 @@ int AD7173Class::set_data_mode(int data_mode) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
 			Serial.print(data_mode + " ");
-			Serial.println("set data mode: data mode out of range");
+			Serial.println("set_data_mode: data mode out of range");
 		}
 		/* return error code */
 		return 1;
@@ -296,7 +296,7 @@ int AD7173Class::get_data(byte *value) {
 
 	/* when debug enabled */
 	if (DEBUG_ENABLED) {
-		Serial.print("get data: read [ ");
+		Serial.print("get_data: read [ ");
 		this->print_byte(value[0]);
 		this->print_byte(value[1]);
 		this->print_byte(value[2]);
