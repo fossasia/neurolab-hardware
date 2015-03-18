@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -106,7 +106,7 @@
 <plain>
 <text x="7.76" y="1.27" size="0.6096" layer="121" font="vector" ratio="10" rot="R180">SOIC+MSOP</text>
 <text x="7.6" y="9.6" size="0.6096" layer="121" font="vector" ratio="10" rot="R180">BREAKOUT</text>
-<text x="8" y="10.4" size="0.6096" layer="121" font="vector" ratio="10" rot="R180">BOARD V1.0</text>
+<text x="8" y="10.4" size="0.6096" layer="121" font="vector" ratio="10" rot="R180">BOARD V0.1</text>
 <text x="2.74499375" y="4.9599875" size="0.4064" layer="121" font="vector" ratio="10" rot="R90">IC1</text>
 <wire x1="0" y1="0" x2="0" y2="10.7" width="0" layer="20"/>
 <text x="7.7" y="1.5" size="0.4064" layer="122" font="vector" ratio="10" rot="MR0">1</text>
@@ -354,6 +354,9 @@ Source: http://focus.ti.com/lit/ds/symlink/tlc27l2.pdf</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
