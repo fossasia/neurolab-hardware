@@ -8859,6 +8859,8 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device="" value="REFV"/>
+<part name="LED2" library="led" deviceset="LED" device="CHIP-LED0603"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0402" value="220"/>
 </parts>
 <sheets>
 <sheet>
@@ -8934,6 +8936,8 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <instance part="P+5" gate="1" x="246.38" y="78.74"/>
 <instance part="+3V3" gate="G$1" x="254" y="78.74"/>
 <instance part="P+6" gate="VCC" x="261.62" y="78.74"/>
+<instance part="LED2" gate="G$1" x="182.88" y="40.64" rot="R270"/>
+<instance part="R5" gate="G$1" x="198.12" y="40.64"/>
 </instances>
 <busses>
 </busses>
@@ -8991,7 +8995,6 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <wire x1="215.9" y1="15.24" x2="215.9" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="12.7" x2="226.06" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="15.24" x2="226.06" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="12.7" x2="226.06" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="2"/>
 <junction x="215.9" y="12.7"/>
 <junction x="226.06" y="12.7"/>
@@ -9006,6 +9009,13 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <wire x1="259.08" y1="33.02" x2="231.14" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="33.02" x2="231.14" y2="35.56" width="0.1524" layer="91"/>
 <junction x="172.72" y="12.7"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<wire x1="177.8" y1="40.64" x2="152.4" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="40.64" x2="152.4" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="12.7" x2="162.56" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="12.7" x2="226.06" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="12.7" x2="226.06" y2="10.16" width="0.1524" layer="91"/>
+<junction x="162.56" y="12.7"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="REF-"/>
@@ -9441,6 +9451,10 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <wire x1="231.14" y1="45.72" x2="231.14" y2="43.18" width="0.1524" layer="91"/>
 <junction x="226.06" y="45.72"/>
 <junction x="231.14" y="45.72"/>
+<wire x1="236.22" y1="45.72" x2="223.52" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="45.72" x2="223.52" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="40.64" x2="203.2" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -9494,6 +9508,13 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <wire x1="246.38" y1="50.8" x2="246.38" y2="58.42" width="0.1524" layer="91"/>
 <junction x="261.62" y="50.8"/>
 <junction x="254" y="50.8"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="193.04" y1="40.64" x2="185.42" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
