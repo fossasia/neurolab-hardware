@@ -167,6 +167,7 @@
 <text x="9.7" y="5.9" size="0.6096" layer="122" font="vector" ratio="10" rot="MR180">REFV</text>
 <text x="13" y="10.9" size="0.6096" layer="122" font="vector" ratio="10" rot="MR180">AVDD</text>
 <text x="12.4" y="3.9" size="0.4064" layer="122" font="vector" ratio="10" rot="MR270">SJ3</text>
+<text x="3.8" y="3.3" size="0.4064" layer="121" font="vector" ratio="10">C16</text>
 </plain>
 <libraries>
 <library name="AD7173">
@@ -2037,12 +2038,13 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <element name="C13" library="rcl" package="C0402" value="4.7uF" x="6.4" y="6.2" rot="R90"/>
 <element name="C14" library="rcl" package="C0402" value="4.7uF" x="15.3" y="3.3" rot="MR90"/>
 <element name="L1" library="inductors" package="0402" value="BLM15HB121SN1" x="7.9" y="7.9" rot="R180"/>
-<element name="C15" library="rcl" package="C0402" value="0.1uF" x="4.3" y="5.2" rot="R180"/>
+<element name="C15" library="rcl" package="C0402" value="0.1uF" x="4.3" y="5.2"/>
 <element name="SJ1" library="jumper" package="SJ" value="" x="14.2" y="8.4" rot="MR270"/>
 <element name="SJ2" library="jumper" package="SJ" value="" x="10.8" y="8.4" rot="MR270"/>
 <element name="SJ3" library="jumper" package="SJ" value="" x="10.8" y="3.3" rot="MR90"/>
 <element name="LED2" library="led" package="CHIP-LED0603" value="" x="10.8" y="6.7" rot="R270"/>
 <element name="R5" library="rcl" package="R0402" value="220" x="8.2" y="6.7" rot="R180"/>
+<element name="C16" library="rcl" package="C0402" value="4.7uF" x="4.3" y="2.7"/>
 </elements>
 <signals>
 <signal name="GPIO1">
@@ -2117,6 +2119,7 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <via x="13.4" y="18" extent="1-16" drill="0.31"/>
 <wire x1="13.4" y1="18" x2="14.37" y2="18" width="0.254" layer="16"/>
 <wire x1="14.37" y1="18" x2="14.42" y2="18.05" width="0.254" layer="16"/>
+<contactref element="C16" pad="2"/>
 <wire x1="15.3" y1="3.95" x2="15.3" y2="3.45" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$1">
@@ -2609,12 +2612,7 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <wire x1="8.3" y1="3.435" x2="6.4" y2="3.45" width="0.254" layer="1"/>
 <contactref element="C13" pad="1"/>
 <contactref element="L1" pad="1"/>
-<contactref element="C15" pad="1"/>
 <wire x1="6.4" y1="5.55" x2="6.4" y2="3.45" width="0.254" layer="1"/>
-<wire x1="4.95" y1="5.2" x2="5.5" y2="5.2" width="0.254" layer="1"/>
-<wire x1="5.5" y1="5.2" x2="5.8" y2="5.5" width="0.254" layer="1"/>
-<wire x1="5.8" y1="5.5" x2="6.45" y2="5.5" width="0.254" layer="1"/>
-<wire x1="6.45" y1="5.5" x2="6.4" y2="5.55" width="0.254" layer="1"/>
 <wire x1="6.4" y1="5.55" x2="14.65" y2="5.55" width="0.254" layer="1"/>
 <wire x1="14.65" y1="5.55" x2="15.2" y2="6.1" width="0.254" layer="1"/>
 <wire x1="15.2" y1="6.1" x2="15.2" y2="7.7" width="0.254" layer="1"/>
@@ -2664,6 +2662,8 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <wire x1="7.25" y1="7.9" x2="7.4" y2="7.7" width="0.254" layer="1"/>
 <wire x1="7.4" y1="7.7" x2="7.4" y2="6.85" width="0.254" layer="1"/>
 <wire x1="7.4" y1="6.85" x2="7.55" y2="6.7" width="0.254" layer="1"/>
+<contactref element="C15" pad="1"/>
+<wire x1="3.65" y1="5.2" x2="3.65" y2="6.65" width="0.254" layer="1"/>
 </signal>
 <signal name="N$28">
 <contactref element="POWER" pad="2"/>
@@ -2674,6 +2674,9 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <wire x1="10.752" y1="4.11" x2="10.8" y2="4.062" width="0.254" layer="16"/>
 <wire x1="10.8" y1="4.062" x2="10.8" y2="7.638" width="0.254" layer="16"/>
 <wire x1="10.8" y1="7.638" x2="14.2" y2="7.638" width="0.254" layer="16"/>
+<contactref element="C16" pad="1"/>
+<wire x1="3.65" y1="2.7" x2="3.2" y2="2.7" width="0.254" layer="1"/>
+<wire x1="3.2" y1="2.7" x2="1.79" y2="4.11" width="0.254" layer="1"/>
 </signal>
 <signal name="N$31">
 <contactref element="LED2" pad="A"/>
