@@ -20,6 +20,10 @@
 *.out
 *.app
 
-# backups
+# eagle stuff
 *.b#*
 *.s#*
+*.G*
+*.gpi
+*.dri
+*.TXT
