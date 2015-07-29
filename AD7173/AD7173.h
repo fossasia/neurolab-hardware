@@ -42,13 +42,13 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #ifndef _AD7173_H_INCLUDED
 #define _AD7173_H_INCLUDED
 
-#include "SPI.h"
-
 #if ARDUINO >= 100
 #include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
+
+#include "SPI.h"
 
 /* enable or disable debug */
 #define DEBUG_ENABLED 0
@@ -178,6 +178,15 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #define SINGLE_CONVERSION_MODE 1
 #define CONTINUOUS_CONVERSION_MODE 2
 
+/* clock mode */
+/*
+	00 Internal oscillator
+	01 Internal oscillator output on XTAL2/CLKIO pin
+	10 External clock input on XTAL2/CLKIO pin
+	11 External crystal on XTAL1 and XTAL2/CLKIO pins
+*/
+typedef enum {INTERNAL_CLOCK, INTERNAL_CLOCK_OUTPUT, EXTERNAL_CLOCK_INPUT, EXTERNAL_CLOCK} clock_mode_t;
+
 /* ADC data ready indicator */
 #define DATA_READY digitalRead(MISO) == LOW
 
@@ -258,6 +267,15 @@ public:
 	================================
 	*/
 	int set_setup_coding(byte, int);
+
+	/*
+	================================
+	sets the ADC clock mode
+	@param clock_mode_t - clock mode
+	@return int - error code
+	================================
+	*/
+	int set_clock_mode(clock_mode_t);
 
 	/*
 	=========================

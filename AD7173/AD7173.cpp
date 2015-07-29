@@ -209,7 +209,7 @@ int AD7173Class::set_filter_speed(byte filter, byte data_speed) {
 	return 0;
 }
 
-int enable_filter_enhancement(byte filter, bool enable, byte configuration) {
+int AD7173Class::enable_filter_enhancement(byte filter, bool enable, byte configuration) {
 	byte value[2];
 	/* get the current register value */
 	this->read_register(filter, value, 2);
@@ -243,6 +243,45 @@ int AD7173Class::set_setup_coding(byte setup, int coding_mode) {
 	this->write_register(setup, value, 2);
 	/* set to new coding mode */
 	this->m_adc_setup_coding_output = coding_mode;
+	/* return error code */
+	return 0;
+}
+
+int AD7173Class::set_clock_mode(clock_mode_t clock_mode) {
+	/* the register value */
+	byte adc_mode_value[2];
+	/* get current register value */
+	this->read_register(ADCMODE_REG, adc_mode_value, 2);
+	/* reset clock mode to default INTERNAL_CLOCK [3:2] bit to 00 */
+	adc_mode_value[0] &= 0xF3;
+
+	/* change to desired clock mode */
+	switch (clock_mode) {
+		case INTERNAL_CLOCK:
+			/* already INTERNAL */
+			break;
+		case INTERNAL_CLOCK_OUTPUT:
+			adc_mode_value[0] |= 0x04;
+			break;
+		case EXTERNAL_CLOCK_INPUT:
+			adc_mode_value[0] |= 0x08;
+			break;
+		case EXTERNAL_CLOCK:
+			adc_mode_value[0] |= 0x0C;
+			break;
+		/* when clock mode out of range */
+		default:
+			/* when debug enabled */
+			if (DEBUG_ENABLED) {
+				Serial.print(clock_mode + " ");
+				Serial.println("set_data_mode: data mode out of range");
+			}
+			/* return error code */
+			return 1;
+	}
+
+	/* write the desired register value */
+	this->write_register(ADCMODE_REG, adc_mode_value, 2);
 	/* return error code */
 	return 0;
 }
