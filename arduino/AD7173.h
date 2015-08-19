@@ -51,7 +51,7 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #include "SPI.h"
 
 /* enable or disable debug */
-#define DEBUG_ENABLED 0
+#define DEBUG_ENABLED 1
 
 /* delay for reading and writing registers  */
 #define READ_WRITE_DELAY 1
@@ -170,13 +170,10 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #define TEMP_SENSOR_NEG 0x12
 
 /* ADC setup coding modes */
-#define BIPOLAR 1
-#define UNIPOLAR 0
+typedef enum {UNIPOLAR = 0, BIPOLAR = 1} coding_mode_t;
 
 /* ADC data conversion modes */
-#define CONTINUOUS_READ_MODE 0
-#define SINGLE_CONVERSION_MODE 1
-#define CONTINUOUS_CONVERSION_MODE 2
+typedef enum {CONTINUOUS_READ_MODE, SINGLE_CONVERSION_MODE, CONTINUOUS_CONVERSION_MODE} data_mode_t;
 
 /* clock mode */
 /*
@@ -199,7 +196,7 @@ public:
 	set default ADC data conversion mode
 	=====================================
 	*/
-	AD7173Class() : m_adc_data_mode(CONTINUOUS_CONVERSION_MODE), m_adc_setup_coding_output(BIPOLAR) {
+	AD7173Class() : m_adc_data_mode(CONTINUOUS_CONVERSION_MODE), m_adc_coding_mode(BIPOLAR) {
 		/* ... */
 	}
 
@@ -259,14 +256,14 @@ public:
 	int enable_filter_enhancement(byte, bool, byte = NULL);
 
 	/*
-	================================
+	==================================
 	sets the ADC setups coding mode
 	@param byte - setup register
-	@param int - coding mode
+	@param condig_mode_t - coding mode
 	@return int - error code
-	================================
+	==================================
 	*/
-	int set_setup_coding(byte, int);
+	int set_setup_coding(byte, coding_mode_t);
 
 	/*
 	================================
@@ -278,13 +275,13 @@ public:
 	int set_clock_mode(clock_mode_t);
 
 	/*
-	=========================
+	==============================
 	sets the ADC data mode
-	@param int - data mode
+	@param data_mode_t - data mode
 	@return int - error code
-	=========================
+	==============================
 	*/
-	int set_data_mode(int);
+	int set_data_mode(data_mode_t);
 
 	/*
 	==========================================
@@ -305,10 +302,10 @@ public:
 
 private:
 	/* ADC data mode */
-	int m_adc_data_mode;
+	data_mode_t m_adc_data_mode;
 
 	/* ADC setup coding mode */
-	int m_adc_setup_coding_output;
+	coding_mode_t m_adc_coding_mode;
 
 	/*
 	===========================

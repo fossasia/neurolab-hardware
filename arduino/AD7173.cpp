@@ -21,15 +21,16 @@ bool AD7173Class::init() {
 	/* check if the id matches 0x30DX, where X is don't care */
 	id[1] &= 0xF0;
 	bool valid_id = id[0] == 0x30 && id[1] == 0xD0;
-	
+
 	/* when debug enabled */
 	if (DEBUG_ENABLED) {
 		if (valid_id) {
 			Serial.println("init: ADC device ID is valid :)");
 		} else {
-			Serial.print("init: ADC device ID is invalid :( ");
+			Serial.print("init: ADC device ID is invalid :( [ ");
 			this->print_byte(id[0]);
 			this->print_byte(id[1]);
+			Serial.print(" ]");
 			Serial.println();
 		}
 	}
@@ -62,8 +63,9 @@ int AD7173Class::write_register(byte reg, byte *value, int write_len) {
 	if (reg < 0x00 || reg > 0x3F) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
+			Serial.print("write_register: register out of range [ ");
 			this->print_byte(reg);
-			Serial.println("write_register: register out of range");
+			Serial.println(" ]");
 		}
 		/* return error code */
 		return 1;
@@ -97,8 +99,9 @@ int AD7173Class::read_register(byte reg, byte *value, int read_len) {
 	if (reg < 0x00 || reg > 0x3F) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
+			Serial.print("read_register: register out of range [ ");
 			this->print_byte(reg);
-			Serial.println("read_register: register out of range");
+			Serial.println(" ]");
 		}
 		/* return error code */
 		return 1;
@@ -119,7 +122,7 @@ int AD7173Class::read_register(byte reg, byte *value, int read_len) {
 		}
 		Serial.print("] from reg [ ");
 		this->print_byte(reg);
-		Serial.println("]");
+		Serial.println(" ]");
 	}
 	/* TODO: find out correct delay */
 	delay(READ_WRITE_DELAY);
@@ -132,8 +135,9 @@ int AD7173Class::enable_channel(byte channel, bool enable, byte ain1, byte ain2)
 	if (channel < CH0 || channel > CH15) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
+			Serial.print("enable_channel: channel out of range [ ");
 			this->print_byte(channel);
-			Serial.println("enable_channel: channel out of range");
+			Serial.println(" ]");
 		}
 		/* return error code */
 		return 1;
@@ -157,7 +161,7 @@ int AD7173Class::enable_channel(byte channel, bool enable, byte ain1, byte ain2)
 		value[0] |= (ain1 >> 6);
 		value[1] |= (ain1 << 5);
 		/* when unipolar coding */
-		if (this->m_adc_setup_coding_output == UNIPOLAR) {
+		if (this->m_adc_coding_mode == UNIPOLAR) {
 			/* set second analog input to same as first */
 			value[1] |= ain1;
 		/* when not unipolar coding and analog input 2 was given */
@@ -166,14 +170,14 @@ int AD7173Class::enable_channel(byte channel, bool enable, byte ain1, byte ain2)
 			value[1] |= ain2;
 		}
 	/* when no analog inputs were given and in BIPOLAR mode */
-	} else if (this->m_adc_setup_coding_output == BIPOLAR) {
-		/* set automatic values for BIPOLAR output */
+	} else if (this->m_adc_coding_mode == BIPOLAR) {
+		/* set automatic values for BIPOLAR mode */
 		value[0] |= (ain >> 6);
 		value[1] |= (ain << 5);
 		value[1] |= (ain + 1);
 	/* otherwise */
 	} else {
-		/* set automatic value for UNIPOLAR output */
+		/* set automatic value for UNIPOLAR mode */
 		value[0] |= ((channel & 0x0F) >> 6);
 		value[1] |= ((channel & 0x0F) << 5);
 		value[1] |= (channel & 0x0F);
@@ -221,7 +225,7 @@ int AD7173Class::enable_filter_enhancement(byte filter, bool enable, byte config
 	this->write_register(filter, value, 2);
 }
 
-int AD7173Class::set_setup_coding(byte setup, int coding_mode) {
+int AD7173Class::set_setup_coding(byte setup, coding_mode_t coding_mode) {
 	/* when setup out of range */
 	if (setup < SETUP0 || setup > SETUP7) {
 		/* when debug enabled */
@@ -242,7 +246,7 @@ int AD7173Class::set_setup_coding(byte setup, int coding_mode) {
 	/* write the new register value */
 	this->write_register(setup, value, 2);
 	/* set to new coding mode */
-	this->m_adc_setup_coding_output = coding_mode;
+	this->m_adc_coding_mode = coding_mode;
 	/* return error code */
 	return 0;
 }
@@ -286,7 +290,7 @@ int AD7173Class::set_clock_mode(clock_mode_t clock_mode) {
 	return 0;
 }
 
-int AD7173Class::set_data_mode(int data_mode) {
+int AD7173Class::set_data_mode(data_mode_t data_mode) {
 	/* when data mode out of range */
 	if (data_mode < 0 || data_mode > 2) {
 		/* when debug enabled */
