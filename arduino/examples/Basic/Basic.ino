@@ -32,7 +32,7 @@ void setup() {
 	/* set the ADC setup coding to BIPLOAR output*/
 	/* SETUP0 - SETUP7 */
 	/* BIPOLAR, UNIPOLAR */
-	AD7173.set_setup_coding(SETUP0, BIPOLAR);
+	AD7173.set_setup_coding_mode(SETUP0, BIPOLAR);
 
 	/* set the ADC data mode */
 	/* CONTINUOUS_READ_MODE, SINGLE_CONVERSION_MODE, CONTINUOUS_CONVERSION_MODE */

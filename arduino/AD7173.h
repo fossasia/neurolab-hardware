@@ -51,10 +51,10 @@ AIN1/REF2+ --| 3.                                                   28. |-- AIN6
 #include "SPI.h"
 
 /* enable or disable debug */
-#define DEBUG_ENABLED 1
+#define DEBUG_ENABLED 0
 
 /* delay for reading and writing registers  */
-#define READ_WRITE_DELAY 1
+#define TRANSFER_DELAY 1
 
 /* ADC channel registers */
 #define CH0 0x10
@@ -263,7 +263,7 @@ public:
 	@return int - error code
 	==================================
 	*/
-	int set_setup_coding(byte, coding_mode_t);
+	int set_setup_coding_mode(byte, coding_mode_t);
 
 	/*
 	================================

@@ -89,7 +89,7 @@ int AD7173Class::write_register(byte reg, byte *value, int write_len) {
 		Serial.println("]");
 	}
 	/* TODO: find out correct delay */
-	delay(READ_WRITE_DELAY);
+	delay(TRANSFER_DELAY);
 	/* return error code */
 	return 0;
 }
@@ -125,7 +125,7 @@ int AD7173Class::read_register(byte reg, byte *value, int read_len) {
 		Serial.println(" ]");
 	}
 	/* TODO: find out correct delay */
-	delay(READ_WRITE_DELAY);
+	delay(TRANSFER_DELAY);
 	/* return error code */
 	return 0;
 }
@@ -225,13 +225,13 @@ int AD7173Class::enable_filter_enhancement(byte filter, bool enable, byte config
 	this->write_register(filter, value, 2);
 }
 
-int AD7173Class::set_setup_coding(byte setup, coding_mode_t coding_mode) {
+int AD7173Class::set_setup_coding_mode(byte setup, coding_mode_t coding_mode) {
 	/* when setup out of range */
 	if (setup < SETUP0 || setup > SETUP7) {
 		/* when debug enabled */
 		if (DEBUG_ENABLED) {
 			this->print_byte(setup);
-			Serial.println("set_setup_coding: setup out of range");
+			Serial.println("set_setup_coding_mode: setup out of range");
 		}
 		/* return error code */
 		return 1;
