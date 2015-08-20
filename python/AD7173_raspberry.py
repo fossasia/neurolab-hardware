@@ -131,7 +131,7 @@ class ADC7173:
     CONTINUOUS_CONVERSION_MODE = 2
 
     # TODO: setup coding is different 4 each setup
-    adc_setup_coding_output = BIPOLAR
+    adc_coding_mode = BIPOLAR
     adc_data_mode = CONTINUOUS_CONVERSION_MODE
 
     # SPI object
@@ -139,143 +139,157 @@ class ADC7173:
 
     def init(self):
         self.spi = spidev.SpiDev() # create SPI object
-        self.spi.mode = 3 # use SPI mode 3, sets Clock Polarity and Phase [CPOL|CPHA] configuration
         self.spi.open(0, 0) # open SPI port 0, device (CS) 0
+        self.spi.mode = 3 # use SPI mode 3, sets Clock Polarity and Phase [CPOL|CPHA] configuration
+
+        # resync the ADC
+        self.resync()
+        # read the ADC device ID */
+        value = self.read_register(self.ID_REG, 2);
+        # check if the id matches 0x30DX, where X is don't care
+        value[1] &= 0xF0
+        valid_id = value[0] == 0x30 and value[1] == 0xD0
+
+        # when debug enabled
+        if self.DEBUG_ENABLED:
+            if valid_id:
+                print "init: ADC device ID is valid :)"
+            else:
+                print "init: ADC device ID is invalid :(", map(hex, value)
+
+        # return validity of ADC device ID
+        return valid_id
 
     # returns ADC to default state
     def reset(self):
         # sending at least 64 high bits
-        for i in range(8):
-            self.spi.xfer2([0xFF])
-        time.sleep(TRANSFER_DELAY)
+        self.spi.xfer2([0xFF] * 8)
 
     # resyncs the ADC communication
     def resync(self):
         # toggle the chip select
-        self.spi.cshigh = 1
-        time.sleep(TRANSFER_DELAY)
-        self.spi.cshigh = 0
+        self.spi.cshigh = True
+        time.sleep(self.TRANSFER_DELAY)
+        self.spi.cshigh = False
 
     # reads a register from the ADC
     def write_register(self, reg, value):
         # when desired register is invalid
         if reg < 0x00 or reg > 0x3F:
             # when debug enabled
-            if self.DEBUG_ENABLED: print "write_register: register out of range", reg
+            if self.DEBUG_ENABLED: print "write_register: register out of range", hex(reg)
             return
 
         # send communication register id 0x00
-        self.spi.xfer2(0x00)
-        # send write command to the desired register 0x00 - 0xFF
-        self.spi.xfer2(0x00 | reg)
-        # write the desired amount of bytes
-        self.spi.xfer2(value)
+        # send desired register 0x00 - 0xFF
+        # write the desired value
+        self.spi.xfer2([0x00, (0x00 | reg)] + value)
         # when debug enabled
-        if self.DEBUG_ENABLED: print "write_register: wrote", value, "to reg", reg
-        time.sleep(TRANSFER_DELAY)
+        if self.DEBUG_ENABLED: print "write_register: wrote", map(hex, value), "to reg", hex(reg)
+        time.sleep(self.TRANSFER_DELAY)
 
     def read_register(self, reg, read_len):
         # when desired register is invalid
         if reg < 0x00 or reg > 0x3F:
             # when debug enabled
-            if self.DEBUG_ENABLED: print "read_register: register out of range", reg
+            if self.DEBUG_ENABLED: print "read_register: register out of range", hex(reg)
             return []
 
         # register value
         value = []
         # send communication register id 0x00
-        self.spi.xfer2(0x00)
-        # send read command to the desired register 0x00 - 0xFF
-        self.spi.xfer2(0x40 | reg)
-        # read the desired amount of bytes
-        value = self.spi.xfer2([0x00] * read_len)
+        # send desired register 0x00 - 0xFF
+        # read the desired value
+        value = self.spi.xfer2([0x00, (0x40 | reg)] + ([0x00] * read_len))
+        # ignore first 2 bytes
+        value = [value[2], value[3]]
         # when debug enabled
-        if self.DEBUG_ENABLED: print "read_register: read", value, "from reg", reg
+        if self.DEBUG_ENABLED: print "read_register: read", map(hex, value), "from reg", hex(reg)
         time.sleep(self.TRANSFER_DELAY)
         # return the register value
         return value
 
     def enable_channel(self, channel, enable, ain1, ain2):
         # when channel out of range
-        if channel < CH0 or channel > CH15:
+        if channel < self.CH0 or channel > self.CH15:
             # when debug enabled
-            if self.DEBUG_ENABLED: print "enable_channel: channel out of range", channel
+            if self.DEBUG_ENABLED: print "enable_channel: channel out of range", hex(channel)
             return
 
         # read desired channel configuration
-        conf = self.read_register(channel, 2)
+        value = self.read_register(channel, 2)
         # clear the enable bit
-        conf[0] = conf[0] & ~(1 << 7)
+        value[0] = value[0] & ~(1 << 7)
         # enable or disable this channel
-        conf[0] = conf[0] | (enable << 7)
+        value[0] = value[0] | (enable << 7)
         # define the default analog input
         ain = ((channel & 0x0F) << 1)
         # set to default state
-        conf[0] = conf[0] & 0xFC
-        conf[1] = 0x00
+        value[0] = value[0] & 0xFC
+        value[1] = 0x00
 
         # when analog input 1 was given
-        if ain1 != NULL:
+        if ain1 != None:
             # set first analog input
-            conf[0] = conf[0] | (ain1 >> 6)
-            conf[1] = conf[1] | (ain1 << 5)
+            value[0] = value[0] | (ain1 >> 6)
+            value[1] = value[1] | (ain1 << 5)
             # when unipolar coding
-            if self.adc_setup_coding_output == UNIPOLAR:
+            if self.adc_coding_mode == self.UNIPOLAR:
                 # set second analog input to same as first
-                conf[1] = conf[1] | ain1
+                value[1] = value[1] | ain1
             # when not unipolar coding and analog input 2 was given
-            elif ain2 != NULL:
+            elif ain2 != None:
                 # set second analog input
-                conf[1] = conf[1] | ain2
+                value[1] = value[1] | ain2
         # when no analog inputs were given and in BIPOLAR mode
-        elif self.adc_setup_coding_output == BIPOLAR:
+        elif self.adc_coding_mode == self.BIPOLAR:
             # set automatic values for BIPOLAR output
-            conf[0] = conf[0] | (ain >> 6)
-            conf[1] = conf[1] | (ain << 5)
-            conf[1] = conf[1] | (ain + 1)
+            value[0] = value[0] | (ain >> 6)
+            value[1] = value[1] | (ain << 5)
+            value[1] = value[1] | (ain + 1)
         # otherwise
         else:
             # set automatic value for UNIPOLAR output
-            conf[0] = conf[0] | ((channel & 0x0F) >> 6)
-            conf[1] = conf[1] | ((channel & 0x0F) << 5)
-            conf[1] = conf[1] | (channel & 0x0F)
+            value[0] = value[0] | ((channel & 0x0F) >> 6)
+            value[1] = value[1] | ((channel & 0x0F) << 5)
+            value[1] = value[1] | (channel & 0x0F)
 
         # update desired channel configuration
-        self.write_register(channel, conf)
+        self.write_register(channel, [value[0], value[1]])
 
     def set_filter_speed(self, filter, data_speed):
         # when filter out of range
-        if filter < FILTER0 or filter > FILTER7:
+        if filter < self.FILTER0 or filter > self.FILTER7:
             # when debug enabled
-            if self.DEBUG_ENABLED: print "set_filter_speed: filter out of range", filter
+            if self.DEBUG_ENABLED: print "set_filter_speed: filter out of range", hex(filter)
             return
 
         # get the current filter configuration
-        conf = self.read_register(filter, value)
+        value = self.read_register(filter, 2)
         # set the speed to default
-        conf[1] = conf[1] & 0xE0
+        value[1] = value[1] & 0xE0
         # set the desired speed
-        conf[1] = conf[1] | data_speed
+        value[1] = value[1] | data_speed
         # set the new filter configuration
-        self.write_register(filter, conf)
+        self.write_register(filter, [value[0], value[1]])
 
-    def set_setup_coding(self, setup, coding_mode):
+    def set_setup_coding_mode(self, setup, coding_mode):
         # when setup out of range
-        if setup < SETUP0 or setup > SETUP7:
+        if setup < self.SETUP0 or setup > self.SETUP7:
             # when debug enabled
-            if self.DEBUG_ENABLED: print "set_setup_coding: setup out of range", setup
+            if self.DEBUG_ENABLED: print "set_setup_coding_mode: setup out of range", hex(setup)
             return
 
         # get the current setup configuration
-        conf = self.read_register(setup, 2)
+        value = self.read_register(setup, 2)
         # set the coding mode to default
-        conf[0] = conf[0] & 0x7F
+        value[0] = value[0] & 0x7F
         # set the desired coding
-        conf[0] = conf[0] | (coding_mode << 7)
+        value[0] = value[0] | (coding_mode << 7)
         # write the new setup configuration
-        self.write_register(setup, conf)
+        self.write_register(setup, [value[0], value[1]])
         # remember the new coding mode
-        self.adc_setup_coding_output = coding_mode
+        self.adc_coding_mode = coding_mode
 
     def set_data_mode(self, data_mode):
         # when data mode out of range
@@ -285,51 +299,55 @@ class ADC7173:
             return
 
         # get current register values
-        if_mode_value = self.read_register(IFMODE_REG, 2)
-        adc_mode_value = self.read_register(ADCMODE_REG, 2)
+        if_mode_value = self.read_register(self.IFMODE_REG, 2)
+        adc_mode_value = self.read_register(self.ADCMODE_REG, 2)
         # set to default read mode
         adc_mode_value[1] = adc_mode_value[1] & 0x8F
 
         # when continuous read mode, the data register can be read directly when DATA_READY
-        if data_mode == CONTINUOUS_READ_MODE:
+        if data_mode == self.CONTINUOUS_READ_MODE:
             # set the ADC to continuous read mode
             if_mode_value[1] = if_mode_value[1] | 0x80
         # when single conversion mode, the ADC conversion has to be triggered manually
-        elif data_mode == SINGLE_CONVERSION_MODE:
+        elif data_mode == self.SINGLE_CONVERSION_MODE:
             # diable continuous read mode
             if_mode_value[1] = if_mode_value[1] & 0xF7
             # set the ADC to single conversion mode
             adc_mode_value[1] = adc_mode_value[1] | 0x10
         # when continuous conversion mode, the communication register has to be notified for a ADC read
-        elif data_mode == CONTINUOUS_CONVERSION_MODE:
+        elif data_mode == self.CONTINUOUS_CONVERSION_MODE:
             # diable continuous read mode
             if_mode_value[1] = if_mode_value[1] & 0xF7
 
         # remember the new data mode
         self.adc_data_mode = data_mode
         # write the desired register value
-        self.write_register(ADCMODE_REG, adc_mode_value)
-        self.write_register(IFMODE_REG, if_mode_value)
+        self.write_register(self.ADCMODE_REG, adc_mode_value)
+        self.write_register(self.IFMODE_REG, if_mode_value)
 
     def get_data(self):
+        value = None
         # when not in continuous read mode, send the read command
-        if self.adc_data_mode != CONTINUOUS_READ_MODE:
+        if self.adc_data_mode != self.CONTINUOUS_READ_MODE:
             # send communication register id 0x00
-            self.spi.xfer2(0x00)
             # send read command 0x40 to the data register 0x04
-            self.spi.xfer2(0x40 | DATA_REG)
+            # get the ADC conversion result (24 bits)
+            value = self.spi.xfer2([0x00, (0x40 | self.DATA_REG), 0x00, 0x00, 0x00])
+            # ignore first 2 bytes
+            value = [value[2], value[3], value[4]]
+        else:
+            # get the ADC conversion result (24 bits)
+            value = self.spi.xfer2([0x00] * 3)
 
-        # get the ADC conversion result (24 bits)
-        value = self.spi.xfer2([0x00] * 3)
         # when debug enabled
-        if self.DEBUG_ENABLED: print "get_data: read", value, "from reg 0x04"
+        if self.DEBUG_ENABLED: print "get_data: read", map(hex, value), "from reg 0x04"
         # return the conversion result
         return value
 
     def get_current_data_channel(self):
         # read ADC status register
-        value = self.read_register(STATUS_REG, 1)
-        # return channel register value 
+        value = self.read_register(self.STATUS_REG, 1)
+        # return channel register value
         return value & 0x0F
 
 # start mingling with the SPI
@@ -342,22 +360,25 @@ adc.reset()
 # enable channel 0 and channel 1 and connect each to 2 analog inputs for bipolar input
 # CH0 - CH15
 # AIN0 - AIN16, REF_POS, REF_NEG, TEMP_SENSOR_POS, TEMP_SENSOR_NEG
-adc.enable_channel(CH0, true, AIN0, AIN1)
-adc.enable_channel(CH1, true, AIN2, AIN3)
+adc.enable_channel(ADC7173.CH0, True, ADC7173.AIN0, ADC7173.AIN1)
+adc.enable_channel(ADC7173.CH1, True, ADC7173.AIN2, ADC7173.AIN3)
 # set the ADC filter samplingrate to 1007 Hz*/
 # FILTER0 - FILTER7
 # SPS_1, SPS_2, SPS_5, SPS_10, SPS_16, SPS_20, SPS_50, SPS_60, SPS_100, SPS_200
 # SPS_381, SPS_504, SPS_1007, SPS_2597, SPS_5208, SPS_10417, SPS_15625, SPS_31250
-adc.set_filter_speed(FILTER0, SPS_1007)
+adc.set_filter_speed(ADC7173.FILTER0, ADC7173.SPS_1007)
 # set the ADC setup coding to BIPLOAR output*/
 # SETUP0 - SETUP7
 # BIPOLAR, UNIPOLAR
-adc.set_setup_coding(SETUP0, BIPOLAR)
+adc.set_setup_coding_mode(ADC7173.SETUP0, ADC7173.BIPOLAR)
 # set the ADC data mode
 # CONTINUOUS_READ_MODE, SINGLE_CONVERSION_MODE, CONTINUOUS_CONVERSION_MODE
-adc.set_data_mode(CONTINUOUS_CONVERSION_MODE)
+adc.set_data_mode(ADC7173.CONTINUOUS_CONVERSION_MODE)
 # wait for the ADC
 time.sleep(0.01)
 # keep polling CH0 and CH1 values
+channel1 = None
+channel2 = None
+counter = 0
 while True:
     print adc.get_data()
