@@ -1,4 +1,5 @@
 import time
+import serial
 # http://tightdev.net/SpiDev_Doc.pdf
 import spidev
 
@@ -376,9 +377,37 @@ adc.set_setup_coding_mode(ADC7173.SETUP0, ADC7173.BIPOLAR)
 adc.set_data_mode(ADC7173.CONTINUOUS_CONVERSION_MODE)
 # wait for the ADC
 time.sleep(0.01)
-# keep polling CH0 and CH1 values
+
+# serial connection
+bluetooth = serial.Serial("/dev/ttyAMA0", 230400)
+
+# channel values
 channel1 = None
 channel2 = None
-counter = 0
+
+# keep polling CH0 and CH1 values
 while True:
-    print adc.get_data()
+    data = adc.get_data()
+
+    # capture first channel
+    if channel1 == None:
+        channel1 = data
+    # capture second channel
+    else:
+        channel2 = data
+
+        # assemble data
+        bt_data = [channel1[0], 
+            (channel1[1] & 0xF0) | 0x09, 
+            ((channel1[1] << 4) & 0xFF) | ((channel1[2] >> 4) & 0x0F),
+            ((channel1[2] << 4) & 0xF0) | 0x09,
+            channel2[0],
+            (channel2[1] & 0xF0) | 0x09,
+            ((channel2[1] << 4) & 0xFF) | ((channel2[2] >> 4) & 0x0F),
+            ((channel2[2] << 4) & 0xF0) | 0x0D]
+        # send data
+        bluetooth.write(''.join(map(chr, bt_data)))
+
+        # reset data
+        channel1 = None
+        channel2 = None
