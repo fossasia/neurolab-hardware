@@ -21,9 +21,4 @@
 *.app
 
 # eagle stuff
-*.b#*
-*.s#*
-*.G*
-*.gpi
-*.dri
-*.TXT
+rm.sh
