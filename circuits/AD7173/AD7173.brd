@@ -143,14 +143,14 @@
 <wire x1="21.16" y1="31.174" x2="0.2" y2="31.174" width="0" layer="20"/>
 <wire x1="0.2" y1="31.174" x2="0.2" y2="0.01" width="0" layer="20"/>
 <text x="5.2" y="20.5" size="0.4064" layer="121" font="vector" ratio="10" rot="R90">C1</text>
-<text x="6.211803125" y="29.1289875" size="0.4064" layer="121" font="vector" ratio="10" rot="R180">C2</text>
+<text x="6.311803125" y="29.1289875" size="0.4064" layer="121" font="vector" ratio="10" rot="R180">C2</text>
 <text x="10.9" y="8" size="0.4064" layer="121" font="vector" ratio="10">C3</text>
 <text x="9.8" y="9.3" size="0.4064" layer="121" font="vector" ratio="10" rot="R180">C4</text>
 <text x="8.6599875" y="27.45500625" size="0.4064" layer="121" font="vector" ratio="10">IC1</text>
 <text x="7.1" y="10.1" size="0.4064" layer="121" font="vector" ratio="10" rot="R90">LED1</text>
 <text x="5.5" y="9.9" size="0.4064" layer="121" font="vector" ratio="10" rot="R180">R1</text>
 <text x="11.1" y="18.4" size="0.4064" layer="121" font="vector" ratio="10" rot="R270">R2</text>
-<text x="14.5481875" y="19.131803125" size="0.4064" layer="121" font="vector" ratio="10" rot="R270">R3</text>
+<text x="14.5481875" y="19.431803125" size="0.4064" layer="121" font="vector" ratio="10" rot="R270">R3</text>
 <text x="3.4" y="26.5" size="0.6096" layer="121" font="vector" ratio="10">AIN3</text>
 <text x="3.4" y="24.2" size="0.6096" layer="121" font="vector" ratio="10">AIN2</text>
 <text x="3.4" y="21.9" size="0.6096" layer="121" font="vector" ratio="10">AIN1</text>
@@ -173,13 +173,13 @@
 <text x="18.1" y="24.8" size="0.6096" layer="121" font="vector" ratio="10" rot="R180">AIN13</text>
 <text x="18.1" y="27.3" size="0.6096" layer="121" font="vector" ratio="10" rot="R180">AIN14</text>
 <text x="18.1" y="29.8" size="0.6096" layer="121" font="vector" ratio="10" rot="R180">AIN15</text>
-<text x="12.5" y="17.7" size="0.4064" layer="121" font="vector" ratio="10">C6</text>
+<text x="12.5" y="17.9" size="0.4064" layer="121" font="vector" ratio="10">C6</text>
 <text x="14.6" y="15.7" size="0.4064" layer="121" font="vector" ratio="10">C7</text>
 <text x="10.6" y="16.2" size="0.4064" layer="121" font="vector" ratio="10" rot="R270">C8</text>
 <text x="10.690196875" y="13.281809375" size="0.4064" layer="121" font="vector" ratio="10" rot="R270">R4</text>
 <text x="7.1" y="12.3" size="0.4064" layer="121" font="vector" ratio="10" rot="R90">IC3</text>
 <text x="16.4" y="12.6" size="0.4064" layer="121" font="vector" ratio="10" rot="R90">IC2</text>
-<text x="5.48" y="27.5" size="0.4064" layer="121" font="vector" ratio="10">C5</text>
+<text x="5.58" y="27.5" size="0.4064" layer="121" font="vector" ratio="10">C5</text>
 <text x="3.37" y="1.28" size="0.6096" layer="121" font="vector" ratio="10">GND</text>
 <text x="3.3" y="30.2" size="0.6096" layer="121" font="vector" ratio="10">ADC7173 BREAKOUT BOARD V0.3</text>
 <text x="7.1" y="18.4" size="0.4064" layer="121" font="vector" ratio="10">Q1</text>
@@ -2080,11 +2080,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="LED1" library="led" package="CHIP-LED0603" value="" x="6.2" y="11.2"/>
 <element name="C1" library="rcl" package="C0402" value="0.1uF" x="4.1" y="20.8" rot="R90"/>
 <element name="R2" library="rcl" package="R0402" value="10k" x="10.42" y="17.23" rot="R270"/>
-<element name="R3" library="rcl" package="R0402" value="10k" x="13.88" y="18.7" rot="R270"/>
-<element name="C2" library="rcl" package="C0402" value="0.1uF" x="4.2" y="28.91"/>
+<element name="R3" library="rcl" package="R0402" value="10k" x="13.88" y="19.1" rot="R270"/>
+<element name="C2" library="rcl" package="C0402" value="0.1uF" x="4.4" y="28.9"/>
 <element name="C3" library="rcl" package="C0402" value="4.7uF" x="11.3" y="9.1"/>
-<element name="C5" library="rcl" package="C0402" value="1uF" x="4.22" y="27.72"/>
-<element name="C6" library="rcl" package="C0402" value="0.1uF" x="13.37" y="16.97"/>
+<element name="C5" library="rcl" package="C0402" value="1uF" x="4.4" y="27.7"/>
+<element name="C6" library="rcl" package="C0402" value="0.1uF" x="13.37" y="17.17"/>
 <element name="C7" library="rcl" package="C0402" value="1uF" x="13.37" y="15.88"/>
 <element name="C8" library="rcl" package="C0402" value="0.1uF" x="11.62" y="16.43" rot="R270"/>
 <element name="R4" library="rcl" package="R0402" value="10k" x="11.62" y="12.83" rot="R270"/>
@@ -2179,11 +2179,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="LED2" pad="C"/>
 <via x="12.5" y="6.7" extent="1-16" drill="0.31"/>
 <via x="15.5" y="13.5" extent="1-16" drill="0.31"/>
-<wire x1="14.37" y1="18" x2="13.88" y2="18.05" width="0.254" layer="1"/>
 <contactref element="C16" pad="2"/>
 <via x="15.5" y="5.1" extent="1-16" drill="0.31"/>
-<wire x1="14.02" y1="16.97" x2="13.88" y2="17.11" width="0.254" layer="1"/>
-<wire x1="13.88" y1="17.11" x2="13.88" y2="18.05" width="0.254" layer="1"/>
+<wire x1="14.02" y1="17.17" x2="13.88" y2="17.11" width="0.254" layer="1"/>
+<wire x1="13.88" y1="17.11" x2="13.88" y2="18.45" width="0.254" layer="1"/>
 <contactref element="JP4" pad="3"/>
 <via x="9.7" y="13" extent="1-16" drill="0.31"/>
 </signal>
@@ -2210,7 +2209,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="IC1" pad="9"/>
 <contactref element="R1" pad="2"/>
 <wire x1="5.92" y1="21.78" x2="5.92" y2="21.28" width="0.254" layer="1"/>
-<wire x1="5.92" y1="21.28" x2="5.87" y2="20.58" width="0.254" layer="1"/>
 <wire x1="5.87" y1="20.58" x2="5.7" y2="20.4" width="0.254" layer="1"/>
 <wire x1="5.7" y1="20.4" x2="5.35" y2="20.05" width="0.254" layer="1"/>
 <wire x1="5.35" y1="20.05" x2="3.8" y2="18.5" width="0.254" layer="1"/>
@@ -2231,6 +2229,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="4.2" y1="20.05" x2="5.35" y2="20.05" width="0.254" layer="1"/>
 <wire x1="14.22" y1="12.23" x2="14.324" y2="12.126" width="0.254" layer="1"/>
 <wire x1="14.324" y1="12.126" x2="14.324" y2="10.387" width="0.254" layer="1"/>
+<wire x1="5.92" y1="21.28" x2="5.87" y2="21.28" width="0.254" layer="1"/>
+<wire x1="5.87" y1="21.28" x2="5.87" y2="20.58" width="0.254" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="IC1" pad="17"/>
@@ -2289,7 +2289,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <via x="13.9" y="20.8" extent="1-16" drill="0.31"/>
 <wire x1="13.9" y1="20.8" x2="14.42" y2="21.32" width="0.254" layer="16"/>
 <wire x1="14.42" y1="21.32" x2="14.42" y2="29.38" width="0.254" layer="16"/>
-<wire x1="13.88" y1="19.35" x2="13.9" y2="19.47" width="0.254" layer="1"/>
+<wire x1="13.88" y1="19.75" x2="13.9" y2="19.47" width="0.254" layer="1"/>
 <wire x1="13.9" y1="19.47" x2="13.9" y2="20.8" width="0.254" layer="1"/>
 </signal>
 <signal name="N$4">
@@ -2543,17 +2543,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="5.9" y1="24.26" x2="5.9" y2="26.8" width="0.254" layer="16"/>
 <via x="5.9" y="26.8" extent="1-16" drill="0.31"/>
 <wire x1="5.9" y1="26.8" x2="4.98" y2="27.72" width="0.254" layer="1"/>
-<wire x1="4.98" y1="27.72" x2="4.87" y2="27.72" width="0.254" layer="1"/>
-<wire x1="4.87" y1="27.72" x2="4.85" y2="27.74" width="0.254" layer="1"/>
-<wire x1="4.85" y1="27.74" x2="4.85" y2="28.91" width="0.254" layer="1"/>
+<wire x1="4.98" y1="27.72" x2="5.05" y2="27.7" width="0.254" layer="1"/>
+<wire x1="5.05" y1="27.7" x2="5.05" y2="28.9" width="0.254" layer="1"/>
 </signal>
 <signal name="N$38">
 <contactref element="C6" pad="1"/>
 <contactref element="C7" pad="1"/>
 <contactref element="IC1" pad="22"/>
 <wire x1="13" y1="20.8" x2="12.72" y2="20.52" width="0.254" layer="1"/>
-<wire x1="12.72" y1="20.52" x2="12.72" y2="16.97" width="0.254" layer="1"/>
-<wire x1="12.72" y1="16.97" x2="12.72" y2="15.88" width="0.254" layer="1"/>
+<wire x1="12.72" y1="20.52" x2="12.72" y2="17.17" width="0.254" layer="1"/>
+<wire x1="12.72" y1="17.17" x2="12.72" y2="15.88" width="0.254" layer="1"/>
 <wire x1="12.12" y1="21.78" x2="12.82" y2="21.78" width="0.254" layer="1"/>
 <wire x1="12.82" y1="21.78" x2="13" y2="21.6" width="0.254" layer="1"/>
 <wire x1="13" y1="21.6" x2="13" y2="20.8" width="0.254" layer="1"/>
