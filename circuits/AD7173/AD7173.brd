@@ -181,7 +181,7 @@
 <text x="16.4" y="12.6" size="0.4064" layer="121" font="vector" ratio="10" rot="R90">IC2</text>
 <text x="5.58" y="27.5" size="0.4064" layer="121" font="vector" ratio="10">C5</text>
 <text x="3.37" y="1.28" size="0.6096" layer="121" font="vector" ratio="10">GND</text>
-<text x="3.3" y="30.2" size="0.6096" layer="121" font="vector" ratio="10">ADC7173 BREAKOUT BOARD V0.3</text>
+<text x="3.6" y="30.3" size="0.6096" layer="121" font="vector" ratio="10">AD7173 BREAKOUT BOARD V0.3</text>
 <text x="7.1" y="18.4" size="0.4064" layer="121" font="vector" ratio="10">Q1</text>
 <text x="6.7" y="14.5" size="0.4064" layer="121" font="vector" ratio="10" rot="R270">C9</text>
 <text x="10.1" y="16.2" size="0.4064" layer="121" font="vector" ratio="10" rot="R270">C10</text>
