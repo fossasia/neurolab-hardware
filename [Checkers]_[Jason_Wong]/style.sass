@@ -1,0 +1,180 @@
+//Variables
+$red: #B93848
+$purple: #3A3042
+$blue: #16A8C7
+$dark: #232621
+$light: #F1F1FF
+$fontColor: #333333
+$shadow: 1px 1px 3px $dark
+
+@mixin gamePiece($color, $factor)
+  width: 8vmin * $factor
+  height: 8vmin * $factor
+  background: 
+    color: $color
+    size: 65%
+    repeat: no-repeat
+    position: center
+  border-radius: 6vmin
+  display: inline-block
+  box-sizing: border-box
+  transition: all 0.2s linear
+  //king image from flaticon.com
+
+html, body
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  margin: 0
+  padding: 0
+  color: $fontColor
+  font-family: 'Lato', Calibri, sans-serif
+  font-size: 16px
+  background:
+    color: $purple
+  
+  h2
+    font-size: 1.3em
+    
+  h3
+    font-size: 1.1em
+    
+  a
+    text-decoration: none
+    color: $fontColor
+    font-weight: 700
+    
+    &:hover
+      text-decoration: underline
+    
+  hr
+    border: 0
+    height: 1px
+    background:
+      color: #333
+      image: linear-gradient(to right, $fontColor, #ccc)
+      
+  .clearfix
+    clear: both
+
+div.column
+  position: relative
+  float: left
+  overflow: auto
+  height: 100%
+  min-height: 100%
+  width: 50%
+  
+@media screen and (max-width: 1000px)
+  div.column
+    width: 100% !important
+    overflow: hidden
+    height: auto
+        
+div.info 
+  width: 70%
+  margin: 15vmin auto 0
+  box-sizing: border-box
+  padding: 20px 30px
+  background-color: $light
+  color: $purple
+  border-radius: 3px
+  box-shadow: $shadow
+  
+div.stats
+  @extend div.info
+  margin: 50px auto !important
+  
+  @mixin div-style($bgColor)
+    text-align: center
+    display: inline-block
+    width: 50%
+    float: left
+    background-color: $bgColor  
+    box-sizing: border-box
+    padding: 0 15px 20px
+  
+  .wrapper
+    display: flex /*for equal height columns*/
+  
+  #player1
+    @include div-style($red)
+    border-top-left-radius: 3px
+    color: $dark
+    
+    .capturedPiece
+      @include gamePiece($dark, 0.3)
+      margin: 5px
+  
+  #player2
+    @include div-style($dark)
+    border-top-right-radius: 3px
+    color: $red
+    
+    .capturedPiece
+      @include gamePiece($red, 0.3)
+      margin: 5px
+  
+  div.turn
+    height: 10px
+    width: 100%
+    background: linear-gradient(to right, #BEEE62 50%, transparent 50%)
+    border-radius: 0 0 3px 3px
+      
+  button#cleargame
+    display: block
+    border: 0
+    color: $light
+    border-radius: 5px
+    cursor: pointer
+    margin: 20px auto 10px
+    padding: 10px
+    background-color: $blue
+    box-shadow: $shadow
+    transition: background-color 0.15s linear
+    &:hover
+      background-color: darken($blue, 20%)
+    
+div#board
+  position: absolute
+  top: calc(50% - 40vmin)
+  left: calc(50% - 40vmin)
+  width: 80vmin
+  height: 80vmin
+  border-radius: 5px
+  box-shadow: $shadow
+  background-color: $red
+  overflow: hidden //to maintain rounded corners
+  
+  .tile
+    width: 10vmin
+    height: 10vmin
+    position: absolute
+    background-color: $dark
+
+  .player1pieces
+    .piece
+      position: absolute
+      @include gamePiece(lighten($red, 30%), 1)
+      margin-top: 1vmin
+      margin-left: 1vmin
+      cursor: pointer
+      border: 1vmin solid $red
+
+      &.selected
+        box-shadow: 0 0 10px 5px $blue
+        
+  .player2pieces
+    .piece
+      position: absolute
+      @include gamePiece($light, 1)
+      margin-top: 1vmin
+      margin-left: 1vmin
+      cursor: pointer
+      border: 1vmin solid darken($light, 20%)
+
+      &.selected
+        box-shadow: 0 0 10px 5px $blue
+      

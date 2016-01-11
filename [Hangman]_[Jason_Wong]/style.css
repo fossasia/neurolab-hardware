@@ -1,0 +1,175 @@
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #404040;
+  font-family: "Open Sans", Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #333333;
+  overflow: hidden; }
+
+a {
+  text-decoration: none;
+  color: #93648D;
+  font-weight: 700; }
+
+h1 {
+  background-color: #404040;
+  color: #ffffff;
+  border-radius: 2px; }
+
+div.introOverlay {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #F16745;
+  transition: top 0.5s ease-in;
+  z-index: 100; }
+
+div.card {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  padding-top: 20px;
+  border-radius: 2px;
+  margin-top: -125px;
+  margin-left: -250px;
+  background-color: #76d1e2;
+  box-shadow: 2px 2px 8px #404040; }
+
+div.playCircle {
+  height: 75px;
+  width: 75px;
+  background: #7BC8A4;
+  margin: 20px auto;
+  padding-top: 15px;
+  padding-left: 21px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px #404040;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s linear; }
+  div.playCircle div.triangle {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 40px solid #93648D;
+    border-bottom: 20px solid transparent; }
+  div.playCircle:hover {
+    opacity: 1; }
+
+/*Main Application */
+div.content {
+  color: #ffffff; }
+
+select#chooseCategory, button#activateNewWords {
+  padding: 10px;
+  background-color: #FFC65D;
+  color: #333333;
+  text-align: center;
+  border-radius: 3px;
+  border-color: transparent;
+  font-size: 1.5em;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s linear; }
+
+button#activateNewWords:hover {
+  background-color: #f69f00; }
+
+div.lettersForGuessing {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto; }
+  div.lettersForGuessing span.letter {
+    color: #FFC65D;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    border-radius: 5px;
+    border-color: #FFC65D;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 15px;
+    transition: all 0.3s linear; }
+    div.lettersForGuessing span.letter:hover {
+      color: #404040;
+      background-color: #FFC65D; }
+    div.lettersForGuessing span.letter.used {
+      color: #404040;
+      background-color: #FFC65D; }
+
+div.word {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  margin: 50px auto; }
+
+span.letterInWord {
+  font-size: 70px;
+  color: #FFC65D;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+canvas#hangman {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  border-radius: 5px;
+  background-color: #4CC3D9; }
+
+@media screen and (max-width: 1000px) {
+  canvas#hangman {
+    position: static !important;
+    margin-bottom: 30px; } }
+div.overlay {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.7;
+  z-index: 2;
+  display: none; }
+
+div#newWordsContainer {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: -200px;
+  margin-left: -250px;
+  background-color: #93648D;
+  color: #ffffff;
+  z-index: 3;
+  transition: all 0.3s ease-in; }
+  div#newWordsContainer select#newWordSelect, div#newWordsContainer textarea#newWords, div#newWordsContainer button#submit, div#newWordsContainer div.result {
+    display: block;
+    margin: 15px auto;
+    border-radius: 3px; }
+
+/*# sourceMappingURL=style.css.map */

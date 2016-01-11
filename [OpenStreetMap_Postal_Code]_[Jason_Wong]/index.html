@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>OpenStreetMap Geolocation from Postal Code</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="apicaller.js"></script>
+</head>
+<body>
+    <h1>Geolocation from OpenStreetMap</h1>
+    <form method="post" action="index.html">
+        <label for="postalcode">Enter your zip code:</label> <!-- for is for the id, not the name-->
+        <br>
+        <input name="postalcode" id="postalcode" type="text" maxlength=6>
+        <br>
+        <select name="country" id="country">
+			<option value="cn">China</option>
+			<option value="in">India</option>
+ 			<option value="tw">Taiwan</option>
+ 			<option value="us">United States</option>
+        </select>
+        <br><br>
+        <input name="submit" id="submit" type="submit" value="Check Location">
+    </form>
+    
+    <div id="result">
+        <h2>Result</h2>
+        <div class="latitude"></div>
+        <div class="longitude"></div>
+        <div class="display_name"></div>
+    </div>
+</body>
+</html>

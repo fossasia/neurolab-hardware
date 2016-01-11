@@ -1,0 +1,106 @@
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: url('background.jpg') center/cover no-repeat;
+  /* from openstreetmap.org */
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, Helvetica, Arial, sans-serif;
+}
+h1 {
+  margin: 0 auto;
+  padding: 30px;
+  width: 50%;
+  background: #eee;
+  border-radius: 0 0 40px 40px;
+  text-align: center;
+}
+
+div.description {
+  background-color: #333;
+  border-radius: 20px;
+  width: 50vw;
+  margin: 50px auto 20px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+  color: #fff;
+  line-height: 1.5;
+}
+
+div.lightbulbs {
+  background-color: #333;
+  border-radius: 20px;
+  height: 100px;
+  width: 50vw;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+
+div.lightbulb {
+  background-color: #999;
+  height: 50px;
+  width: 50px;
+  border: 5px solid #999;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.1s linear;
+}
+
+.selected {
+  border-color: #388E8E !important;
+}
+
+div.lightbox {
+  background: #333;
+  width:50vw;
+  height: 250px;
+  margin: 10px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lightswitchcontainer {
+  width: 20%;
+  height: 80%;
+  background-color: #fff;
+  position: relative;
+}
+
+.lightswitchcontainer::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 2px;
+  height: 60%;
+  background-color: #000;
+}
+
+.lightswitch {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  z-index: 2;
+  margin-left: -12.5px;
+  width: 25px;
+  height: 12px;
+  background-color: #aaa;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.lightswitch:hover {
+  background-color: greenyellow;
+}
+
+.topPosition {
+  top: 30% !important;
+}

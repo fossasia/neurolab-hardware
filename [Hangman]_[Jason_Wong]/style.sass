@@ -1,0 +1,221 @@
+//SASS
+
+//Colors
+$red: #F16745
+$yellow: #FFC65D
+$green: #7BC8A4
+$red: #F16745
+$blue: #4CC3D9
+$magenta: #93648D
+$grey: #404040
+$darkgrey: #333333
+$white: #ffffff
+$black: #000000
+
+$default-shadow: 1px 1px 5px $grey
+$big-shadow: 2px 2px 8px $grey
+
+html
+  margin: 0
+  padding: 0
+  min-height: 100%
+  
+body
+  height: 100%
+  margin: 0
+  padding: 0
+  background:
+    color: $grey
+  font-family: 'Open Sans', Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, Helvetica, Arial, sans-serif
+  text-align: center
+  color: $darkgrey
+  overflow: hidden
+  
+a
+  text-decoration: none
+  color: $magenta
+  font-weight: 700
+
+h1
+  background-color: $grey
+  color: $white
+  border-radius: 2px
+
+div.introOverlay
+  position: absolute
+  top: 0
+  width: 100vw
+  height: 100vh
+  background:
+    color: $red
+  transition: top 0.5s ease-in
+  z-index: 100
+    
+div.card
+  width: 500px
+  height: 200px
+  position: absolute
+  top: 50vh
+  left: 50vw
+  padding:
+    top: 20px
+  border:
+    radius: 2px
+  margin:
+    top: -125px
+    left: -250px
+  background:
+    color: lighten($blue, 10%)
+  box-shadow: $big-shadow
+  
+div.playCircle
+  height: 75px
+  width: 75px
+  background: $green
+  margin: 20px auto
+  padding:
+    top: 15px
+    left: 21px
+  box-sizing: border-box
+  border:
+    radius: 50px
+  box-shadow: $default-shadow
+  cursor: pointer
+  opacity: 0.8
+  transition: opacity 0.3s linear
+  
+  div.triangle
+    width: 0
+    height: 0
+    border:
+      top: 20px solid transparent
+      left: 40px solid $magenta
+      bottom: 20px solid transparent
+      
+  &:hover
+    opacity: 1
+
+
+/*Main Application*/
+div.content
+  color: $white
+  
+  
+select#chooseCategory, button#activateNewWords
+  padding: 10px
+  background:
+    color: $yellow
+  color: $darkgrey
+  text-align: center
+  border:
+    radius: 3px
+    color: transparent
+  font-size: 1.5em
+  margin-right: 10px
+  cursor: pointer
+  transition: background-color 0.3s linear
+  
+button#activateNewWords:hover
+  background-color: darken($yellow, 20%)
+  
+div.lettersForGuessing
+  display: flex
+  width: 50%
+  flex-wrap: wrap
+  justify-content: center
+  margin:
+    top: 20px
+    left: auto
+    right: auto
+
+  span.letter
+    color: $yellow
+    display: inline-block
+    width: 30px
+    height: 30px
+    padding-top: 5px
+    border:
+      radius: 5px
+      color: $yellow
+      width: 2px
+      style: solid
+    cursor: pointer
+    margin:
+      left: 8px
+      right: 8px
+      top: 15px
+    transition: all 0.3s linear
+
+    &:hover
+      color: $grey
+      background-color: $yellow
+
+    &.used
+      color: $grey
+      background-color: $yellow
+  
+div.word
+  display: flex
+  flex-wrap: wrap
+  width: 80%
+  justify-content: center
+  margin: 50px auto
+    
+span.letterInWord
+  font-size: 70px
+  color: $yellow
+  margin:
+    left: 10px
+    right: 10px
+  
+canvas#hangman
+  position: absolute
+  bottom: 10%
+  right: 10%
+  border-radius: 5px
+  background: 
+    color: $blue
+    
+@media screen and (max-width: 1000px) 
+  canvas#hangman 
+    position: static !important
+    margin-bottom: 30px
+
+div.overlay
+  content: ''
+  position: fixed
+  top: 0
+  left: 0
+  background:
+    color: $black
+  width: 100%
+  height: 100vh
+  opacity: 0.7
+  z-index: 2
+  display: none
+  
+div#newWordsContainer
+  width: 500px
+  height: 400px
+  position: absolute
+  top: 200% /*margin top interference*/
+  left: 50%
+  box-sizing: border-box
+  padding: 20px
+  border-radius: 5px
+  margin:
+    top: -200px
+    left: -250px
+  background:
+    color: $magenta
+  color: $white
+  z-index: 3
+  transition: all 0.3s ease-in
+  
+  select#newWordSelect, textarea#newWords, button#submit, div.result
+    display: block
+    margin: 15px auto
+    border-radius: 3px
+  
+
+    
