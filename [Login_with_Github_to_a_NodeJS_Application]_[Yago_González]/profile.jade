@@ -1,0 +1,91 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    //- Bootstrap CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    title GCI | Node.js GitHub OAuth
+    style.
+      h3 {
+      margin-top: 0;
+      }
+      .user-picture {
+      height: 100px;
+      width: 100px;
+      }
+      .media-body section > h4 {
+      font-weight: bold;
+      }
+  body
+    .container
+      .page-header
+        h1 Node.js GitHub OAuth
+        h2
+          small Google Code-in - FOSSASIA
+      .media
+        .media-left
+          img.media-object.user-picture(src='#{user.avatar_url}')
+        .media-body
+          h3
+            a(href='#{user.html_url}')
+              | #{user.name} (#{user.login})
+          section
+            h4 Emails
+            ul
+              each email in emails
+                li #{email.email}
+          section
+            h4 Repositories
+            .list-group
+              each repo in repos
+                a.list-group-item(href='#{repo.html_url}')
+                  h4.list-group-item-heading
+                    | #{repo.name}&nbsp;
+                    small
+                      | #{repo.full_name}
+                  span.list-group-item-text
+                    if repo.description
+                      | #{repo.description}
+                    else
+                      i No description
+          section
+            h4 Gists
+            .list-group
+              each gist, index in gists
+                a.list-group-item(href='#{gist.html_url}')
+                  h4.list-group-item-heading
+                    | Gist ##{index}
+                  span.list-group-item-text
+                    b Creation date: 
+                    | #{gist.created_at}
+                    br
+                    b Files: 
+                    each file, name in gist.files
+                      | #{name} 
+          footer
+            hr
+            .well
+              b Google Code-in 2015 | Made by Yago González with &lt;3, for the Open Source community
+              br
+              | Powered by 
+              a(href='https://nodejs.org')
+                b Node.js
+              | , 
+              a(href='http://expressjs.com')
+                b Express
+              | , 
+              a(href='https://github.com/request/request-promise')
+                b request-promise
+              | , 
+              a(href='http://jade-lang.com/')
+                b Jade
+              | , 
+              a(href='http://getbootstrap.com')
+                b Bootstrap
+              | , and 
+              a(href='https://developer.github.com/v3/')
+                b GitHub Developer API
+      //- jQuery JS
+      script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+      //- Bootstrap JS
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
