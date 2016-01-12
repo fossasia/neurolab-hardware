@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hangman</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="js/helper.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/canvas.js"></script>
+</head>
+<body>
+  <div class="introOverlay">
+    <div class="card">
+      <h1>HANGMAN</h1>
+      <p>Guess the right letters!</p><p>Made for <a href="http://fossasia.org">FOSSASIA</a> 2015 in JS by codethejason.</p>
+      <div class="playCircle"><div class="triangle"></div></div>
+    </div>
+  </div>
+  <div class="content">
+    <h1>HANGMAN IN JS</h1>
+    <div class="category">
+    <select id="chooseCategory">
+      <option value="animals">Animals</option>
+      <option value="chores">Chores</option>
+      <option value="countries">Countries</option>
+      <option value="sports">Sports</option>
+      <option value="companies">Companies</option>
+    </select>
+    <button id="activateNewWords">Add New Words</button>
+    </div>
+    <div class="lettersForGuessing"></div>
+    <div class="word"></div>
+      
+    <canvas id="hangman" width="200" height="200">Your browser is not supported.</canvas>
+  </div>
+  <div class="overlay"></div>
+  <div id="newWordsContainer">
+    <h2>Add New Words</h2>
+    <p>Think the words are too limited? Feel free to add some of your own words and challenge your friends!</p>
+    <p>Select the category and enter the words, separating each one by a comma.</p>
+    <select id="newWordSelect">
+      <option value="animals">Animals</option>
+      <option value="chores">Chores</option>
+      <option value="countries">Countries</option>
+      <option value="sports">Sports</option>
+      <option value="companies">Companies</option>
+    </select>
+    <textarea id="newWords" rows="4" cols="50" placeholder="item1,item2,item3"></textarea>
+    <button id="submit" type="submit">Submit</button>
+    <div class="result"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+	height: 100%;
+    margin: 0;
+    padding: 30vh 0 0;
+    background: url('background.png') center/cover no-repeat;
+    /* from openstreetmap.org */
+    font-family: Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+input#postalcode {
+    border: 2px solid #000;
+    border-radius: 5px 1px 5px 1px;
+    margin: 12px 0;
+    padding: 10px 8px;
+}
+
+input#submit {
+    padding: 10px 8px;
+    background-color: #555;
+    border: 2px solid #111;
+    border-radius: 1px 5px 1px 5px;
+    opacity: 0.3;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.25s opacity ease;
+}
+
+input#submit:hover {
+    opacity: 1;
+}
+
+.latitude, .longitude, .display_name {
+    padding: 5px 0;
+}

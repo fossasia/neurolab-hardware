@@ -1,0 +1,64 @@
+/*color scheme: https://coolors.co/app/02111b-3f4045-30292f-5d737e-e0e0e0 */
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 10px 30px;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #FFF;
+}
+
+h1 {
+    text-align: center;
+}
+div#files {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+div.file {
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 3px;
+    background-color: #02111B;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.file > .name {
+    color: #FFF;
+}
+.file > .size, .file > .type, .file > .date {
+    display: block;
+    padding: 3px;
+    background-color: #E0E0E0;
+    border-radius: 2px;
+    margin: 5px 0;
+}
+.file > .size, .file > .type {
+    font-size: 12px;
+}
+.file > .date {
+    font-size: 8.5px;
+}
+
+span#basicInfo {
+    display: block;
+    margin-top: 10px;
+}
+
+div.upload {
+    background-color: #30292F;
+    display: block;
+    width: 300px;
+    margin: 5px auto;
+    padding: 10px;
+    color: #FFF;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+}

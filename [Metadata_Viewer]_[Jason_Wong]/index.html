@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Metadata Viewer</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <h1>Metadata Viewer</h1>
+    <div id="content">
+        <div class="upload">
+            <input id="input" name="filesInput" type="file" multiple>
+            <span id="basicInfo"></span>
+        </div>
+        <template id="fileTemplate">
+            <div class="file">
+                <span class="name"></span>
+                <span class="size"></span>
+                <span class="type"></span>
+                <span class="date"></span>
+            </div>
+        </template>
+        <div id="files"></div>
+    </div>
+</body>
+</html>

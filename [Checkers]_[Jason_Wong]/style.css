@@ -1,0 +1,173 @@
+html, body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  font-family: "Lato", Calibri, sans-serif;
+  font-size: 16px;
+  background-color: #3A3042; }
+  html h2, body h2 {
+    font-size: 1.3em; }
+  html h3, body h3 {
+    font-size: 1.1em; }
+  html a, body a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 700; }
+    html a:hover, body a:hover {
+      text-decoration: underline; }
+  html hr, body hr {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    background-image: linear-gradient(to right, #333333, #ccc); }
+  html .clearfix, body .clearfix {
+    clear: both; }
+
+div.column {
+  position: relative;
+  float: left;
+  overflow: auto;
+  height: 100%;
+  min-height: 100%;
+  width: 50%; }
+
+@media screen and (max-width: 1000px) {
+  div.column {
+    width: 100% !important;
+    overflow: hidden;
+    height: auto; } }
+div.info, div.stats {
+  width: 70%;
+  margin: 15vmin auto 0;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  background-color: #F1F1FF;
+  color: #3A3042;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #232621; }
+
+div.stats {
+  margin: 50px auto !important; }
+  div.stats .wrapper {
+    display: flex; }
+  div.stats #player1 {
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    float: left;
+    background-color: #B93848;
+    box-sizing: border-box;
+    padding: 0 15px 20px;
+    border-top-left-radius: 3px;
+    color: #232621; }
+    div.stats #player1 .capturedPiece {
+      width: 2.4vmin;
+      height: 2.4vmin;
+      background-color: #232621;
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 6vmin;
+      display: inline-block;
+      box-sizing: border-box;
+      transition: all 0.2s linear;
+      margin: 5px; }
+  div.stats #player2 {
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    float: left;
+    background-color: #232621;
+    box-sizing: border-box;
+    padding: 0 15px 20px;
+    border-top-right-radius: 3px;
+    color: #B93848; }
+    div.stats #player2 .capturedPiece {
+      width: 2.4vmin;
+      height: 2.4vmin;
+      background-color: #B93848;
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 6vmin;
+      display: inline-block;
+      box-sizing: border-box;
+      transition: all 0.2s linear;
+      margin: 5px; }
+  div.stats div.turn {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #BEEE62 50%, transparent 50%);
+    border-radius: 0 0 3px 3px; }
+  div.stats button#cleargame {
+    display: block;
+    border: 0;
+    color: #F1F1FF;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 10px;
+    padding: 10px;
+    background-color: #16A8C7;
+    box-shadow: 1px 1px 3px #232621;
+    transition: background-color 0.15s linear; }
+    div.stats button#cleargame:hover {
+      background-color: #0c5a6b; }
+
+div#board {
+  position: absolute;
+  top: calc(50% - 40vmin);
+  left: calc(50% - 40vmin);
+  width: 80vmin;
+  height: 80vmin;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #232621;
+  background-color: #B93848;
+  overflow: hidden; }
+  div#board .tile {
+    width: 10vmin;
+    height: 10vmin;
+    position: absolute;
+    background-color: #232621; }
+  div#board .player1pieces .piece {
+    position: absolute;
+    width: 8vmin;
+    height: 8vmin;
+    background-color: #e4a6ae;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6vmin;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+    margin-top: 1vmin;
+    margin-left: 1vmin;
+    cursor: pointer;
+    border: 1vmin solid #B93848; }
+    div#board .player1pieces .piece.selected {
+      box-shadow: 0 0 10px 5px #16A8C7; }
+  div#board .player2pieces .piece {
+    position: absolute;
+    width: 8vmin;
+    height: 8vmin;
+    background-color: #F1F1FF;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6vmin;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+    margin-top: 1vmin;
+    margin-left: 1vmin;
+    cursor: pointer;
+    border: 1vmin solid #8b8bff; }
+    div#board .player2pieces .piece.selected {
+      box-shadow: 0 0 10px 5px #16A8C7; }
+
+/*# sourceMappingURL=style.css.map */
