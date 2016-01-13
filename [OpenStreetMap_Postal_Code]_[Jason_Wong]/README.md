@@ -7,4 +7,4 @@ Type in a postal code and select the country the postal code belongs to from the
 The code makes an AJAX request to OpenStreetMap's API and retrieves the information. It then places the information in a preset div element.
 
 ## Demo
-[DEMO](http://codethejason.github.io/gcismallprojects2015/openstreetmappostalcode/index.html)
+[DEMO](http://codethejason.github.io/gci2015/openstreetmappostalcode/index.html)

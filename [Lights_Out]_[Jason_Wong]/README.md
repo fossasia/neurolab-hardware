@@ -8,4 +8,4 @@ The game is purely based on HTML, CSS, and JS, so there are absolutely no images
 
 
 ## Live Demo
-[DEMO](http://codethejason.github.io/gcismallprojects2015/lightsout/index.html)
+[DEMO](http://codethejason.github.io/gci2015/lightsout/index.html)

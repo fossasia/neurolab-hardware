@@ -8,4 +8,4 @@ To keep it organized and flexible, the code is based on two main objects: letter
 
 
 ## Live Demo
-[DEMO](http://codethejason.github.io/gcismallprojects2015/hangman/index.html)
+[DEMO](http://codethejason.github.io/gci2015/hangman/index.html)
