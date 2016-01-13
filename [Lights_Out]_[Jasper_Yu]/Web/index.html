@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="background-image:url(img/bg.png)">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+        <title>Light it!</title>
+    </head>
+    <body>
+      <div class="big-wrap">
+        <div>
+            <div class="wrap">
+                <div class="wrap-item" id="toggle-wrap1">
+                    <input type="checkbox" id="toggle1" name="toggle1" class="toggle-cb">
+                    <label class="toggle toggle-item" for="toggle1"></label>
+                </div>
+                <div class="wrap-item" id="bulb">
+                    <div id="lamp"></div>
+                </div>
+                <div class="wrap-item flipx" id="toggle-wrap2">
+                    <input type="checkbox" id="toggle2" name="toggle2" class="toggle-cb">
+                    <label class="toggle toggle-item" for="toggle2"></label>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <input type="checkbox" id="fs">
+                    <label for="fs">Fetch data of switches from a Minecraft server: srv.seadog007.me:25565</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="rpi" disabled="">
+                    <label for="rpi"><del>Send the light singal to Raspberry Pi</del></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

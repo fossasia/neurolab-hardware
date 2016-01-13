@@ -1,0 +1,65 @@
+.toggle-cb {
+    display: none;
+}
+
+.toggle{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: url("../img/lever_off.gif");
+    cursor: pointer;
+}
+
+#lamp{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: url("../img/lamp_off.gif");
+}
+
+:checked ~ .toggle {
+    background: url("../img/lever_on.gif");
+	background-size: cover;
+}
+
+#bulb.active > #lamp{
+    background: url("../img/lamp_on.gif");
+	background-size: cover;
+}
+
+.flipx {
+    -moz-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+    /*IE*/
+    filter:FlipH;
+}
+
+.big-wrap {
+	position: fixed;
+ 	height: 100%;
+	width: 100%;
+	left:0px;
+	top:0px;
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.wrap { display: table; margin-left: auto; margin-right: auto; max-width: 100%; }
+.wrap-item { display: inline-block; margin: 20px 10px; }
+
+.items { display: table; margin-left: auto; margin-right: auto; max-width: 100%; margin-top: 30px; }
+.item { margin-top: 10px; margin-bottom: 10px; }
+
+@media screen and (max-width: 550px) {
+    #lamp, .toggle-item { width: 100px; height: 100px; background-size: cover; }
+
+    .items { margin-left: 20px; margin-right: 20px; }
+}
+
+@media screen and (max-width: 400px) {
+    #lamp, .toggle-item { width: 80px; height: 80px; }
+}
