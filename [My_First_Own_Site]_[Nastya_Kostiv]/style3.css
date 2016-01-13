@@ -1,0 +1,62 @@
+
+body {
+background: url(fix2.png), url(about2.png), url(about1.png), url(about1.png),url(about1.png),url(about1.png),url(about1.png),url(fix10.png),url(fix14.png),url(fix11.png), url(fix13.png);
+background-repeat: no-repeat;
+background-position:300px 15px, 300px 215px, 300px 315px, 300px 415px, 300px 515px, 300px 615px, 300px 715px, -5px 120px,40px 400px,1040px 10px,1040px 370px;
+background-attachment:scroll;
+background-size:700px 120px,700px 120px,700px 120px,700px 120px,700px 120px,700px 120px,700px 120px, 350px, 250px, 300px, 230px;
+padding: 10px;
+font-family: 'Neucha', cursive;
+font-size: 27px;
+line-height: 1.5;
+margin:5px;
+min-width:1350px;
+max-width:1355px;
+
+
+
+}
+
+
+
+
+.main-menu {
+float:right;
+margin-top:33px;
+margin-left:385px;
+margin-right:355px;
+padding: 0px;
+list-style: none;
+border: 2px  #FFFAFA;
+width:603px;
+position:absolute;
+
+
+
+}
+.main-menu li {
+display:inline-block;
+margin-right: -4px;
+
+}
+.main-menu a {
+text-decoration: none;
+display: block;
+padding: 8px 10px;
+color:#CD3333;
+background-color: #F5F5F5;
+
+margin-left:-4px;
+}
+.main-menu a:hover {
+background-color: #FFC1C1;
+}
+
+.two{
+float:right;
+margin-top:100px;
+margin-left:330px;
+margin-right:380px;
+color:#eee9e9;
+}
+

@@ -1,0 +1,178 @@
+body {
+background: url(fix2.png), url(hero2.png), url(hero1.png), url(hero1.png),url(hero1.png),url(hero1.png),url(hero1.png),url(fix9.png),url(fix12.png),url(fix11.png), url(fix13.png);
+background-repeat: no-repeat;
+background-position:300px 15px, 300px 215px, 300px 315px, 300px 415px, 300px 515px, 300px 615px, 300px 715px, -5px 180px,-20px 490px,1040px 10px,1040px 370px;
+background-attachment:scroll;
+background-size:700px 120px,700px 120px,700px 120px,700px 120px,700px 120px,700px 120px,700px 120px, 300px, 380px, 300px, 270px;
+padding: 10px;
+font-family: 'Neucha', cursive;
+font-size: 27px;
+line-height: 1.5;
+min-width:1350px;
+max-width:1355px;
+
+
+}
+
+
+
+
+.main-menu {
+float:right;
+margin-top:26px;
+margin-left:385px;
+margin-right:355px;
+padding: 0px;
+list-style: none;
+border: 2px  #FFFAFA;
+width:603px;
+position:absolute;
+
+
+}
+.main-menu li {
+display:inline-block;
+margin-right: -4px;
+
+}
+.main-menu a {
+text-decoration: none;
+display: block;
+padding: 8px 10px;
+color:#FF8C00;
+background-color: #F5F5F5;
+
+margin-left:-4px;
+}
+.main-menu a:hover {
+background-color: #F5DEB3;
+}
+
+.nolik{
+	margin-left:350px;
+	margin-top:160px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.simka{
+	margin-left:500px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.papus{
+	margin-left:650px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+.masa{
+	margin-left:800px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.igrek{
+	margin-left:350px;
+	margin-top:60px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.kusachka{
+	margin-left:500px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.faer{
+	margin-left:650px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.dima{
+	margin-left:800px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;	
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+
+.dedus{
+	margin-left:350px;
+	margin-top:50px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+.verta{
+	margin-left:500px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.shpulya{
+	margin-left:650px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.shuchka{
+	margin-left:800px;
+	margin-top:-90px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
+
+.prophesor{
+	margin-left:350px;
+	margin-top:40px;
+	border: 4px outset white;
+	width:90px;
+	height:84px;
+	border-radius:4px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}

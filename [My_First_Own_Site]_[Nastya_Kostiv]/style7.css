@@ -1,0 +1,92 @@
+body {
+background: url(fix2.png), url(seasons2.png), url(seasons1.png), url(seasons1.png),url(seasons1.png),url(seasons1.png),url(seasons1.png),url(fix6.png),url(fix7.png),url(fix11.png), url(fix13.png);
+background-repeat: no-repeat;
+background-position:300px 15px, 300px 215px, 300px 315px, 300px 415px, 300px 515px, 300px 615px, 300px 715px, -5px 150px,-20px 450px,1040px 10px,1040px 370px;
+background-attachment:scroll;
+background-size:700px 120px,700px 120px,700px 120px,700px 120px,700px 120px,700px 120px,700px 120px, 300px, 300px, 300px, 230px;
+padding: 10px;
+font-family: 'Neucha', cursive;
+font-size: 27px;
+line-height: 1.5;
+margin:5px;
+min-width:1350px;
+max-width:1355px;
+min-height:750px;
+
+
+
+}
+
+
+
+
+.main-menu {
+float:right;
+margin-top:30px;
+margin-left:385px;
+margin-right:355px;
+padding: 0px;
+list-style: none;
+border: 2px  #FFFAFA;
+width:603px;
+position:absolute;
+
+
+
+}
+.main-menu li {
+display:inline-block;
+margin-right: -4px;
+
+}
+.main-menu a {
+text-decoration: none;
+display: block;
+padding: 8px 10px;
+color:#CD950C;
+background-color: #F5F5F5;
+margin-left:-4px;
+}
+.main-menu a:hover {
+background-color: #EEEED1;
+}
+
+.one{
+	margin-left:337px;
+	margin-top:-40px;
+}
+
+.cast{
+	margin-left:350px;
+	margin-top:140px;
+	font-family: Comic, cursive;
+	font-size: 40px;
+	color:white;
+}
+.season1{
+	margin-left:300px;
+	list-style: none;
+}
+
+.season1 li {
+display:block;
+}
+
+.season1 a {
+text-decoration: none;
+display: block;
+color:white;
+}
+
+.season1 a:hover {
+color:#CD5555;
+}
+
+.season1 li:nth-child(2) a:hover{
+	color:#76EE00;
+}
+
+iframe{
+	border-radius:3px;
+	box-shadow:15px 15px 20px rgba(0,0,0,0.5);
+}
