@@ -1,0 +1,54 @@
+
+body {
+background: url(fix2.png),url(fix6.png),url(fix7.png),url(fix11.png), url(fix13.png), url(fix8.png),url(fix9.png), url(fix12.png),url(fix10.png),url(fix18.png),url(fix16.png),url(fix17.png);
+background-repeat: no-repeat;
+background-position:300px 15px, -5px 150px,-20px 450px,1040px 10px,1040px 370px,260px 200px,700px 350px,270px 460px,490px 210px,700px 710px, 30px 850px,1010px 870px;
+background-attachment:scroll;
+background-size:700px 120px,300px, 300px, 300px, 230px,300px,350px,550px, 350px, 400px,850px,370px;
+padding: 10px;
+font-family: 'Neucha', cursive;
+font-size: 27px;
+line-height: 1.5;
+margin:5px;
+min-width:1350px;
+max-width:1355px;
+min-height:1300px;
+
+
+
+}
+
+
+
+
+.main-menu {
+float:right;
+margin-top:15px;
+margin-left:385px;
+margin-right:355px;
+padding: 0px;
+list-style: none;
+border: 2px  #FFFAFA;
+width:603px;
+position:absolute;
+
+
+
+}
+.main-menu li {
+display:inline-block;
+margin-right: -4px;
+
+}
+.main-menu a {
+text-decoration: none;
+display: block;
+padding: 8px 10px;
+color:#3258a8;
+background-color: #F5F5F5;
+
+margin-left:-4px;
+}
+.main-menu a:hover {
+background-color: #B0E2FF;
+}
