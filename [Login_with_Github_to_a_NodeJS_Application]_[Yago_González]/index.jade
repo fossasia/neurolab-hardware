@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    //- Bootstrap CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    title GCI | Node.js GitHub OAuth
+    style.
+      button span {
+        margin-left: 10px;
+      }
+      #octocat-logo {
+        height: 25px;
+        width: 25px;
+      }
+  body
+    .container
+      .page-header
+        h1 Node.js GitHub OAuth
+        h2
+          small Google Code-in - FOSSASIA
+      | This Node.js application uses 
+      a(href='https://developer.github.com/v3/oauth/') GitHub's OAuth 
+      | to access your GitHub account, and show some relevant information, i.e: your configured email addresses, public and private repos, and all your gists.
+      br
+      br
+      p Want to try it?
+      br
+      button.btn.btn-default(onclick='location.href="/login"')
+        img#octocat-logo(src='./octocat-logo.ico')
+        span Login with 
+          b GitHub
+      footer
+        hr
+        .well
+          b Google Code-in 2015 | Made by Yago González with &lt;3, for the Open Source community
+          br
+          | Powered by 
+          a(href='https://nodejs.org')
+            b Node.js
+          | , 
+          a(href='http://expressjs.com')
+            b Express
+          | , 
+          a(href='https://github.com/request/request-promise')
+            b request-promise
+          | , 
+          a(href='http://jade-lang.com/')
+            b Jade
+          | , 
+          a(href='http://getbootstrap.com')
+            b Bootstrap
+          | , and 
+          a(href='https://developer.github.com/v3/')
+            b GitHub Developer API
+    //- jQuery JS
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    //- Bootstrap JS
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
