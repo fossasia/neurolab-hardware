@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+<h1>LIGHTBULB GAME</h1>
+
+
+<img id="bulb" src="bulb_offf.jpg" width="200" height="280">
+<img id="bulb2" src="bulb_offf.jpg" width="200" height="280">
+<img id="bulb3" src="bulb_offf.jpg" width="200" height="280">
+<img id="bulb4" src="bulb_offf.jpg" width="200" height="280">
+<br>
+<img id="switch" onclick="changeImage()" src="button.png" width="200" height="180">
+
+<p>Keep clicking to get all four to light up!</p>
+
+</center>
+
+<script>
+function changeImage()
+{
+    var imageBulb = document.getElementById('bulb');
+    var imageBulb2 = document.getElementById('bulb2');
+    var imageBulb3 = document.getElementById('bulb3');
+    var imageBulb4 = document.getElementById('bulb4');
+    var x = Math.floor((Math.random() * 4) + 1);
+if(x==1){
+    if (imageBulb.src.match("bulb_onn"))
+    {
+        imageBulb.src = "bulb_offf.jpg";
+    }
+    else
+    {
+        imageBulb.src = "bulb_onn.jpg";
+    }
+  }
+  if(x==2){
+    if (imageBulb2.src.match("bulb_onn"))
+    {
+        imageBulb2.src = "bulb_offf.jpg";
+    }
+    else
+    {
+        imageBulb2.src = "bulb_onn.jpg";
+    }
+  }
+  if(x==3){
+    if (imageBulb3.src.match("bulb_onn"))
+    {
+        imageBulb3.src = "bulb_offf.jpg";
+    }
+    else
+    {
+        imageBulb3.src = "bulb_onn.jpg";
+    }
+  }
+  if(x==4){
+    if (imageBulb4.src.match("bulb_onn"))
+    {
+        imageBulb4.src = "bulb_offf.jpg";
+    }
+    else
+    {
+        imageBulb4.src = "bulb_onn.jpg";
+    }
+  }
+}
+</script>
+</body>
+</html>
