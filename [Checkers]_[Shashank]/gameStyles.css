@@ -1,0 +1,67 @@
+body{
+    background-color:white;
+}
+#soundHolder{
+    width: 62px;
+    height: 50px;
+    background-image: url("speaker.png");
+    background-size: 120px 55px;
+}
+#omniContainerBox{
+padding-left:23%;
+}
+
+.inline{
+display: inline-block;
+}
+.icon
+{
+    width: 100px;
+    height: 100px;
+    background-image: url("sprites.png");
+    background-size: 155px;	
+}
+.red
+{
+    background-position: -20 -7.5;
+}
+.black
+{
+    background-position: -20 -120.5;
+}
+.redK
+{
+    background-position: -20 -231.5;
+}
+.blackK
+{
+    background-position: -20 -341.5;
+}
+.empty
+{
+    background-position: -20 -450;
+}
+#title{
+    font-size: -webkit-xxx-large;
+    font-style: oblique;
+    font-family: fantasy;
+}
+#iconHolder{
+position: absolute;
+top:0;
+left:0;
+right:0;
+left:0;
+
+}
+#board{
+position: relative;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

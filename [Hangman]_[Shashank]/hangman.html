@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}       
+#section {
+    width:100%;
+    float:left;
+    padding:10px;    
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;    
+}
+div.header {
+width: absolute;
+height: absolute;
+background-color: #fff;
+box-shadow: 5px 5px 10px 10px #000;
+}
+div.hey {
+width: absolute;
+height: absolute;
+background-color: #fff;
+box-shadow: 5px 5px 10px 10px #000;
+}
+</style>
+
+<body>
+<div id="header" class = "header">
+<h1>Hangman Game in Javascript</h1>
+</div>
+<div id="section">
+<br>
+<br>
+<div class="hey" style="background-color:black; color:white; padding:20px;">
+<form>
+Select your caregory
+<select id="mySelect">
+  <option value="programming">Programming</option>
+  <option value="country">Country</option>
+  <option value="fruits">fruits</option>
+  <option value="color">Color</option>
+  <option value="animals">animals</option>
+</select>
+</form>
+
+<p>Click to START!</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+</div>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo4" ></p>
+<p id="demo5" ></p>
+<center><h1 id="div1">Let's Play Hangman<h1/></center>
+<div id="div2"></div>
+<br>
+<div class="hey" style="background-color:black; color:white; padding:20px;">
+<h3>Please enter your alphabet here in this input box</h3>
+<input type="text" id="myText" title="Enter any alphabet" name="Type any Alphabet" placeholder="Type your alphabet">
+<button onclick="myFunctions()">Sure</button>
+<h3 style="color:red;" id = "div7" ></h3>
+<h3 style="color:red;" id = "div10" ></h3>
+<center><h1 id = "div4" ></h1></center>
+<br>
+<center><h1 id = "div11" ></h1></center>
+<center><h3 id = "div6" ></h3></center>
+<h3 style="color:white;" id = "div5" ></h3>
+</div>
+</div>
+<br>
+<br>
+<br>
+<div>
+<a href='https://plus.google.com/u/0/+ShashankSharma98'><img alt='Google+' height='35' src='http://i67.tinypic.com/zwhs01.png' title='G+ Profile' width='35'/></a>
+
+<a href='https://github.com/shashank-sharma/'><img alt='Github' height='35' src='http://i67.tinypic.com/hsjr5i.png' title='GitHub Profile' width='35'/></a>
+
+<a href='https://www.facebook.com/shashank.sharma.902'><img alt='Facebook' height='35' src='http://i63.tinypic.com/34xqs8l.jpg' title='Facebook Profile' width='35'/></a>
+
+<a href='http://stackoverflow.com/users/3523510/shashank'><img alt='Stackoverflow' height='35' src='http://i65.tinypic.com/8wckzc.png' title='Stackoverflow Profile' width='35'/></a>
+
+
+
+
+</div>
+<br>
+<br>
+<div id="footer" class = "header">
+</div>
+</body>
+
+<script>
+console.log("Welcome");
+var programming = ["ruby", "javascript", "python", "java", "swift", "jquery"];
+var fruits = ["apple", "mango", "banana", "grapes"];
+var color = ["red","yellow","orange","blue","white"];
+var country = ["india","germany","italy","japan"];
+var animals = ["tiger","lion","snake"];
+var test;   //GLOBAL
+var boo;
+var record = "";
+
+  var counting = 5;
+//Function -----------------------------------
+  
+function Common(){
+
+boo = blank();
+        for(var i=0;i<test.length;i++)
+        { var count = test.charAt(i)
+        if(count === "a"||count === "e"||count === "i"||count === "o"||count === "u"||count === "A"||count === "E"||count === "I"||count === "O"||count === "U")
+        {
+           //var sha = boo.charAt(i);
+           // var res = str.replace("Microsoft", "W3Schools"); 
+           boo = boo.split('');
+           boo[i] = count;
+           boo = boo.join('');
+
+        }
+     
+     }
+     document.getElementById("div1").innerHTML = boo;
+
+};
+
+var blank_name;
+function blank(){
+  var blank = "";
+  for(var i=0;i<test.length;i++)
+  {
+  blank = "-" + blank;
+}
+return blank;
+blank = "";
+};
+function myFunction() {
+
+    record = "";
+    counting = 5;
+    document.getElementById("div4").innerHTML = "";
+    document.getElementById("div6").innerHTML = "";
+    document.getElementById("div10").innerHTML = "";
+    document.getElementById("div5").innerHTML = "";
+    document.getElementById("div11").innerHTML = "";
+
+   if(document.getElementById("mySelect").value === "programming")
+    {
+
+    document.getElementById("demo").innerHTML = "Here is your first word related Programming";
+    test= programming[Math.floor((Math.random() * programming.length) + 0)];                        
+    Common();
+    }
+else if(document.getElementById("mySelect").value === "country")
+    {
+
+    document.getElementById("demo").innerHTML = "Here is your first word related Country";
+    test= country[Math.floor((Math.random() * country.length) + 0)];
+    Common();
+    }
+ else if(document.getElementById("mySelect").value === "fruits")
+    {
+
+    document.getElementById("demo").innerHTML = "Here is your first word related Fruits";
+    test= fruits[Math.floor((Math.random() * fruits.length) + 0)];
+    Common();
+    }
+    else if(document.getElementById("mySelect").value === "color")
+    {
+
+    document.getElementById("demo").innerHTML = "Here is your first word related Color";
+    test= color[Math.floor((Math.random() * color.length) + 0)];
+    Common();
+    }
+    else if(document.getElementById("mySelect").value === "animals")
+    {
+
+    document.getElementById("demo").innerHTML = "Here is your first word related Animals";
+    test= animals[Math.floor((Math.random() * animals.length) + 0)];
+    Common();
+    }
+
+
+else {
+	
+    document.getElementById("demo1").innerHTML = "ERROR";
+} 
+//Function ---------------------------------------
+};
+
+
+function myFunctions() {
+    document.getElementById("div7").innerHTML = "";
+    document.getElementById("div10").innerHTML = ""
+    var x = document.getElementById("myText").value;
+    //document.getElementById("div2").innerHTML = x;
+//---------------------------------------------------------
+    if(counting > 1)
+    {
+    for(var j=0;j<test.length;j++)
+    {
+       var count = test.charAt(j)
+       if(boo.charAt(j) === "-")
+       {
+          if(count === x)
+          {
+           boo = boo.split('');
+           boo[j] = count;
+           boo = boo.join('');
+           break;
+          }
+          else if(x === "a"||x === "e"||x === "i"||x === "o"||x === "u"){
+            document.getElementById("div7").innerHTML = "Error You entered vowels: No lives deducted";
+              
+              break;
+          }
+        
+          else{
+            --counting;
+            break;
+          }
+       }
+      }
+      for(var k=0;k<record.length;k++)
+      {
+        if(x===record.charAt(k))
+        {
+          document.getElementById("div10").innerHTML = "Error You entered it twice: No lives deducted"
+         ++counting;
+          break;
+        }
+      }
+            record = record + x;
+      console.log(record + " After record --------------- 4")
+    }
+    else{
+      document.getElementById("div4").innerHTML = "You Loose! :("
+      document.getElementById("div11").innerHTML = ("Answer is : " + test);
+          }
+      document.getElementById("div1").innerHTML = boo; 
+      if(boo === test)
+      {
+        document.getElementById("div4").innerHTML = "You did it :D Win!"
+        document.getElementById("div6").innerHTML = "Click on Try it to start again"
+
+      }  
+        document.getElementById("div5").innerHTML = ("You have Currently " + counting + " Lives");    
+
+//----------------------------------------------------------
+     
+};
+</script>
+
+</html>
