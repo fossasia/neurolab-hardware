@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<title>Go Tour</title>
+<head>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}	      
+#section {
+    width:100%;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+div.header {
+width: absolute;
+height: absolute;
+background-color: #fff;
+box-shadow: 5px 5px 10px 10px #000;
+}
+a:link {
+color: #CC0000;
+text-decoration: none;
+}
+a:visited {
+color: #999999;
+}
+a:hover {
+color: #FF3300;
+}
+span.highlight {
+    background-color: #eeeeee;
+    padding: 10px;
+}
+</style>
+</head>
+    <body>
+
+<div id="header" class = "header">
+<h1>A tour of Go</h1>
+</div>
+
+<div id="section">
+<br>
+<br>
+Before we start making program we must first install all the required packages which we need. In this section I'll be using Ubuntu GNOME 14.04 LTS OS and I'll tell
+you how to make program and how to run it.
+<h2>List of topics I have covered :</h2>
+<a href = "#get">1. Getting Started</a><br>
+<a href = "#function">2. Functions</a><br>
+<a href = "#variable">3. Variables</a><br>
+<a href = "#for">4. For loop</a><br>
+<a href = "#if">5. If statement</a><br>
+<a href = "#switch">6. Switch</a><br>
+<a href = "#struct">7. Structs</a><br>
+<a href = "#slices">8. Slices</a><br>
+<a href = "#maps">9. Maps</a><br>
+<h2 id = "get">Getting Started</h2>
+Now at first we have to make sure that we have install go language in your system. If you haven't done it already then you can install it from here<br>
+<p><span class="highlight">sudo apt-get install golang</span></p>
+After installing go language, now we can start making our first program. Now lets get started by making your first program.
+First lets open your editer which you use (Vim,sublime etc) and create file with name hello.go .
+Whenever we make any go language program we use .go file extension and then save it like that. Now we'll edit and start making 'Hello World' program.
+<pre><code>
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello World")
+}
+</code>
+</pre>
+
+After writing this code in hello.go file save that file and then open terminal. After opening terminal go to that directory where your file is and then type:
+<p><span class="highlight">go run hello.go</span></p>
+This command will execute that file and then it will show the output in that terminal. Now it seems like we have successfully run our first program with
+go language but what else we can do. Well there are loads of things to learn. So lets get started by learning more about go programming language.
+<p><strong>Fact: Go language is case sensitive if you write Println and println then it will give error so make sure not to do that</strong></p>
+<h2 id="function">Functions</h2>
+
+Declaring function in go language is not that hard and it can done easily. For making function we use:
+<pre>
+func <i>function_name</i>(<i>variable_name variable type</i>) <i>function_type</i>{
+    // Your task
+} 
+</pre>
+Here we must note that the brackets which is used in function is in same line. If we will use that bracket after new line then the compiler will print an error so we must avoid that mistake.<br>
+Now lets take example of real function returning a value.
+<pre><code>
+func addition(a int, b int) int{
+    return a+b
+}
+</code>
+</pre>
+
+Here function can take zero or more argument so its upto you that how to use function. As in above function code it takes 2 arguments of int type and then return
+the value by adding it as an int type. To call the function we use:
+
+<p><span class="highlight">fmt.Println(addition(1+2))</span></p>
+in main function inside brackets. It calls addition function and send 1 and 2 int variable and then when it adds up it return the final values and then Println print the value. Here Println means "Print line" so that it can easily be remember.<br>
+<p><b>Fact: Package fmt implements formatted I/O with functions analogous to C's printf and scanf. </b></p>
+
+If there are 2 function variable of same type so to avoid typing int type twice we can avoid doing it by typing:
+<p><span class="highlight">a, b int</span></p>
+<h2 id="variable">Variables</h2>
+To declare a list of variables we use <span class="highlight">var</span> statement to declare it and type is in last. For example:
+<p><span class="highlight">var x int</span></p>
+It will create a variable name x of integer datatype.<br>
+Now we can also declare variable initializer easily. For example:
+<p><span class="highlight">var x = 2</span></p>
+Now this will create variable x with value 2. Now we must note that now variable x is of integer datatype because we have declared integer type to x.
+Let us take one experiment and understand what's happening and see the result:
+<br>
+<p><span class="highlight">var x = 2  // x is of integer type now </span></p>
+<p><span class="highlight">var x int = 2  // already integer type no error</span></p>
+<p><span class="highlight">var x int = "hey"  // Error: cannot use "hey" (type string) as type int in assignment</span></p>
+Now it's pretty much clear now how this is working.
+
+<p><strong>Fact: Inside function we can also use the := short assignment statement in place of var declaration but outside the function statement is always
+begin with either var or func etc.</strong>
+Example :
+<p><span class="highlight">a := 5</span></p>
+</p>
+Without any declaration by defualt integer type has 0 value, false for boolean type and "" for string type.
+<h2 id = "for">For loop</h2>
+Its quite fascination but Go language has only one looping construct which is for loop. for loop is pretty much similar to C and Java but much better than that.
+Let's take a quick example to learn how to use it.
+<pre><code>
+package main
+
+import "fmt"
+
+func main() {
+    sum := 0
+    for i := 0; i < 10; i++ {
+        sum += i
+    }
+    fmt.Println(sum)
+}
+</code></pre>
+
+Here we must note that brackets () are not required and it is optional. Let us observe what is happening:
+<p> In for loop first i variable is assigned with value 0. So this loop says that i is equal to 0 and if i is less than 10 then increment the value of i by 1
+ and then put sum = sum + i. Now let us observe that will be value and how it will run :
+ <code>
+ <p><span class= "highlight"> 0 = 0 + 0</span></p>
+ <p><span class= "highlight"> 0 = 0 + 1</span></p>
+ <p><span class= "highlight"> 1 = 1 + 2</span></p>
+ <p><span class= "highlight"> 3 = 3 + 3</span></p>
+ <p><span class= "highlight"> 6 = 6 + 4</span></p>
+ <p><span class= "highlight"> 10 = 10 + 5</span></p>
+ <p><span class= "highlight"> 15 = 15 + 6</span></p>
+ <p><span class= "highlight"> 21 = 21 + 7</span></p>
+ <p><span class= "highlight"> 28 = 28 + 8</span></p>
+ <p><span class= "highlight"> 36 = 36 + 9</span></p>
+ <p><span class= "highlight"> 45 = 45 + 10 // It will give error as 10 < 10 is false</span></p>
+ <p><span class= "highlight"> Answer: 45</span></p>
+ </code>
+
+ </p>
+ So now we come to know that how loop works in Go.
+ <p><strong>Fact: C's 'while' is spelled 'for' in Go. How ? Lets see example : </strong></p>
+    <code><pre> sum := 1
+    for sum < 100 {
+        sum += sum
+    }
+    fmt.Println(sum)
+    </pre>
+ </code>
+ <strong>Here you must notice that it is for loop only but in this case pre and post statements are empty so by that it can be used as while</strong>
+ <h2 id="if">If statement</h2>
+ If statement is also similar to C and java but again it is much better that here we don't have to use brackets (). Let us see how it is work :
+ <pre><code>
+     if x < 0 {
+        fmt.Println("Hey")
+    }
+ </code></pre>
+ It is pretty much obvious that if x is less that 0 then it will print Hey.
+ <br>Let's see how else will work. else is always placed where the if brackets are closed. See the sample code :
+ <code><pre>
+ if x < 0 {
+        fmt.Println("Hey")
+    } else {
+        fmt.Println("Hi")
+    }
+    </pre>
+    </code>
+    Note here that if you will type else in new line then it will show error.
+    <h2 id="switch">Switch</h2>
+    Switch is pretty much similar and its not that different. For example:
+    <code>
+        <pre>
+     switch c {
+case '1':
+    fmt.Println("It is 1")
+case '2'':
+    fmt.Println("It is 2")
+case '3':
+    fmt.Println("3 is awesome")
+case '4':
+    fmt.Println("4 is four")
+case '5':
+    fmt.Println("five is great")
+default:
+    fmt.Println("Sorry")
+}
+        </pre>
+    </code>
+    Here it will check the cases on variable c. If c will have '1' integer type then it will "It is 1" and such like that it will check all the cases. default case is run when all the cases above that doesn't statisfy.
+
+    <p><strong>Fact: Switch without a condition is same as switch true. So if we want to create any condition then simply make your condition after case like</strong></p>
+    <p><span class="highlight">case c < 100</span></p>
+    where c is any variable with integer value.
+    <h2 id="struct">Structs</h2>
+    Structs can be defined as a collection of data(fields). It is declated by typing 'type'. Here is the sample code to know how it works:
+    <p><pre><code>
+    type Vertex struct {
+         x int
+         y int
+}
+    </code>
+    </pre>
+    </p>
+    Now this will create struct with name Vertex having x,y as integer type. 
+    <br>
+    Now these fields can be accessed by using dot. For example if we want to print the value of x from Vertex struct then :
+    <p><pre><code>
+    type Vertex struct {
+        x int
+        y int
+    }
+    func main() {
+        v := Vertex{}
+        v.X = 4
+        fmt.Println(v.X)
+    }
+    </code></pre></p>
+    Now this will print the value 4. Here 'v.X = 4' is accessing the x variable in struct Vertex and assigning the value 4 to it.
+    <h2 id="slices">Slices</h2>
+    Slice points to an array of values. It can be used by '[]A' which means this slice has elements of type A. Let us see one example:
+    <p><span class = "highlight"></span>a := []int{1, 2, 3, 4, 5, 6}</p>
+    Here []int is a slice with elements of type int which are 1,2,3,4,5,6. If we will try to print a then it will give:
+    <p>[1 2 3 4 5 6]</p>
+    <p><strong>Fact: Slices of slices is also possible and to implement it is also easy. Here is the sample code:</strong></p>
+    <pre><code>
+    a := [][]int{
+        []int{1,2,3},
+        []int{4,5,6},
+        []int{7,8,9},
+    }
+    </code></pre>
+    <strong>Now if you will print a then you'll notice it it will look like: [[1 2 3] [4 5 6] [7 8 9]]. Here there is a slice of int which contain 3 other slices 
+    of int type which is containing different numbers.</strong>
+    <h2 id="maps">Maps</h2>
+    A map maps keys to values. It is created by typing 'make' at starting. For example suppose we have struct 'my' then:
+    <pre><code>
+package main
+
+import "fmt"
+
+type my struct {
+    int
+}
+
+var m map[string]my
+
+func main() {
+    m = make(map[string]my)
+    m["world"] = my{
+        3 - 1,
+    }
+    fmt.Println(m["world"])
+}
+    </code></pre> 
+    Here variable m map string of my. And then assigning m["world"] to 3 - 1 having int type. By doing that m["world"] will be equal to 2 and then it will execute 
+    then it give output {2}.
+    <p>So by now it was pretty much fun working with Go language and we got loads of information. At their official site you can see the<a href = "https://tour.golang.org/list"> Tour of Go language </a>where you can learn even more.
+</div>
+<br><br>
+
+
+
+
+
+<div>
+<a href='https://plus.google.com/u/0/+ShashankSharma98'><img alt='Google+' height='35' src='http://i67.tinypic.com/zwhs01.png' title='G+ Profile' width='35'/></a>
+
+<a href='https://github.com/shashank-sharma/'><img alt='Github' height='35' src='http://i67.tinypic.com/hsjr5i.png' title='GitHub Profile' width='35'/></a>
+
+<a href='https://www.facebook.com/shashank.sharma.902'><img alt='Facebook' height='35' src='http://i63.tinypic.com/34xqs8l.jpg' title='Facebook Profile' width='35'/></a>
+
+<a href='http://stackoverflow.com/users/3523510/shashank'><img alt='Stackoverflow' height='35' src='http://i65.tinypic.com/8wckzc.png' title='Stackoverflow Profile' width='35'/></a>
+
+
+
+
+</div>
+</div>
+
+<div id="footer" class = "header">
+</div>
+
+</body>
+</html>
