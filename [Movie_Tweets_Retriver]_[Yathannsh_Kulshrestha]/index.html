@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="Twitter">
+	<head>
+		<meta charset="UTF-8">
+		<title>MTS</title>
+		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+		<link rel="stylesheet" href="css/style.css"> 
+		<script src="http://code.angularjs.org/angular-1.0.0rc4.min.js"></script>
+		<script src="http://code.angularjs.org/angular-resource-1.0.0rc4.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+	<div class="page-wrap">
+		<div class="wrapper" ng-controller="TwitterCtrl">
+			<ul class="tabs">
+				<li> Movie Tweet Search </li>
+			</ul>
+			<section class="search-box" >
+				<div class="outer-search-box">
+					<form>
+						<input type="text" class="search"  ng-model="searchTerm"  disabled> <button type="submit" ng-click="doSearch()" >
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+					</form>
+				</div>
+
+			</section>
+			<div id="loader" style="display:none;"></div> 
+				<section class="streamers">
+
+					<ul id="streamerList" ng-repeat="tweet in twitterResult.statuses">
+					<div class="media">
+							 <div class=" media-left user-image " ><img src="{{tweet.user.profile_image_url_https}}"><br>
+								<span class="thead"> @{{tweet.screen_name}}</span> 
+								</div><div class="media-body">
+								<h3 id="unn">
+								<b  ng-bind-html="tweet.user.name"></b></h3><br>
+								<div class="time"><b ng-bind-html="tweet.created_at"></b></div></h3><br>
+								<div class=" col-md-10 col-sm-10" class="user-description" ng-bind-html="tweet.text"></div></div>
+							</div>
+						<hr>
+					</ul>  
+				</section> </div></div>
+			<footer class="site-footer">
+				<ul class="tabs">
+					<li>MADE FOR  <a href= "http://fossasia.org" target="_blank">FOSSASIA</a>&nbsp;| Using <a href= "http://loklak.org/" target="_blank">
+			 Loklak</a> </li>
+				</ul>
+			</footer>
+		</div>
+		<script>
+		angular.module('Twitter', ['ngResource']);
+		function TwitterCtrl($scope, $resource) {
+		$scope.twitter = $resource('http://loklak.org/api/search.json?q=starwars',
+		{action:'search.json', q:'starwars', callback:'JSON_CALLBACK'},
+		{get:{method:'JSONP'}})
+		$scope.searchTerm ='starwars';
+		$scope.doSearch = function () {
+		$("#loader").show();
+		$scope.twitterResult = $scope.twitter.get({q:$scope.searchTerm},function(){
+		$("#loader").hide();
+		});
+		//
+		};
+
+		}
+
+		</script>
+
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	</body>
+</html>
