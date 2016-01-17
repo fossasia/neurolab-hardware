@@ -1,0 +1,16 @@
+#bulb {
+    width: 160px;
+    height: 43px;
+    margin-top: 80px;
+    margin-left: 400px;
+}
+#switch {
+    position: static;
+    width: 50px;
+    margin-top: 130px;
+    margin-left: 1160px;
+}
+.room {
+    background: url("Room.png") no-repeat;
+    background-repeat: no-repeat;
+}

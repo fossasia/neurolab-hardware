@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+</head>
+<body class="room">
+<center>
+<img id="bulb" src="lightbulboff.png" width="100%" height="100%">
+
+<img id="switch" onclick="changeImage()" src="switch_off.jpg">
+
+
+
+
+
+</center>
+<script>
+function changeImage() 
+{
+    var imageBulb = document.getElementById('bulb');
+    var imageSwitch = document.getElementById('switch');
+
+
+    if (imageBulb.src.match("lightbulbon")) 
+    {
+        imageBulb.src = "lightbulboff.png";
+        imageSwitch.src = "switch_off.jpg";
+    } 
+
+    else 
+    {
+        imageBulb.src = "lightbulbon.png";
+        imageSwitch.src = "switch_on.jpg";
+    }
+}
+</script>
+</body>
+</html>
