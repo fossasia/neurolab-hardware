@@ -158,7 +158,7 @@ int AD7173Class::enable_channel(byte channel, bool enable, byte ain1, byte ain2)
 	/* when analog input 1 was given */
 	if (ain1 != NULL) {
 		/* set first analog input */
-		value[0] |= (ain1 >> 6);
+		value[0] |= (ain1 >> 3);
 		value[1] |= (ain1 << 5);
 		/* when unipolar coding */
 		if (this->m_adc_coding_mode == UNIPOLAR) {
@@ -172,13 +172,13 @@ int AD7173Class::enable_channel(byte channel, bool enable, byte ain1, byte ain2)
 	/* when no analog inputs were given and in BIPOLAR mode */
 	} else if (this->m_adc_coding_mode == BIPOLAR) {
 		/* set automatic values for BIPOLAR mode */
-		value[0] |= (ain >> 6);
+		value[0] |= (ain >> 3);
 		value[1] |= (ain << 5);
 		value[1] |= (ain + 1);
 	/* otherwise */
 	} else {
 		/* set automatic value for UNIPOLAR mode */
-		value[0] |= ((channel & 0x0F) >> 6);
+		value[0] |= ((channel & 0x0F) >> 3);
 		value[1] |= ((channel & 0x0F) << 5);
 		value[1] |= (channel & 0x0F);
 	}
