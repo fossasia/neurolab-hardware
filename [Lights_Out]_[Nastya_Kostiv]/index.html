@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+		<script src="script.js"> </script>
+		<style>
+			#street {
+						margin-left:30px;
+						margin-top:7px;
+						width:1000px;
+						height:600px;
+						background-repeat:no-repeat;
+						background-image: url(dark.jpg);
+						background-size:900px 600px;
+					
+						}
+			#bottom{
+						position:absolute;
+						width:325px;
+						height:325px;
+						cursor:pointer;
+						padding:13px
+					
+			}
+			
+			#wall{
+						position:absolute;
+						width:350px;
+						height:350px;
+						background:#DCDCDC;
+						border-radius:19px;
+						margin-top:10px;
+						margin-left:940px;
+						box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			
+			}
+			#text{
+						position:absolute;
+						width:350px;
+						height:190px;
+						background:#DCDCDC;
+						border-radius:19px;
+						margin-top:-200px;
+						margin-left:970px;
+						box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			}
+			#on{
+						font-family: 'Orbitron', sans-serif;
+						font-size:40px;
+						color:#4682B4;
+						margin-top:17px;
+						margin-left:19px;
+					
+			}
+		</style>
+		
+		<script>
+			function Image() {
+				var street = document.getElementById('street');
+				var bottom = document.getElementById('bottom');
+				if (street.style.backgroundImage.match("lamp")) {
+					street.style.backgroundImage = 'url(dark.jpg)';
+					bottom.src = "off.png";
+				} else {
+					street.style.backgroundImage = 'url(lamp.jpg)';
+					bottom.src = "on.png";
+				};
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+	
+		<div id="street">
+		<div id="wall">
+		
+			
+				<img id="bottom" onclick="Image()" src="off.png"/>
+				</div>
+				</div>
+		<div id="text"><p id="on">Press button to turn <span style="color: #9ACD32">on</span>/<span style="color:#FF0000">off</span> the light</p></div>	
+	</body>
+	
+</html>
