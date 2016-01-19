@@ -1,0 +1,82 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(map.jpg);
+  background-repeat:no-repeat;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  height: 100%;
+}
+
+
+input#submit {
+  padding: 10px 8px;
+  background-color: #F4A460;
+  border: 3px dashed #FF8C00;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size:55px;
+  font-weight:bold;
+  font-family: font-family: 'Orbitron', sans-serif;
+  transition: 0.25s opacity ease;
+  
+}
+
+input#submit:hover {
+  color:#F0E68C;
+}
+.latitude, .longitude {
+  background-color: #EEE8AA;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 3px dashed #ADFF2F;
+  min-height: 50px;
+  min-width: 100px;
+}
+
+.latitude, .latlabel {
+  width:40px;
+  margin-left: 10px;
+  margin-top:120px;
+}
+.longitude, .longlabel {
+  
+  width:40px;
+  margin-left: 410px;
+  margin-top:-77px;
+
+}
+
+.box {
+  position: absolute;
+  width: 35vw;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-left: -17.5vw;
+  margin-top: -150px;
+	font-family: font-family: 'Orbitron', sans-serif;
+	color: #fff;
+}
+
+#one{
+	font-family: 'Orbitron', sans-serif;
+	color: #fff;
+	font-size:27px;
+	margin-left:-190px;
+	margin-top:350px;
+}
+
+#two{
+	font-family: 'Orbitron', sans-serif;
+	color: #fff;
+	font-size:27px;
+	margin-left:300px;
+	margin-top:-52px;
+}
+h1{
+	font-family: 'Orbitron', sans-serif;
+}
