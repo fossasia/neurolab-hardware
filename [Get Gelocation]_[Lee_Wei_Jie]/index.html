@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<title>Geolcation Getter</title>
+<title>Geolocation Getter</title>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
-    <button onclick="getLocation()">
-        Get Geolocation
-    </button>
-    <p id="displayText"></p>
+    <div id="box">
+       <h1>GEOLOCATION GETTER</h1>
+       <hr id=line>
+        <div class="round-button">
+            <div class="round-button-circle">
+               <img src = "images/location.png" id="button" onclick="getLocation()">
+<!--               <button class="round-button" onclick="getLocation()">Get Geolocation</button>-->
+            </div>
+        </div>
+        <p id="displayText"></p>
+    </div>
     <script src="js/position.js"></script>
 </body>
 

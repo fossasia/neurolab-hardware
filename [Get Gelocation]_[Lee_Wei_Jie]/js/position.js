@@ -9,7 +9,7 @@ function getLocation() {
             longitude = position.coords.longitude;
 
             displayLocation(latitude, longitude)
-        });
+        }, function (){ displayText.innerHTML = "Oops, please accept the location request"});
     } else {
         displayText.innerHTML = "Geolocation is not supported on this browser";
     }
