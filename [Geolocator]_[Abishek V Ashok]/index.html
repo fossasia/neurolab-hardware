@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>Geolocation site Created for FOSSASIA as a part of Google Code-in</title>
+<link rel="shortcut icon" href="" type="favicon"/>
+</head>
+<body>
+<!-- Just a div, labels and buttons are going to do the task -->
+<div id="a"><br>
+<label id="b">Click the below button to get Geolocation</label><br><br><br>
+<input id="c" type="button" value="Get my geolocation" onClick="geolocation()"/><br><br>
+<!-- The below div will hold the data -->
+<label id="d"></label><br><br>
+<label id="e">Created for FOSSASIA as a part of Google Code-in Competition hope you will like it.</label><br><br>
+</div>
+</body>
+</html>
+<!-- CSS put after HTML to ensure good speeds -->
+<style>
+body{background:#eee;font-family: Roboto, "Helvetica Neue", sans-serif;}
+#a{width:50%;margin-left:25%;margin-right:25%;background:#FFF;text-align:center;margin-top:15%;border:1px solid;
+border-color:#e5e6e9 #dfe0e4 #d0d1d5;}
+#e,#b{font-size:18px;}
+#c{width:200px;height:35px;cursor:pointer;border:none;outline:none;}
+#e{font-size:15px;}
+#a,#c{border:1px solid;border-color:#e5e6e9 #dfe0e4 #d0d1d5;}
+#d{display:none;}
+</style>
+<!-- Javascript put at last to ensure page speeds -->
+<script type="text/javascript" language="javascript">
+var a=document.getElementById("d");
+function geolocation(){
+	if(navigator.geolocation){navigator.geolocation.getCurrentPosition(rit,fileit);}
+	else{a.innerHTML="Geolocation is not supported by this browser";a.style.display="inherit";}
+}
+function rit(position){
+	var mylocation="Latitude: "+position.coords.latitude+" Longitude: "+ position.coords.longitude;
+	a.innerHTML=mylocation;
+	a.style.display="none";
+	a.style.display="inherit";
+}
+function fileit(error){
+switch(error.code) {
+case error.PERMISSION_DENIED:
+  a.innerHTML="Hey!!! You denied the permission to get geolocation try again!"
+  break;
+case error.POSITION_UNAVAILABLE:
+  a.innerHTML="Current position information is unavailable please try after some time"
+  break;
+case error.TIMEOUT:
+  a.innerHTML ="Request Timed out, please try again."
+  break;
+case error.UNKNOWN_ERROR:
+  a.innerHTML="What the hell! Unknown Error please try again"
+  break;
+}
+}
+</script>
