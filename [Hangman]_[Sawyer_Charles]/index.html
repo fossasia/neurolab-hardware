@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Hangman</title>
+    <link href="main.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <label>Category: </label>
+      <select id="category">
+        <option value="animals">Animals</option>
+        <option value="clothes">Clothing Article</option>
+        <option value="food">Food</option>
+      </select>
+    </header>
+    <center><h1>Welcome to hangman! Select a category and press start!</h1></center>
+    <center ><button type="button" id='start-btn'>Start!</button></center>
+    <center id='game-c' style="display:none;"><canvas id='game' height="400" width="600">Your browser doesn't support the canvas element, please update!</canvas>
+      <br />
+      <button id='re-btn'>Restart</button>
+    </center>
+    <input id='game-i' style="opacity:0;filter:alpha(opacity=0);" type="text" />
+  </body>
+
+
+</html>
