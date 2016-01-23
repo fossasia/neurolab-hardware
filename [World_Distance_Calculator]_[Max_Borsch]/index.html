@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<head>
+    <title>World Distance Calculator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+	<div id="container">
+        <div id="form">
+            <h5>City 1</h5>
+            <h4>(Default: Googleplex, Mountain View, CA)</h4>
+            <h2>Latitude:</h2>
+            <br>
+            <input type="text" id="lat" value="37.422461">
+            <h2>Longitude:</h2>
+            <br>
+            <input type="text" id="lon" value="-122.084201">
+        </div>
+        <div id="form">
+            <h5>City 2</h5>
+            <h4>(Default: Fossasia 2015, Singapore, China)</h4>
+            <h2>Latitude:</h2>
+            <br>
+            <input type="text" id="lat2" value="1.296956">
+            <h2>Longitude:</h2>
+            <br>
+            <input type="text" id="lon2" value="103.786631">
+        </div>
+        <hr>
+        <button type="button" id="submit" class="btn waves-effect waves-light">Find Distance + Time Change</button>
+    </div>
+    <hr class="hr-dashed">
+    <h3>Result</h3>
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</body>
+</html>
