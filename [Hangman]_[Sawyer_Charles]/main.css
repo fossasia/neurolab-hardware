@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+}
+header {
+  height: 50px;
+  background-color: grey;
+  border-bottom: 2px rgba(0,0,0,0.5);
+  color:white;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+select {
+  color: black;
+}
+#start-btn {
+  font-size: 5em;
+  border-radius: 15px;
+  margin-top: 20px;
+  background-color: blue;
+  padding: 5px;
+}
+#game-c {
+  margin-top: 50px;
+}
