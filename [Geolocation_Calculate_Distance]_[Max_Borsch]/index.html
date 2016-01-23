@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Lat/Lon Distance Finder</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+	<div id="container">
+      <div id="form">
+      <h2>Latitude:</h2>
+        <br>
+        <input type="text" id="lat" value="0">
+        <h2>Longitude:</h2>
+        <br>
+        <input type="text" id="lon" value="0">
+       </div>
+       <h4>- or -</h4>
+       <button type="button" id="locate" class="btn waves-effect waves-light">Locate Me!</button>
+       <hr>
+       <button type="button" id="submit" class="btn waves-effect waves-light">Distance to: HackerSpace</button>
+     </div>
+     <hr class="hr-dashed">
+   <h3>Result</h3>
+   <p id="result"></p>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</body>
+</html>
