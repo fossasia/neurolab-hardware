@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>File Metadata</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="action.js"></script>
+</head>
+
+<body>
+	<div class="heading">
+		<br>
+		<p>This Web App lets you retrieve the Metadata of the files(s) you select</p>
+	</div>
+	<br><br>
+	<div id="files">
+	    <p>Select your files :</p>
+	    <input type="file" id="file" name="files[]" multiple onchange="fileHandler()"/>
+	</div>
+	<div id="result">
+	</div>
+	<div class="heading">
+		<br>
+		<p>Developed for <a href="http://www.fossasia.org" target="_blank">Fossasia</a></p>
+	</div>

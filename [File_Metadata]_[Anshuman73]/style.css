@@ -1,0 +1,33 @@
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600');
+
+body
+{
+	background: rgba(192,192,192,0.35);
+}
+
+.heading
+{
+	font-size: 1.5em;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+
+#files
+{
+	text-align: center;
+	padding: 0.5em 3em 0.5em 3em;
+	margin: auto;
+	font-size: 1.5em;
+}
+
+input[type="file"]
+{
+	text-align: center;
+}
+
+#result
+{
+	font-size: 1.25em;
+	padding: 2em 1em 0.75em 1em;
+}

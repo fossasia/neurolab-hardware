@@ -1,0 +1,44 @@
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600');
+
+body
+{
+	background: rgba(192,192,192,0.35);
+}
+
+.heading
+{
+	font-size: 1.5em;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+
+.button
+{
+	position: relative;
+	display: block;
+	background: #df7366;
+	color: #fff;
+	text-align: center;
+	border-radius: 0.5em;
+	margin: auto;
+	padding: 0.65em 3em 0.65em 3em;
+	border: 0;
+	outline: 0;
+	font-weight: 300;
+	font-size: 1.25em;
+	float: center;
+}
+
+.button:hover
+{
+	color: #fff;
+	background: #ef8376;
+}
+
+#result
+{
+	font-size: 1.25em;
+	padding: 2em 1em 0.75em 1em;
+	text-align: center;
+}
