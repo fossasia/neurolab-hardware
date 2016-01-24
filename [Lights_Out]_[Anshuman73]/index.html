@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Lights Out !</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="action.js"></script>
+</head>
+<body>
+	<div class="heading">
+		<p>Toggle the switches to turn lights <b>On</b> and <b>Off</b> and <b>the master switch</b> <u><em>to control 'em all !</em></u></p>
+	</div>
+	<br>
+	<div class="bulb-set">
+        <img id="1" src="off.jpg"/>
+		<button class="button" id="4" onclick="change(1)">Click to switch ON</button>
+	</div>
+    <div class="bulb-set">
+        <img id="2" src="off.jpg"/>
+		<button class="button" id="5" onclick="change(2)">Click to switch ON</button>
+	</div>
+    <div class="bulb-set">
+        <img id="3" src="off.jpg"/>
+		<button class="button" id="6" onclick="change(3)">Click to switch ON</button>
+	</div>
+	<div>
+        <br><br>
+        <p class="heading">Master Button:</p>
+        <button class="button" id="master" onclick="masterchange()">Click to switch all ON</button>
+	</div>
+	<div class="heading">
+		<p>Developed for <a href="http://www.fossasia.org" target="_blank">Fossasia</a></p>
+	</div>
+</body>
+</html>

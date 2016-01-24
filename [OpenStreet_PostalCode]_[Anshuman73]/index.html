@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Location Retrieval using Postal Code</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="action.js"></script>
+</head>
+
+<body>
+	<div class="heading">
+		<br>
+		<p>This Web App lets you retrieve the Geo Location of a place using only the Postal Code</p>
+		<p>The output will be the Latitude and the Longitude of the place with the Official Name</p>
+	</div>
+	<br><br>
+	<div>
+		<form id="form">
+		    <p>Enter the Postal Code:</p>
+		    <input type="number" name="postalcode" onkeypress="return keypress(event)">
+		    <br><br>
+		    <input id="submit" type="button" value="Submit" onclick="main(this.form)">
+		</form>
+	</div>
+	<div id="result">
+		<h2>Result:</h2>
+	</div>
+	<div class="heading">
+		<br>
+		<p>This Web App uses the free <a href="http://wiki.openstreetmap.org/wiki/Nominatim" target="_blank">Nominatim</a> API.</p>
+		<p>Developed for <a href="http://www.fossasia.org" target="_blank">Fossasia</a></p>
+	</div>

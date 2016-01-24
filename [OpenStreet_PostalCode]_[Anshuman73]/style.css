@@ -1,0 +1,63 @@
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600');
+
+body
+{
+	background: rgba(192,192,192,0.35);
+}
+
+.heading
+{
+	font-size: 1.5em;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+
+#form
+{
+	text-align: center;
+	font-size: 1.25em
+}
+
+#submit
+{
+	position: relative;
+	display: inline-block;
+	background: #df7366;
+	color: #fff;
+	text-align: center;
+	border-radius: 0.5em;
+	padding: 0.65em 3em 0.65em 3em;
+	border: 0;
+	outline: 0;
+	font-weight: 300;
+}
+
+#submit:hover
+{
+	color: #fff;
+	background: #ef8376;
+}
+
+form input[type="number"],
+form input[type="button"],
+form select
+{
+	line-height: 1.5em;
+}
+
+form input[type="number"],
+form select
+{
+	border: 0;
+	background: #eee;
+	box-shadow: inset 0px 0px 1px 0px #a0a1a7;
+	border-radius: 0.35em;
+	padding: 0.75em 1em 0.75em 1em;
+}
+
+#result
+{
+	font-size: 1.25em;
+	padding: 2em 1em 0.75em 1em;
+}
