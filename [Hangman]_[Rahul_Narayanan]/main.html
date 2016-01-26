@@ -1,0 +1,30 @@
+<html>
+    <title>Hangman</title>
+
+
+  <head>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  
+  </head>
+
+  <body>
+ 
+  <div class = "gamediv">
+    <h1> Hangman </h1>
+    <h2> Simple Hangman game made in HTML, CSS and JavaScript by Rahul Narayanan.</h2><br>
+
+  
+    <p id = "guessfield"> </p>
+
+    <form name ="rateformula">
+      <input name="input" type="text" size="5" maxlength="1">
+      <input name="ratebutton" type="button" value="Guess" onClick="fillUnderline()">
+      <p> <strong>The current category is Formula 1 teams</strong></p>
+
+      <img src="hang1.gif" id="hangman"><br /><br />
+      <input name="refresh" type="button" value="New Game" onClick="location.reload()">
+    </form>
+  </div>
+</body> 
+</html>
