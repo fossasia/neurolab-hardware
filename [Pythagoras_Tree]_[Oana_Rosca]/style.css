@@ -1,0 +1,93 @@
+body {
+  font-family: 'Roboto', "Open Sans", sans-serif;
+  color: white;
+  background: #333333;
+}
+
+#container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+a {
+  color: #f8632f;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+p {
+  margin-left: 80px;
+}
+
+p, select {
+  font-size: 23px;
+  float: left;
+  display: inline;
+}
+
+form {
+  font-size: 23px;
+  text-align: center;
+  display: inline;
+  float: left;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+select {
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 6px;
+  margin-top: 23px;
+  background: LightSeaGreen;
+}
+
+p {
+  margin-top: 30px;
+}
+
+input {
+  background: lightseagreen;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 23px;
+  width: 60px;
+  height: 21px;
+}
+
+#create {
+  float: left;
+  display: inline;
+  margin-top: 20px;
+  margin-left: 80px;
+  background: #f8632f;
+  padding: 6px 10px 10px 10px;
+  border: 2px solid #f8632f;
+  border-radius: 5px;
+  width: 90px;
+  height: 21px;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: color 0.4s, background-color 0.4s;
+  -moz-transition: color 0.4s, background-color 0.4s;
+  -ms-transition: color 0.4s, background-color 0.4s;
+  -o-transition: color 0.4s, background-color 0.4s;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+#create:hover {
+  color: #f8632f;
+  background: transparent;
+}
+
+#tree {
+  border: 3px solid white;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 80px;
+}

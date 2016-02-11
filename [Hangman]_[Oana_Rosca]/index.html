@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="container">
+      <h1>HANGMAN</h1>
+      <h2>A JavaScript game. Project at <a href="http://fossasia.org">FOSSASIA</a> Google Code-In 2015.</h2>
+      <br>
+      <h2>Choose a category</h3>
+      <select id="select" onchange="changeCategory()">
+        <option value="0">Animals</option>
+        <option value="1">Cities</option>
+        <option value="2">Movies</option>
+        <option value="3">Sports</option>
+      </select>
+      <ul>
+        <li id="A">A</li><li>B</li><li>C</li><li>D</li><li id="E">E</li><li>F</li><li>G</li><li>H</li><li id="I">I</li><li>J</li><li>K</li><li>L</li><li>M</li>
+        <br><li>N</li><li id="O">O</li><li>P</li><li>Q</li><li>R</li><li>S</li><li>T</li><li id="U">U</li><li>V</li><li>W</li><li>X</li><li>Y</li><li>Z</li>
+      </ul>
+      <div id="wordDisplay"></div>
+      <div id="again" onclick="reset()">Play again!</div>
+      <canvas id="hang" width="300px" height="200px">Uh oh, your browser doesn't support HTML5 canvas!</canvas>
+    </div>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script type='text/javascript' src='actions.js'></script>
+  </body>
+</html>

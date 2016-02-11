@@ -1,0 +1,63 @@
+body {
+  background-image: url("back_geolocation.jpg");
+}
+
+#center {
+  background-image: url("back_div.jpg");
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 200px;
+  -webkit-box-shadow: 15px 0 10px -15px #000000, -15px 0 10px -15px #000000;
+  -moz-box-shadow: 10px 0 6px -10px #000000, -10px 0 6px -10px #000000;
+  -ms-box-shadow: 10px 0 6px -10px #000000, -6px 0 6px -4px #000000;
+  -o-box-shadow: 10px 0 6px -10px #000000, -10px 0 6px -10px #000000;
+  box-shadow: 15px 0 10px -15px #000000, -15px 0 10px -15px #000000;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Sansita One', 'Roboto', Verdana;
+  color: #0c1057;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+#button {
+	background-color:#1986be;
+	-webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 0px 5px 0px 0px #075781;
+  -moz-box-shadow: 0px 5px 0px 0px #075781;
+  -ms-box-shadow: 0px 5px 0px 0px #075781;
+  -o-box-shadow: 0px 5px 0px 0px #075781;
+	box-shadow: 0px 5px 0px 0px #075781;
+	color: #ffffff;
+	font-family: Calibri;
+  font-weight: bold;
+	font-size: 20px;
+  position: absolute;
+	padding: 15px 25px;
+	text-decoration:none;
+  left: 44.5%;
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+#result {
+  font-size: 25px;
+  font-family: 'Roboto';
+  padding: 20px;
+  padding-top: 90px;
+}
+
+#button:hover {
+  background-color: #086da1;
+}

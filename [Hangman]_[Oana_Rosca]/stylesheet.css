@@ -1,0 +1,121 @@
+body {
+  background-color: mediumslateblue;
+}
+
+#container {
+  width: 55.9%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', Arial;
+}
+
+::selection {
+  background: mediumpurple;
+}
+
+a {
+  color: rebeccapurple;
+}
+
+h2 {
+  margin-top: -5px;
+}
+
+select {
+  padding: 15px;
+  font-family: 'Roboto', Arial;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: rebeccapurple;
+  color: white;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -50px;
+  margin-bottom: 45px;
+}
+
+li {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-top: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+  -webkit-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -moz-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -ms-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -o-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  transition: border 0.4s, color 0.4s, background-color 0.4s;
+}
+
+li:hover, #again:hover {
+  border: 2px solid white;
+  background-color: white;
+  color: rebeccapurple; /*mediumslateblue*/
+}
+
+#wordDisplay {
+  /*border: 2px solid white;*/
+  width: 250px;
+  height: 120px;
+  margin-top: 20px;
+  float: left;
+  display: inline-block;
+  font-size: 40px;
+  text-align: left;
+  margin-left: 5px;
+}
+
+canvas {
+  border: 3.5px solid white;
+  border-radius: 10px;
+  margin-top: 20px;
+  float: right;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#again {
+  position: fixed;
+  float: left;
+  display: block;
+  font-family: 'Roboto', Arial;
+  font-size: 18px;
+  width: 100px;
+  height: 32px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px 15px 5px 12px;
+  margin-top: 172px;
+  margin-left: 5px;
+  cursor: pointer;
+  -webkit-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -moz-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -ms-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -o-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  transition: border 0.4s, color 0.4s, background-color 0.4s;
+}
+
+.used {
+  border: 2px solid rebeccapurple;
+  color: rebeccapurple;
+  cursor: default;
+}
+
+.used:hover {
+  border: 2px solid rebeccapurple;
+  color: rebeccapurple;
+  cursor: default;
+  background-color: mediumslateblue;
+}
