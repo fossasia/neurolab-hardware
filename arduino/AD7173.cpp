@@ -257,7 +257,7 @@ int AD7173Class::set_clock_mode(clock_mode_t clock_mode) {
 	/* get current register value */
 	this->read_register(ADCMODE_REG, adc_mode_value, 2);
 	/* reset clock mode to default INTERNAL_CLOCK [3:2] bit to 00 */
-	adc_mode_value[0] &= 0xF3;
+	adc_mode_value[1] &= 0xF3;
 
 	/* change to desired clock mode */
 	switch (clock_mode) {
@@ -265,13 +265,13 @@ int AD7173Class::set_clock_mode(clock_mode_t clock_mode) {
 			/* already INTERNAL */
 			break;
 		case INTERNAL_CLOCK_OUTPUT:
-			adc_mode_value[0] |= 0x04;
+			adc_mode_value[1] |= 0x04;
 			break;
 		case EXTERNAL_CLOCK_INPUT:
-			adc_mode_value[0] |= 0x08;
+			adc_mode_value[1] |= 0x08;
 			break;
 		case EXTERNAL_CLOCK:
-			adc_mode_value[0] |= 0x0C;
+			adc_mode_value[1] |= 0x0C;
 			break;
 		/* when clock mode out of range */
 		default:
