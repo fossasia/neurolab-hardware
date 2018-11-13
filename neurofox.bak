@@ -1,0 +1,491 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:neuro
+LIBS:neurofox-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 10
+Title "FOSSASIA - NeuroFox"
+Date "2018-05-31"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1455 1720 685  185 
+U 5B10060A
+F0 "External Power" 39
+F1 "ExternalPower.sch" 39
+F2 "VIN" O R 2140 1770 39 
+F3 "12V" I L 1455 1770 39 
+F4 "5.5V" I L 1455 1855 39 
+F5 "GND" I R 2140 1855 39 
+$EndSheet
+$Comp
+L GND #PWR3
+U 1 1 5B10240C
+P 2270 1935
+F 0 "#PWR3" H 2270 1685 50  0001 C CNN
+F 1 "GND" H 2270 1785 39  0000 C CNN
+F 2 "" H 2270 1935 50  0001 C CNN
+F 3 "" H 2270 1935 50  0001 C CNN
+	1    2270 1935
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 2410 1720 765  185 
+U 5B103929
+F0 "Power Regulator" 39
+F1 "PowerRegulator.sch" 39
+F2 "VIN" I L 2410 1770 39 
+F3 "VCCIO" O R 3175 1770 39 
+F4 "GND" I L 2410 1855 39 
+F5 "+5V" O R 3175 1855 39 
+$EndSheet
+$Sheet
+S 3960 1720 660  525 
+U 5B108F6C
+F0 "Attenuator" 39
+F1 "Attenuator.sch" 39
+F2 "GND" I L 3960 2195 39 
+F3 "+IN0.4XA" I L 3960 1940 39 
+F4 "-IN0.4XA" I L 3960 1855 39 
+F5 "+IN0.4XB" I L 3960 2110 39 
+F6 "VCCIO" I L 3960 1770 39 
+F7 "+OUTB" O R 4620 2110 39 
+F8 "+OUTA" O R 4620 1940 39 
+F9 "-OUTA" O R 4620 1855 39 
+F10 "-OUTB" O R 4620 2025 39 
+F11 "-IN0.4XB" I L 3960 2025 39 
+$EndSheet
+$Sheet
+S 5275 1805 710  355 
+U 5B112CE8
+F0 "RC Filter 1" 39
+F1 "RCFilterBlock1.sch" 39
+F2 "+OUTA'" O R 5985 2110 39 
+F3 "-OUTA'" O R 5985 2025 39 
+F4 "+OUTB'" O R 5985 1940 39 
+F5 "-OUTB'" O R 5985 1855 39 
+F6 "+OUTA" I L 5275 1940 39 
+F7 "-OUTA" I L 5275 1855 39 
+F8 "+OUTB" I L 5275 2110 39 
+F9 "-OUTB" I L 5275 2025 39 
+$EndSheet
+$Sheet
+S 5275 2310 710  530 
+U 5B10B2AE
+F0 "MAX7480 Block" 39
+F1 "MAX7480Block.sch" 39
+F2 "CLKIN" I L 5275 2785 39 
+F3 "+5V" I L 5275 2700 39 
+F4 "OUT1" O R 5985 2660 39 
+F5 "OUT2" O R 5985 2575 39 
+F6 "OUT3" O R 5985 2490 39 
+F7 "OUT4" O R 5985 2405 39 
+F8 "IN3" I L 5275 2615 39 
+F9 "IN2" I L 5275 2445 39 
+F10 "IN1" I L 5275 2360 39 
+F11 "IN4" I L 5275 2530 39 
+F12 "GND" I R 5985 2745 39 
+$EndSheet
+$Sheet
+S 4040 2650 760  275 
+U 5B10D013
+F0 "Clock Block" 39
+F1 "ClockBlock.sch" 39
+F2 "+5V" I L 4040 2700 39 
+F3 "EXCLK" I L 4040 2785 39 
+F4 "GND" I L 4040 2870 39 
+F5 "CLK" O R 4800 2785 39 
+$EndSheet
+$Sheet
+S 6430 2355 695  360 
+U 5B117A7C
+F0 "RC Filter 2" 39
+F1 "RCFilterBlock2.sch" 39
+F2 "OUT1" I L 6430 2660 39 
+F3 "OUT2" I L 6430 2575 39 
+F4 "OUT3" I L 6430 2490 39 
+F5 "OUT4" I L 6430 2405 39 
+F6 "OUT1'" O R 7125 2660 39 
+F7 "OUT2'" O R 7125 2575 39 
+F8 "OUT3'" O R 7125 2490 39 
+F9 "OUT4'" O R 7125 2405 39 
+$EndSheet
+$Sheet
+S 1450 2210 760  530 
+U 5B117C68
+F0 "Amplifier Block 1" 39
+F1 "Amplifier.sch" 39
+F2 "IN-" I L 1450 2515 39 
+F3 "IN+" I L 1450 2430 39 
+F4 "V+" I R 2210 2260 39 
+F5 "V-" I R 2210 2430 39 
+F6 "GND" I R 2210 2345 39 
+F7 "OP" O R 2210 2515 39 
+F8 "+O" O R 2210 2685 39 
+F9 "-O" O R 2210 2600 39 
+$EndSheet
+$Sheet
+S 1445 2865 765  530 
+U 5B117CFE
+F0 "Amplifier Block 2" 39
+F1 "Amplifier.sch" 39
+F2 "IN-" I L 1445 3085 39 
+F3 "IN+" I L 1445 3170 39 
+F4 "V+" I R 2210 2915 39 
+F5 "V-" I R 2210 3085 39 
+F6 "GND" I R 2210 3000 39 
+F7 "OP" O R 2210 3170 39 
+F8 "+O" O R 2210 3340 39 
+F9 "-O" O R 2210 3255 39 
+$EndSheet
+$Comp
+L Conn_01x04_Female J?
+U 1 1 5B188AC3
+P 835 2850
+F 0 "J?" V 875 2950 39  0000 C CNN
+F 1 "Channel" V 880 2745 39  0000 C CNN
+F 2 "" H 835 2850 50  0001 C CNN
+F 3 "" H 835 2850 50  0001 C CNN
+	1    835  2850
+	-1   0    0    1   
+$EndComp
+Text GLabel 765  595  0    39   Input ~ 0
++12V
+Text GLabel 765  745  0    39   Input ~ 0
+-12V
+Text GLabel 765  900  0    39   Input ~ 0
++5.5V
+$Comp
+L GND #PWR?
+U 1 1 5B198EFA
+P 765 1250
+F 0 "#PWR?" H 765 1000 50  0001 C CNN
+F 1 "GND" H 765 1100 39  0000 C CNN
+F 2 "" H 765 1250 50  0001 C CNN
+F 3 "" H 765 1250 50  0001 C CNN
+	1    765  1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5B199772
+P 840 1190
+F 0 "#FLG?" H 840 1265 50  0001 C CNN
+F 1 "PWR_FLAG" V 835 1445 39  0000 C CNN
+F 2 "" H 840 1190 50  0001 C CNN
+F 3 "" H 840 1190 50  0001 C CNN
+	1    840  1190
+	0    1    1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5B199CDA
+P 840 900
+F 0 "#FLG?" H 840 975 50  0001 C CNN
+F 1 "PWR_FLAG" V 835 1155 39  0000 C CNN
+F 2 "" H 840 900 50  0001 C CNN
+F 3 "" H 840 900 50  0001 C CNN
+	1    840  900 
+	0    1    1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5B19A242
+P 840 745
+F 0 "#FLG?" H 840 820 50  0001 C CNN
+F 1 "PWR_FLAG" V 835 1000 39  0000 C CNN
+F 2 "" H 840 745 50  0001 C CNN
+F 3 "" H 840 745 50  0001 C CNN
+	1    840  745 
+	0    1    1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5B19A3D6
+P 840 595
+F 0 "#FLG?" H 840 670 50  0001 C CNN
+F 1 "PWR_FLAG" V 835 850 39  0000 C CNN
+F 2 "" H 840 595 50  0001 C CNN
+F 3 "" H 840 595 50  0001 C CNN
+	1    840  595 
+	0    1    1    0   
+$EndComp
+Text GLabel 1340 1855 0    39   Input ~ 0
++5.5V
+Text GLabel 1340 1770 0    39   Input ~ 0
++12V
+$Comp
+L GND #PWR?
+U 1 1 5B1A7762
+P 3865 2275
+F 0 "#PWR?" H 3865 2025 50  0001 C CNN
+F 1 "GND" H 3865 2125 39  0000 C CNN
+F 2 "" H 3865 2275 50  0001 C CNN
+F 3 "" H 3865 2275 50  0001 C CNN
+	1    3865 2275
+	1    0    0    -1  
+$EndComp
+Text GLabel 2260 2260 2    39   Input ~ 0
++12V
+Text GLabel 2260 2430 2    39   Input ~ 0
+-12V
+Text GLabel 2260 3085 2    39   Input ~ 0
+-12V
+Text GLabel 2260 2915 2    39   Input ~ 0
++12V
+$Comp
+L GND #PWR?
+U 1 1 5B1B631E
+P 2570 2385
+F 0 "#PWR?" H 2570 2135 50  0001 C CNN
+F 1 "GND" H 2655 2375 39  0000 C CNN
+F 2 "" H 2570 2385 50  0001 C CNN
+F 3 "" H 2570 2385 50  0001 C CNN
+	1    2570 2385
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5B1B6BA1
+P 2570 3040
+F 0 "#PWR?" H 2570 2790 50  0001 C CNN
+F 1 "GND" H 2655 3030 39  0000 C CNN
+F 2 "" H 2570 3040 50  0001 C CNN
+F 3 "" H 2570 3040 50  0001 C CNN
+	1    2570 3040
+	1    0    0    -1  
+$EndComp
+Text GLabel 765  1055 0    39   Input ~ 0
++5V
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5B1BEBFC
+P 840 1055
+F 0 "#FLG?" H 840 1130 50  0001 C CNN
+F 1 "PWR_FLAG" V 835 1310 39  0000 C CNN
+F 2 "" H 840 1055 50  0001 C CNN
+F 3 "" H 840 1055 50  0001 C CNN
+	1    840  1055
+	0    1    1    0   
+$EndComp
+Text GLabel 3245 1855 2    39   Input ~ 0
++5V
+Text GLabel 3930 2700 0    39   Input ~ 0
++5V
+$Comp
+L GND #PWR?
+U 1 1 5B1D8B2E
+P 3905 3005
+F 0 "#PWR?" H 3905 2755 50  0001 C CNN
+F 1 "GND" H 3990 2995 39  0000 C CNN
+F 2 "" H 3905 3005 50  0001 C CNN
+F 3 "" H 3905 3005 50  0001 C CNN
+	1    3905 3005
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2140 1770 2410 1770
+Wire Wire Line
+	2140 1855 2410 1855
+Wire Wire Line
+	1035 2650 1155 2650
+Wire Wire Line
+	1155 2650 1155 2430
+Wire Wire Line
+	1155 2430 1450 2430
+Wire Wire Line
+	1450 2515 1230 2515
+Wire Wire Line
+	1230 2515 1230 2750
+Wire Wire Line
+	1230 2750 1035 2750
+Wire Wire Line
+	1035 2850 1230 2850
+Wire Wire Line
+	1230 2850 1230 3085
+Wire Wire Line
+	1230 3085 1445 3085
+Wire Wire Line
+	1035 2950 1155 2950
+Wire Wire Line
+	1155 2950 1155 3170
+Wire Wire Line
+	1155 3170 1445 3170
+Wire Wire Line
+	840  595  765  595 
+Wire Wire Line
+	840  745  765  745 
+Wire Wire Line
+	840  900  765  900 
+Wire Wire Line
+	840  1190 765  1190
+Wire Wire Line
+	765  1190 765  1250
+Wire Notes Line
+	1280 505  1280 1450
+Wire Notes Line
+	1280 505  510  505 
+Wire Notes Line
+	510  505  510  1450
+Wire Wire Line
+	1340 1770 1455 1770
+Wire Wire Line
+	1455 1855 1340 1855
+Wire Wire Line
+	2270 1935 2270 1855
+Connection ~ 2270 1855
+Wire Wire Line
+	3865 2275 3865 2195
+Wire Wire Line
+	2210 2260 2260 2260
+Wire Wire Line
+	2260 2430 2210 2430
+Wire Wire Line
+	2260 2915 2210 2915
+Wire Wire Line
+	2260 3085 2210 3085
+Wire Wire Line
+	2570 3040 2570 3000
+Wire Wire Line
+	2210 3000 2770 3000
+Wire Wire Line
+	2570 2385 2570 2345
+Wire Wire Line
+	2210 2345 2770 2345
+Wire Wire Line
+	3960 1770 3175 1770
+Wire Wire Line
+	840  1055 765  1055
+Wire Notes Line
+	510  1450 1280 1450
+Wire Wire Line
+	3245 1855 3175 1855
+Wire Wire Line
+	3960 1855 3470 1855
+Wire Wire Line
+	3470 1855 3470 2600
+Wire Wire Line
+	3470 2600 2210 2600
+Wire Wire Line
+	2210 2685 3550 2685
+Wire Wire Line
+	3550 2685 3550 1940
+Wire Wire Line
+	3550 1940 3960 1940
+Wire Wire Line
+	3865 2195 3960 2195
+Wire Wire Line
+	3960 2025 3625 2025
+Wire Wire Line
+	3625 2025 3625 3255
+Wire Wire Line
+	3625 3255 2210 3255
+Wire Wire Line
+	2210 3340 3700 3340
+Wire Wire Line
+	3700 3340 3700 2110
+Wire Wire Line
+	3700 2110 3960 2110
+Wire Wire Line
+	2210 3170 2770 3170
+Wire Wire Line
+	2770 3170 2770 3000
+Connection ~ 2570 3000
+Wire Wire Line
+	2210 2515 2770 2515
+Wire Wire Line
+	2770 2515 2770 2345
+Connection ~ 2570 2345
+Wire Wire Line
+	3930 2700 4040 2700
+Wire Wire Line
+	3905 3005 3905 2870
+Wire Wire Line
+	3905 2870 4040 2870
+Wire Wire Line
+	4620 1855 5275 1855
+Wire Wire Line
+	4620 1940 5275 1940
+Wire Wire Line
+	4620 2025 5275 2025
+Wire Wire Line
+	4620 2110 5275 2110
+Wire Wire Line
+	5275 2360 5185 2360
+Wire Wire Line
+	5185 2360 5185 1855
+Connection ~ 5185 1855
+Wire Wire Line
+	5275 2445 5110 2445
+Wire Wire Line
+	5110 2445 5110 1940
+Connection ~ 5110 1940
+Wire Wire Line
+	5275 2530 5035 2530
+Wire Wire Line
+	5035 2530 5035 2025
+Connection ~ 5035 2025
+Wire Wire Line
+	5275 2615 4960 2615
+Wire Wire Line
+	4960 2615 4960 2110
+Connection ~ 4960 2110
+Wire Wire Line
+	5275 2785 4800 2785
+Wire Wire Line
+	3980 2700 3980 2550
+Wire Wire Line
+	3980 2550 4885 2550
+Wire Wire Line
+	4885 2550 4885 2700
+Wire Wire Line
+	4885 2700 5275 2700
+Connection ~ 3980 2700
+Wire Wire Line
+	5985 2405 6430 2405
+Wire Wire Line
+	6430 2490 5985 2490
+Wire Wire Line
+	5985 2575 6430 2575
+Wire Wire Line
+	6430 2660 5985 2660
+$EndSCHEMATC

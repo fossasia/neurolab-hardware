@@ -1,0 +1,236 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:neuro
+LIBS:neurofox-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 10
+Title "FOSSASIA - NeuroFox"
+Date "2018-05-31"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5215 1715 0    39   Input ~ 0
+IN1
+Text HLabel 5215 2635 0    39   Input ~ 0
+IN2
+Text HLabel 5215 3525 0    39   Input ~ 0
+IN3
+Text HLabel 5215 4445 0    39   Input ~ 0
+IN4
+Text HLabel 6660 1715 2    39   Output ~ 0
+OUT1'
+Text HLabel 6285 2635 2    39   Output ~ 0
+OUT2'
+Text HLabel 6285 3525 2    39   Output ~ 0
+OUT3'
+Text HLabel 6595 4445 2    39   Output ~ 0
+OUT4'
+$Comp
+L R R10
+U 1 1 5B11CA40
+P 5670 1715
+F 0 "R10" V 5750 1715 50  0000 C CNN
+F 1 "470" V 5670 1715 39  0000 C CNN
+F 2 "" V 5600 1715 50  0001 C CNN
+F 3 "" H 5670 1715 50  0001 C CNN
+	1    5670 1715
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C20
+U 1 1 5B11CAE4
+P 6005 1990
+F 0 "C20" H 6030 2090 50  0000 L CNN
+F 1 "100n" H 6030 1890 39  0000 L CNN
+F 2 "" H 6043 1840 50  0001 C CNN
+F 3 "" H 6005 1990 50  0001 C CNN
+	1    6005 1990
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5820 1715 6660 1715
+Wire Wire Line
+	6005 1715 6005 1840
+$Comp
+L R R11
+U 1 1 5B11CF87
+P 5670 2635
+F 0 "R11" V 5750 2635 50  0000 C CNN
+F 1 "470" V 5670 2635 39  0000 C CNN
+F 2 "" V 5600 2635 50  0001 C CNN
+F 3 "" H 5670 2635 50  0001 C CNN
+	1    5670 2635
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C21
+U 1 1 5B11CF8D
+P 6005 2910
+F 0 "C21" H 6030 3010 50  0000 L CNN
+F 1 "100n" H 6030 2810 39  0000 L CNN
+F 2 "" H 6043 2760 50  0001 C CNN
+F 3 "" H 6005 2910 50  0001 C CNN
+	1    6005 2910
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5820 2635 6285 2635
+Wire Wire Line
+	6005 2635 6005 2760
+$Comp
+L R R12
+U 1 1 5B11D8F3
+P 5680 3525
+F 0 "R12" V 5760 3525 50  0000 C CNN
+F 1 "470" V 5680 3525 39  0000 C CNN
+F 2 "" V 5610 3525 50  0001 C CNN
+F 3 "" H 5680 3525 50  0001 C CNN
+	1    5680 3525
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C22
+U 1 1 5B11D8F9
+P 6015 3800
+F 0 "C22" H 6040 3900 50  0000 L CNN
+F 1 "100n" H 6040 3700 39  0000 L CNN
+F 2 "" H 6053 3650 50  0001 C CNN
+F 3 "" H 6015 3800 50  0001 C CNN
+	1    6015 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5830 3525 6285 3525
+Wire Wire Line
+	6015 3525 6015 3650
+$Comp
+L R R13
+U 1 1 5B11D901
+P 5680 4445
+F 0 "R13" V 5760 4445 50  0000 C CNN
+F 1 "470" V 5680 4445 39  0000 C CNN
+F 2 "" V 5610 4445 50  0001 C CNN
+F 3 "" H 5680 4445 50  0001 C CNN
+	1    5680 4445
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C23
+U 1 1 5B11D907
+P 6015 4720
+F 0 "C23" H 6040 4820 50  0000 L CNN
+F 1 "100n" H 6040 4620 39  0000 L CNN
+F 2 "" H 6053 4570 50  0001 C CNN
+F 3 "" H 6015 4720 50  0001 C CNN
+	1    6015 4720
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5830 4445 6595 4445
+Wire Wire Line
+	6015 4445 6015 4570
+Wire Wire Line
+	5215 4445 5530 4445
+Wire Wire Line
+	5215 3525 5530 3525
+Wire Wire Line
+	5215 2635 5520 2635
+Wire Wire Line
+	5215 1715 5520 1715
+Connection ~ 6005 1715
+Connection ~ 6005 2635
+Connection ~ 6015 3525
+Connection ~ 6015 4445
+$Comp
+L GS2 J4
+U 1 1 5B11E5F5
+P 6375 2005
+F 0 "J4" H 6475 2155 50  0000 C CNN
+F 1 "GS2" H 6475 1856 39  0000 C CNN
+F 2 "Connectors:GS2" V 6449 2005 50  0001 C CNN
+F 3 "" H 6375 2005 50  0001 C CNN
+	1    6375 2005
+	1    0    0    -1  
+$EndComp
+$Comp
+L GS2 J5
+U 1 1 5B11E8D1
+P 6375 4720
+F 0 "J5" H 6475 4870 50  0000 C CNN
+F 1 "1" H 6475 4571 50  0000 C CNN
+F 2 "Connectors:GS2" V 6449 4720 50  0001 C CNN
+F 3 "" H 6375 4720 50  0001 C CNN
+	1    6375 4720
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6375 1715 6375 1805
+Wire Wire Line
+	6005 2140 6005 2330
+Wire Wire Line
+	6005 2330 6990 2330
+Wire Wire Line
+	6375 2330 6375 2205
+Connection ~ 6375 1715
+Wire Wire Line
+	6375 4520 6375 4445
+Connection ~ 6375 4445
+Wire Wire Line
+	6015 4870 6015 5075
+Wire Wire Line
+	6015 5075 6990 5075
+Wire Wire Line
+	6375 5075 6375 4920
+Wire Wire Line
+	6005 3060 6005 3190
+Wire Wire Line
+	6005 3190 6990 3190
+Connection ~ 6375 2330
+Wire Wire Line
+	6015 3950 6015 4125
+Wire Wire Line
+	6015 4125 6990 4125
+Wire Wire Line
+	6990 5075 6990 2330
+Connection ~ 6375 5075
+Connection ~ 6990 3190
+Connection ~ 6990 4125
+$EndSCHEMATC
