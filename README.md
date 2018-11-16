@@ -4,7 +4,7 @@
 [![Gitter](https://badges.gitter.im/fossasia/pslab.svg)](https://gitter.im/fossasia/pslab?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Mailing List](https://img.shields.io/badge/Mailing%20List-FOSSASIA-blue.svg)](mailto:pslab-fossasia@googlegroups.com)
 
-We are developing a device as a headband with integrated electronics. This repository holds the PCB schematics and layouts for the Neurolab Hardware. 
+We are developing a neuro-device to collect brainwaves as a headband with integrated electronics. This repository holds the PCB schematics and layouts for the Neurolab Hardware. 
 
 The goal of the Neurolab project is to develop an easy to use open hardware measurement headset device for brain waves that can be plugged into an Android smartphone and a software application and enables us to understand our brains better.
 
