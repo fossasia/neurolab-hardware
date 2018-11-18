@@ -37,9 +37,9 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 10
-Title "FOSSASIA - NeuroFox"
-Date "2018-05-31"
+Sheet 3 11
+Title "FOSSASIA - NeuroLab"
+Date "2018-11-17"
 Rev "2"
 Comp ""
 Comment1 ""
@@ -194,7 +194,7 @@ $EndComp
 Wire Wire Line
 	5695 4480 5695 4400
 Wire Wire Line
-	4625 4400 6030 4400
+	3950 4400 6030 4400
 Wire Wire Line
 	5695 4780 5695 4870
 Connection ~ 5695 4870
@@ -233,4 +233,7 @@ Text Notes 5955 4400 0    30   ~ 6
 3.3V
 Text Notes 5955 3595 0    30   ~ 6
 5.0V
+Text HLabel 3950 4400 0    39   Output ~ 0
+3.3V
+Connection ~ 4625 4400
 $EndSCHEMATC
