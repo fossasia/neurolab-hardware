@@ -32,15 +32,15 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:neuro
-LIBS:neurofox-cache
+LIBS:neurolab-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 10
-Title "FOSSASIA - NeuroFox"
-Date "2018-05-31"
-Rev "1"
+Sheet 2 11
+Title "FOSSASIA - NeuroLab"
+Date "2018-11-17"
+Rev "2"
 Comp ""
 Comment1 ""
 Comment2 ""

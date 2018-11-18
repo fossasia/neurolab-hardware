@@ -32,14 +32,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:neuro
-LIBS:neurofox-cache
+LIBS:neurolab-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 10
-Title "FOSSASIA - NeuroFox"
-Date "2018-05-31"
+Sheet 6 11
+Title "FOSSASIA - NeuroLab"
+Date "2018-11-17"
 Rev "1"
 Comp ""
 Comment1 ""
@@ -99,16 +99,16 @@ Text HLabel 5460 3215 2    39   Output ~ 0
 OUT1
 Text HLabel 7980 3215 2    39   Output ~ 0
 OUT2
-Text HLabel 7980 4345 2    39   Output ~ 0
-OUT3
 Text HLabel 5460 4345 2    39   Output ~ 0
+OUT3
+Text HLabel 7980 4345 2    39   Output ~ 0
 OUT4
 $Comp
 L C C14
 U 1 1 5B10D3B0
 P 3470 3215
-F 0 "C14" H 3495 3315 50  0000 L CNN
-F 1 "0.1u" H 3495 3115 50  0000 L CNN
+F 0 "C14" H 3495 3315 39  0000 L CNN
+F 1 "0.1u" H 3495 3115 39  0000 L CNN
 F 2 "" H 3508 3065 50  0001 C CNN
 F 3 "" H 3470 3215 50  0001 C CNN
 	1    3470 3215
@@ -118,8 +118,8 @@ $Comp
 L C C15
 U 1 1 5B10D6EE
 P 3470 4365
-F 0 "C15" H 3495 4465 50  0000 L CNN
-F 1 "0.1u" H 3495 4265 50  0000 L CNN
+F 0 "C15" H 3495 4465 39  0000 L CNN
+F 1 "0.1u" H 3495 4265 39  0000 L CNN
 F 2 "" H 3508 4215 50  0001 C CNN
 F 3 "" H 3470 4365 50  0001 C CNN
 	1    3470 4365
@@ -147,13 +147,13 @@ F 3 "" H 6075 4365 50  0001 C CNN
 	1    6075 4365
 	1    0    0    -1  
 $EndComp
-Text HLabel 6620 4445 0    39   Input ~ 0
+Text HLabel 4185 4445 0    39   Input ~ 0
 IN3
 Text HLabel 6620 3315 0    39   Input ~ 0
 IN2
 Text HLabel 4185 3315 0    39   Input ~ 0
 IN1
-Text HLabel 4185 4445 0    39   Input ~ 0
+Text HLabel 6620 4445 0    39   Input ~ 0
 IN4
 Text HLabel 3115 4995 0    39   Input ~ 0
 GND
