@@ -329,7 +329,7 @@ F 3 "" H 7875 3590 39  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text HLabel 9485 3790 2    39   Input ~ 8
-VCC
+VIN
 $Comp
 L L_Small L2
 U 1 1 5BF1CA9E

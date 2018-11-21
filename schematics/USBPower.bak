@@ -71,7 +71,7 @@ Wire Wire Line
 Wire Wire Line
 	5555 3870 5555 4425
 Wire Wire Line
-	4935 4425 6615 4425
+	6615 4425 4935 4425
 Wire Wire Line
 	5035 4425 5035 4330
 Wire Wire Line
@@ -85,7 +85,7 @@ L Conn_01x02 J17
 U 1 1 5BF6FEF6
 P 4885 2520
 F 0 "J17" H 4885 2620 39  0000 C CNN
-F 1 "Conn_01x02" H 4885 2320 39  0000 C CNN
+F 1 "External" H 4885 2320 39  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4885 2520 50  0001 C CNN
 F 3 "" H 4885 2520 50  0001 C CNN
 	1    4885 2520
@@ -111,7 +111,7 @@ Wire Wire Line
 Wire Wire Line
 	5085 2420 6615 2420
 Wire Wire Line
-	6615 2420 6615 4425
+	6615 1975 6615 4425
 Connection ~ 5555 4425
 $Comp
 L C_Small C63
@@ -130,4 +130,22 @@ Connection ~ 6090 3630
 Wire Wire Line
 	6090 3850 6090 3870
 Connection ~ 6090 3870
+$Comp
+L Conn_01x02 J?
+U 1 1 5BFF55BC
+P 4885 1975
+F 0 "J?" H 4885 2075 39  0000 C CNN
+F 1 "High Power" H 4885 1775 39  0000 C CNN
+F 2 "" H 4885 1975 50  0001 C CNN
+F 3 "" H 4885 1975 50  0001 C CNN
+	1    4885 1975
+	-1   0    0    1   
+$EndComp
+Text HLabel 5295 1875 2    39   Output ~ 0
+5.5V
+Wire Wire Line
+	5295 1875 5085 1875
+Wire Wire Line
+	5085 1975 6615 1975
+Connection ~ 6615 2420
 $EndSCHEMATC
