@@ -417,8 +417,8 @@ U 5BF6F22D
 F0 "USB Power" 39
 F1 "USBPower.sch" 39
 F2 "GND" O R 2040 6380 39 
-F3 "+5V" O R 2040 6295 39 
-F4 "5.5V" O R 2040 6460 39 
+F3 "5.5V" O R 2040 6460 39 
+F4 "+5V" I R 2040 6295 39 
 $EndSheet
 $Comp
 L GS2 J24
@@ -548,10 +548,6 @@ F 3 "" H 7655 5650 50  0001 C CNN
 	1    7655 5650
 	1    0    0    -1  
 $EndComp
-Text GLabel 4150 3595 0    39   Input ~ 0
-EXCLK
-Text GLabel 9055 5135 0    39   Input ~ 0
-EXCLK
 $Sheet
 S 9335 2350 655  630 
 U 5BF6B982
@@ -614,7 +610,7 @@ U 1 1 5BF9F53E
 P 5150 6475
 F 0 "J32" H 5150 6775 39  0000 C CNN
 F 1 "Bluetooth" V 5245 6435 39  0000 C CNN
-F 2 "" H 5150 6475 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 5150 6475 50  0001 C CNN
 F 3 "" H 5150 6475 50  0001 C CNN
 	1    5150 6475
 	0    1    1    0   
@@ -690,6 +686,30 @@ F 3 "" H 10515 2320 50  0001 C CNN
 	1    10515 2320
 	1    0    0    -1  
 $EndComp
+$Comp
+L GND #PWR019
+U 1 1 5BFFAD28
+P 2485 6500
+F 0 "#PWR019" H 2485 6250 50  0001 C CNN
+F 1 "GND" H 2485 6350 39  0000 C CNN
+F 2 "" H 2485 6500 50  0001 C CNN
+F 3 "" H 2485 6500 50  0001 C CNN
+	1    2485 6500
+	1    0    0    -1  
+$EndComp
+Text GLabel 2185 6460 2    39   Input ~ 0
++5.5V
+Text GLabel 8740 2495 2    39   Input ~ 0
++5.5V
+Text GLabel 2185 6295 2    39   Input ~ 0
++5V
+NoConn ~ 9245 4635
+NoConn ~ 9245 4735
+NoConn ~ 9245 4835
+NoConn ~ 9245 5335
+NoConn ~ 10195 4235
+Text GLabel 9055 5135 0    39   Input ~ 0
+EXCLK
 Wire Wire Line
 	2295 2620 2565 2620
 Wire Wire Line
@@ -969,8 +989,6 @@ Wire Wire Line
 Wire Wire Line
 	8415 4935 9245 4935
 Wire Wire Line
-	4150 3595 4195 3595
-Wire Wire Line
 	9245 5135 9055 5135
 Wire Wire Line
 	8625 2410 9335 2410
@@ -1069,29 +1087,16 @@ Wire Wire Line
 	9150 2495 9335 2495
 Wire Wire Line
 	2185 6460 2040 6460
-$Comp
-L GND #PWR019
-U 1 1 5BFFAD28
-P 2485 6500
-F 0 "#PWR019" H 2485 6250 50  0001 C CNN
-F 1 "GND" H 2485 6350 39  0000 C CNN
-F 2 "" H 2485 6500 50  0001 C CNN
-F 3 "" H 2485 6500 50  0001 C CNN
-	1    2485 6500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2485 6500 2485 6380
 Wire Wire Line
 	2485 6380 2040 6380
-Text GLabel 2185 6460 2    39   Input ~ 0
-+5.5V
-Text GLabel 8740 2495 2    39   Input ~ 0
-+5.5V
 Wire Wire Line
 	8740 2495 8625 2495
-Text GLabel 2185 6295 2    39   Input ~ 0
-+5V
 Wire Wire Line
 	2185 6295 2040 6295
+Wire Wire Line
+	4150 3595 4195 3595
+Text GLabel 4150 3595 0    39   Input ~ 0
+EXCLK
 $EndSCHEMATC
