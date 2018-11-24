@@ -162,4 +162,23 @@ $EndComp
 Wire Wire Line
 	5100 3570 5100 3730
 Connection ~ 5100 3730
+$Comp
+L Conn_01x02 J36
+U 1 1 5BFA0C31
+P 4885 1400
+F 0 "J36" H 4885 1500 50  0000 C CNN
+F 1 "12 Volts" H 4885 1200 39  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4885 1400 50  0001 C CNN
+F 3 "" H 4885 1400 50  0001 C CNN
+	1    4885 1400
+	-1   0    0    1   
+$EndComp
+Text HLabel 5305 1300 2    39   Output ~ 0
++12V
+Text HLabel 5305 1400 2    39   Output ~ 0
+-12V
+Wire Wire Line
+	5085 1300 5305 1300
+Wire Wire Line
+	5085 1400 5305 1400
 $EndSCHEMATC
