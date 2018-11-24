@@ -419,6 +419,8 @@ F1 "USBPower.sch" 39
 F2 "GND" O R 2040 6380 39 
 F3 "5.5V" O R 2040 6460 39 
 F4 "+5V" I R 2040 6295 39 
+F5 "+12V" O L 1480 6335 39 
+F6 "-12V" O L 1480 6420 39 
 $EndSheet
 $Comp
 L GS2 J24
@@ -1099,4 +1101,12 @@ Wire Wire Line
 	4150 3595 4195 3595
 Text GLabel 4150 3595 0    39   Input ~ 0
 EXCLK
+Text GLabel 1320 6335 0    39   Input ~ 0
++12V
+Text GLabel 1320 6420 0    39   Input ~ 0
+-12V
+Wire Wire Line
+	1320 6420 1480 6420
+Wire Wire Line
+	1480 6335 1320 6335
 $EndSCHEMATC
