@@ -96,8 +96,6 @@ Connection ~ 5585 4520
 Wire Wire Line
 	5935 5355 5935 4845
 Wire Wire Line
-	8455 5355 1040 5355
-Wire Wire Line
 	4450 5355 4450 4870
 Wire Wire Line
 	5585 4845 5585 5355
@@ -370,7 +368,7 @@ Wire Wire Line
 Wire Wire Line
 	8735 3925 8735 3790
 Wire Wire Line
-	8455 4125 8455 5355
+	8455 5355 8455 4125
 Wire Wire Line
 	6685 4270 9390 4270
 Wire Wire Line
@@ -457,4 +455,6 @@ Wire Wire Line
 Wire Wire Line
 	7450 3970 7450 4270
 Connection ~ 7450 4270
+Wire Wire Line
+	2050 5355 8455 5355
 $EndSCHEMATC
