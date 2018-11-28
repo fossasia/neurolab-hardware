@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/knight/Documents/FOSSASIA/NeuroLab/neurolab-hardware/schematics/neurolab.sch)
-    (date "Tue 27 Nov 2018 17:53:03 +0530")
+    (date "Wed 28 Nov 2018 06:29:46 +0530")
     (tool "Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -196,6 +196,7 @@
       (tstamp 5BFDEA5A))
     (comp (ref U18)
       (value Arduino)
+      (footprint Pin_Headers:Pin_Header_Straight_2x12_Pitch2.54mm)
       (libsource (lib neuro) (part Arduino))
       (sheetpath (names /) (tstamps /))
       (tstamp 5BFF0E5C))
@@ -1639,10 +1640,10 @@
       (uri /usr/share/kicad/library/transistors.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
-    (library (logical linear)
-      (uri /usr/share/kicad/library/linear.lib))
     (library (logical conn)
       (uri /usr/share/kicad/library/conn.lib))
+    (library (logical linear)
+      (uri /usr/share/kicad/library/linear.lib))
     (library (logical neuro)
       (uri /home/knight/Documents/FOSSASIA/NeuroLab/neurolab-hardware/schematics/neuro.lib)))
   (nets
