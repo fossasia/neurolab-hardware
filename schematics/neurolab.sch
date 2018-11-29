@@ -665,7 +665,7 @@ TxO
 Text GLabel 4045 6270 0    39   Input ~ 0
 TxO
 Text GLabel 4045 6070 0    39   Input ~ 0
-TxO
+RxI
 $Comp
 L GS3 J33
 U 1 1 5BFE0942
