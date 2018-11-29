@@ -14,3 +14,8 @@ Current devices in the medical industry are usually not accessible by doctors du
 
 A difference to existing projects like OpenBCI is that it will not be necessary to 3D print large headsets. Instead we are focusing on creating a device that collects as much data as possible through the forehead. To achieve this goal we are using high-grade sensors and flexible electronics.
 
+
+## PCB Layout
+Front Side               | Back Side
+ ----------------------- | ---------------------------
+![](docs/images/Top.png) | ![](docs/images/Bottom.png)
