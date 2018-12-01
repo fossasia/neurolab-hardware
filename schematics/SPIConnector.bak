@@ -269,29 +269,6 @@ Wire Wire Line
 	5900 5580 6235 5580
 Text Notes 6025 5580 0    30   Italic 0
 MISO
-$Comp
-L Conn_01x02 J29
-U 1 1 5BF59BF1
-P 4865 5660
-F 0 "J29" H 4865 5760 50  0000 C CNN
-F 1 "Teensy Port" H 4865 5460 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4865 5660 50  0001 C CNN
-F 3 "" H 4865 5660 50  0001 C CNN
-	1    4865 5660
-	1    0    0    -1  
-$EndComp
-Text HLabel 3775 5660 0    39   Output ~ 0
-MOSI'
-Wire Wire Line
-	3775 5660 4665 5660
-Text Notes 4010 5660 0    30   Italic 0
-MISO (12) Teensy 3.2
-Text HLabel 3775 5760 0    39   Output ~ 0
-SCL'
-Wire Wire Line
-	3775 5760 4665 5760
-Text Notes 4010 5760 0    30   Italic 0
-SCL (13) Teensy 3.2
 Wire Wire Line
 	6495 4060 7950 4060
 $EndSCHEMATC
