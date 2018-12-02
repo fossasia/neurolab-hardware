@@ -215,19 +215,6 @@ F 3 "" H 4255 3920 50  0001 C CNN
 	1    4255 3920
 	0    1    1    0   
 $EndComp
-$Comp
-L GS2 J8
-U 1 1 5B11D6F9
-P 3860 3920
-AR Path="/5B117C68/5B11D6F9" Ref="J8"  Part="1" 
-AR Path="/5B117CFE/5B11D6F9" Ref="J11"  Part="1" 
-F 0 "J11" V 3920 4075 39  0000 C CNN
-F 1 "GS2" V 3915 3740 39  0000 C CNN
-F 2 "Connectors:GS2" V 3934 3920 50  0001 C CNN
-F 3 "" H 3860 3920 50  0001 C CNN
-	1    3860 3920
-	0    1    1    0   
-$EndComp
 Text HLabel 5385 3720 2    39   Input ~ 0
 V+
 Text HLabel 5385 4020 2    39   Input ~ 0
@@ -670,14 +657,6 @@ Wire Wire Line
 Wire Wire Line
 	4445 3920 4405 3920
 Wire Wire Line
-	4445 3820 3615 3820
-Wire Wire Line
-	3615 3820 3615 3920
-Wire Wire Line
-	3615 3920 3660 3920
-Wire Wire Line
-	4060 3920 4105 3920
-Wire Wire Line
 	3915 3105 4385 3105
 Wire Wire Line
 	4385 2425 4385 3720
@@ -1009,4 +988,12 @@ F 3 "" V 1485 3840 50  0001 C CNN
 	1    1485 3840
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	4445 3820 4060 3820
+Wire Wire Line
+	4060 3820 4060 3920
+Wire Wire Line
+	4060 3920 4105 3920
+Text Notes 3750 3905 0    20   ~ 0
+200R Resistor can\nbe dismounted
 $EndSCHEMATC
