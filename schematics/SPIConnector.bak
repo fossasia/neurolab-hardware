@@ -129,21 +129,8 @@ F 3 "" H 6845 2775 50  0001 C CNN
 	1    6845 2775
 	1    0    0    -1  
 $EndComp
-$Comp
-L Conn_02x03_Odd_Even J26
-U 1 1 5BF6C9E8
-P 6435 5680
-F 0 "J26" H 6485 5880 50  0000 C CNN
-F 1 "ICSP Port" H 6485 5480 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 6435 5680 50  0001 C CNN
-F 3 "" H 6435 5680 50  0001 C CNN
-	1    6435 5680
-	1    0    0    -1  
-$EndComp
 Text HLabel 3440 4840 0    39   Input ~ 0
 GND
-Text HLabel 5900 5780 0    39   Input ~ 0
-RST
 Wire Wire Line
 	3440 2445 4010 2445
 Connection ~ 3730 2445
@@ -173,40 +160,6 @@ Wire Wire Line
 	6495 3055 6845 3055
 Wire Wire Line
 	6845 3055 6845 2925
-Text HLabel 5900 5680 0    39   Output ~ 0
-SCL'
-Text HLabel 7125 5780 2    39   Input ~ 0
-GND
-Text HLabel 7125 5680 2    39   Output ~ 0
-MISO'
-Wire Wire Line
-	7125 5680 6735 5680
-Text Notes 6750 5680 0    30   Italic 0
-MOSI
-Wire Wire Line
-	5900 5780 6235 5780
-Wire Wire Line
-	6235 5680 5900 5680
-Text Notes 6025 5680 0    30   Italic 0
-SCL/SCK
-Text Notes 6025 5780 0    30   Italic 0
-RESET
-Wire Wire Line
-	7125 5780 6735 5780
-Text Notes 6750 5780 0    30   Italic 0
-GND
-Text HLabel 7125 5580 2    39   Input ~ 0
-VCC
-Wire Wire Line
-	7125 5580 6735 5580
-Text Notes 6750 5580 0    30   Italic 0
-VCC
-Text HLabel 5900 5580 0    39   Output ~ 0
-MOSI'
-Wire Wire Line
-	5900 5580 6235 5580
-Text Notes 6025 5580 0    30   Italic 0
-MISO
 Wire Wire Line
 	6495 4060 7950 4060
 Wire Wire Line
@@ -223,4 +176,6 @@ Wire Wire Line
 Connection ~ 6845 2455
 Wire Wire Line
 	3730 2570 3730 2445
+Text Notes 6585 5060 0    30   ~ 0
+MOSI'  ---->   MISO\nSCL'   -----> SCL/SCK\nRST   ----->  RESET\nVCC   ----->  VCC\nMISO' ----->  MOSI
 $EndSCHEMATC

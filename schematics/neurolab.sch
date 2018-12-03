@@ -417,50 +417,6 @@ VCCIO
 Text GLabel 7690 3635 0    39   Input ~ 0
 VCCIO
 $Comp
-L GS2 J20
-U 1 1 5BFDBEA7
-P 6620 1750
-F 0 "J20" H 6660 1890 39  0000 C CNN
-F 1 "GS2" V 6580 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6694 1750 50  0001 C CNN
-F 3 "" H 6620 1750 50  0001 C CNN
-	1    6620 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS2 J21
-U 1 1 5BFDE58D
-P 6720 1750
-F 0 "J21" H 6760 1890 39  0000 C CNN
-F 1 "GS2" V 6680 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6794 1750 50  0001 C CNN
-F 3 "" H 6720 1750 50  0001 C CNN
-	1    6720 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS2 J22
-U 1 1 5BFDE7F0
-P 6820 1750
-F 0 "J22" H 6860 1890 39  0000 C CNN
-F 1 "GS2" V 6780 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6894 1750 50  0001 C CNN
-F 3 "" H 6820 1750 50  0001 C CNN
-	1    6820 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS2 J23
-U 1 1 5BFDEA5A
-P 6920 1750
-F 0 "J23" H 6960 1890 39  0000 C CNN
-F 1 "GS2" V 6880 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6994 1750 50  0001 C CNN
-F 3 "" H 6920 1750 50  0001 C CNN
-	1    6920 1750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Arduino U18
 U 1 1 5BFF0E5C
 P 9720 4785
@@ -471,14 +427,6 @@ F 3 "" H 9720 4785 39  0001 C CNN
 	1    9720 4785
 	1    0    0    -1  
 $EndComp
-Text Label 6620 1465 1    39   ~ 0
-AD3
-Text Label 6720 1465 1    39   ~ 0
-AD2
-Text Label 6820 1465 1    39   ~ 0
-AD1
-Text Label 6920 1465 1    39   ~ 0
-AD0
 Text GLabel 10310 4635 2    39   Input ~ 0
 AD3
 Text GLabel 10310 4735 2    39   Input ~ 0
@@ -487,13 +435,13 @@ Text GLabel 10310 4835 2    39   Input ~ 0
 AD1
 Text GLabel 10310 4935 2    39   Input ~ 0
 AD0
-Text GLabel 6620 1295 1    39   Input ~ 0
+Text GLabel 6620 1950 1    39   Input ~ 0
 AD3
-Text GLabel 6720 1295 1    39   Input ~ 0
+Text GLabel 6720 1950 1    39   Input ~ 0
 AD2
-Text GLabel 6820 1295 1    39   Input ~ 0
+Text GLabel 6820 1950 1    39   Input ~ 0
 AD1
-Text GLabel 6920 1295 1    39   Input ~ 0
+Text GLabel 6920 1950 1    39   Input ~ 0
 AD0
 $Comp
 L R R44
@@ -890,14 +838,6 @@ Connection ~ 6820 2750
 Wire Wire Line
 	6920 1950 6920 2920
 Connection ~ 6920 2920
-Wire Wire Line
-	6620 1295 6620 1550
-Wire Wire Line
-	6720 1550 6720 1295
-Wire Wire Line
-	6820 1295 6820 1550
-Wire Wire Line
-	6920 1295 6920 1550
 Wire Wire Line
 	10310 4635 10195 4635
 Wire Wire Line
