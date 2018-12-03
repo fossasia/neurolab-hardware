@@ -247,19 +247,19 @@ Text HLabel 5125 3220 2    39   Output ~ 8
 AIN13
 Text HLabel 5125 3720 2    39   Output ~ 8
 AIN12
-Text HLabel 5125 3520 2    39   Output ~ 8
-AIN11
 Text HLabel 5125 3420 2    39   Output ~ 8
+AIN11
+Text HLabel 5125 3320 2    39   Output ~ 8
 AIN10
-Text HLabel 5125 4020 2    39   Output ~ 8
-AIN9
 Text HLabel 5125 3920 2    39   Output ~ 8
+AIN9
+Text HLabel 5125 3820 2    39   Output ~ 8
 AIN8
 Text HLabel 5125 3620 2    39   Output ~ 8
 AIN7
-Text HLabel 5125 3320 2    39   Output ~ 8
+Text HLabel 5125 3520 2    39   Output ~ 8
 AIN6
-Text HLabel 5125 3820 2    39   Output ~ 8
+Text HLabel 5125 4020 2    39   Output ~ 8
 AIN4
 Text HLabel 5125 4120 2    39   Output ~ 8
 AIN5
