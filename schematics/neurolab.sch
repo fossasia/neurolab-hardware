@@ -610,39 +610,13 @@ F 3 "" H 5150 6000 50  0001 C CNN
 	1    5150 6000
 	-1   0    0    1   
 $EndComp
-$Comp
-L GS3 J31
-U 1 1 5BFAD09C
-P 4195 6170
-F 0 "J31" H 4195 6370 39  0000 C CNN
-F 1 "GS3" H 4195 5965 39  0000 C CNN
-F 2 "Connectors:GS3" V 4283 6096 50  0001 C CNN
-F 3 "" H 4195 6170 50  0001 C CNN
-	1    4195 6170
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS3 J30
-U 1 1 5BFAD7E8
-P 4195 5585
-F 0 "J30" H 4195 5785 39  0000 C CNN
-F 1 "GS3" H 4195 5390 39  0000 C CNN
-F 2 "Connectors:GS3" V 4283 5511 50  0001 C CNN
-F 3 "" H 4195 5585 50  0001 C CNN
-	1    4195 5585
-	1    0    0    -1  
-$EndComp
 Text GLabel 9055 4235 0    39   Input ~ 0
 TxO
 Text GLabel 9055 4335 0    39   Input ~ 0
 RxI
-Text GLabel 4045 5485 0    39   Input ~ 0
-RxI
-Text GLabel 4045 5685 0    39   Input ~ 0
+Text GLabel 5050 6275 1    39   Input ~ 0
 TxO
-Text GLabel 4045 6270 0    39   Input ~ 0
-TxO
-Text GLabel 4045 6070 0    39   Input ~ 0
+Text GLabel 4950 6275 1    39   Input ~ 0
 RxI
 $Comp
 L GS3 J33
@@ -994,14 +968,6 @@ Wire Wire Line
 	5250 6160 5250 6275
 Wire Wire Line
 	5150 6000 5150 6275
-Wire Wire Line
-	4345 6170 4950 6170
-Wire Wire Line
-	4950 6170 4950 6275
-Wire Wire Line
-	4345 5585 5050 5585
-Wire Wire Line
-	5050 5585 5050 6275
 Wire Wire Line
 	9055 4235 9245 4235
 Wire Wire Line
