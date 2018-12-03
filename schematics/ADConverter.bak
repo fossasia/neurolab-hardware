@@ -257,7 +257,7 @@ Text HLabel 5125 3820 2    39   Output ~ 8
 AIN8
 Text HLabel 5125 3620 2    39   Output ~ 8
 AIN7
-Text HLabel 5435 3320 2    39   Output ~ 8
+Text HLabel 5125 3520 2    39   Output ~ 8
 AIN6
 Text HLabel 5125 4020 2    39   Output ~ 8
 AIN4
