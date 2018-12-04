@@ -416,250 +416,113 @@ Text GLabel 3625 2480 0    39   Input ~ 0
 VCCIO
 Text GLabel 7690 3635 0    39   Input ~ 0
 VCCIO
-$Comp
-L GS2 J20
-U 1 1 5BFDBEA7
-P 6620 1750
-F 0 "J20" H 6660 1890 39  0000 C CNN
-F 1 "GS2" V 6580 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6694 1750 50  0001 C CNN
-F 3 "" H 6620 1750 50  0001 C CNN
-	1    6620 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS2 J21
-U 1 1 5BFDE58D
-P 6720 1750
-F 0 "J21" H 6760 1890 39  0000 C CNN
-F 1 "GS2" V 6680 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6794 1750 50  0001 C CNN
-F 3 "" H 6720 1750 50  0001 C CNN
-	1    6720 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS2 J22
-U 1 1 5BFDE7F0
-P 6820 1750
-F 0 "J22" H 6860 1890 39  0000 C CNN
-F 1 "GS2" V 6780 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6894 1750 50  0001 C CNN
-F 3 "" H 6820 1750 50  0001 C CNN
-	1    6820 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS2 J23
-U 1 1 5BFDEA5A
-P 6920 1750
-F 0 "J23" H 6960 1890 39  0000 C CNN
-F 1 "GS2" V 6880 1575 39  0000 C CNN
-F 2 "Connectors:GS2" V 6994 1750 50  0001 C CNN
-F 3 "" H 6920 1750 50  0001 C CNN
-	1    6920 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Arduino U18
-U 1 1 5BFF0E5C
-P 9720 4785
-F 0 "U18" H 9720 4110 39  0000 C CNN
-F 1 "Arduino" H 9720 5460 39  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x12_Pitch2.54mm" H 9720 4785 39  0001 C CNN
-F 3 "" H 9720 4785 39  0001 C CNN
-	1    9720 4785
-	1    0    0    -1  
-$EndComp
-Text Label 6620 1465 1    39   ~ 0
+Text GLabel 8815 5605 0    39   Input ~ 0
 AD3
-Text Label 6720 1465 1    39   ~ 0
+Text GLabel 8815 5805 0    39   Input ~ 0
 AD2
-Text Label 6820 1465 1    39   ~ 0
+Text GLabel 8815 5705 0    39   Input ~ 0
 AD1
-Text Label 6920 1465 1    39   ~ 0
+Text GLabel 8815 5905 0    39   Input ~ 0
 AD0
-Text GLabel 10310 4635 2    39   Input ~ 0
+Text GLabel 6620 1950 1    39   Input ~ 0
 AD3
-Text GLabel 10310 4735 2    39   Input ~ 0
+Text GLabel 6720 1950 1    39   Input ~ 0
 AD2
-Text GLabel 10310 4835 2    39   Input ~ 0
+Text GLabel 6820 1950 1    39   Input ~ 0
 AD1
-Text GLabel 10310 4935 2    39   Input ~ 0
-AD0
-Text GLabel 6620 1295 1    39   Input ~ 0
-AD3
-Text GLabel 6720 1295 1    39   Input ~ 0
-AD2
-Text GLabel 6820 1295 1    39   Input ~ 0
-AD1
-Text GLabel 6920 1295 1    39   Input ~ 0
+Text GLabel 6920 1950 1    39   Input ~ 0
 AD0
 $Comp
 L R R44
 U 1 1 5BF4D66A
-P 8415 5235
-F 0 "R44" V 8495 5235 50  0000 C CNN
-F 1 "5.1k" V 8415 5235 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 8345 5235 50  0001 C CNN
-F 3 "" H 8415 5235 50  0001 C CNN
-	1    8415 5235
-	-1   0    0    1   
-$EndComp
-$Comp
-L LED_ALT D2
-U 1 1 5BF4DED8
-P 8065 5475
-F 0 "D2" H 8065 5575 50  0000 C CNN
-F 1 "LED_ALT" H 8065 5375 50  0000 C CNN
-F 2 "LEDs:LED_0603" H 8065 5475 50  0001 C CNN
-F 3 "" H 8065 5475 50  0001 C CNN
-	1    8065 5475
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR015
-U 1 1 5BF54099
-P 7655 5650
-F 0 "#PWR015" H 7655 5400 50  0001 C CNN
-F 1 "GND" H 7655 5500 39  0000 C CNN
-F 2 "" H 7655 5650 50  0001 C CNN
-F 3 "" H 7655 5650 50  0001 C CNN
-	1    7655 5650
-	1    0    0    -1  
+P 9475 5805
+F 0 "R44" V 9555 5805 50  0000 C CNN
+F 1 "5.1k" V 9475 5805 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 9405 5805 50  0001 C CNN
+F 3 "" H 9475 5805 50  0001 C CNN
+	1    9475 5805
+	0    -1   -1   0   
 $EndComp
 $Sheet
-S 9335 2350 655  630 
+S 9335 2350 655  560 
 U 5BF6B982
 F0 "SPI Connector" 39
 F1 "SPIConnector.sch" 39
 F2 "CS" I L 9335 2580 39 
 F3 "MISO" I L 9335 2750 39 
 F4 "MOSI" I L 9335 2835 39 
-F5 "CS'" O R 9990 2540 39 
-F6 "MISO'" O R 9990 2710 39 
-F7 "MOSI'" O R 9990 2790 39 
+F5 "CS'" O R 9990 2495 39 
+F6 "MISO'" O R 9990 2665 39 
+F7 "MOSI'" O R 9990 2750 39 
 F8 "GND" I L 9335 2410 39 
-F9 "RST" I L 9335 2920 39 
-F10 "VCC" I L 9335 2495 39 
-F11 "SCL" I L 9335 2665 39 
-F12 "SCL'" O R 9990 2625 39 
+F9 "VCC" I L 9335 2495 39 
+F10 "SCL" I L 9335 2665 39 
+F11 "SCL'" O R 9990 2580 39 
 $EndSheet
-Text GLabel 10315 5335 2    39   Input ~ 0
+Text GLabel 9875 5505 2    39   Input ~ 0
 CS
-Text GLabel 10105 2540 2    39   Input ~ 0
+Text GLabel 10105 2495 2    39   Input ~ 0
 CS
-Text GLabel 10105 2625 2    39   Input ~ 0
+Text GLabel 10105 2580 2    39   Input ~ 0
 SCL
-Text GLabel 10105 2710 2    39   Input ~ 0
+Text GLabel 10105 2665 2    39   Input ~ 0
 MISO
-Text GLabel 10105 2790 2    39   Input ~ 0
+Text GLabel 10105 2750 2    39   Input ~ 0
 MOSI
-Text GLabel 9060 5235 0    39   Input ~ 0
-CS
-Text GLabel 10310 5035 2    39   Input ~ 0
-SCL
-Text GLabel 10315 5235 2    39   Input ~ 0
+Text GLabel 8415 5405 0    39   Input ~ 0
 MISO
-Text GLabel 9055 5035 0    39   Input ~ 0
-MISO
-Text Notes 8840 5085 2    30   Italic 0
+Text Notes 8215 5455 2    30   Italic 0
 MOSI (11)\nTeensy 3.2
-Text Notes 8915 5285 2    30   Italic 0
+Text Notes 10005 5555 0    30   Italic 0
 CS (10)\nTeensy 3.2
-Text GLabel 10315 5135 2    39   Input ~ 0
-MOSI
 $Comp
 L GS2 J34
 U 1 1 5BF8C560
-P 10595 4160
-F 0 "J34" V 10550 4315 39  0000 C CNN
-F 1 "GS2" V 10545 3970 39  0000 C CNN
-F 2 "Connectors:GS2" V 10669 4160 50  0001 C CNN
-F 3 "" H 10595 4160 50  0001 C CNN
-	1    10595 4160
-	1    0    0    -1  
+P 9610 6045
+F 0 "J34" V 9565 6200 39  0000 C CNN
+F 1 "GS2" V 9560 5855 39  0000 C CNN
+F 2 "Connectors:GS2" V 9684 6045 50  0001 C CNN
+F 3 "" H 9610 6045 50  0001 C CNN
+	1    9610 6045
+	0    1    1    0   
 $EndComp
 Text GLabel 9150 2495 0    39   UnSpc Italic 0
 VCC
-Text GLabel 10420 3520 0    30   UnSpc Italic 0
+Text GLabel 9890 6045 2    30   UnSpc Italic 0
 VCC
 $Comp
-L Conn_01x06 J32
+L Conn_01x04 J32
 U 1 1 5BF9F53E
 P 5150 6475
-F 0 "J32" H 5150 6775 39  0000 C CNN
+F 0 "J32" H 5150 6675 39  0000 C CNN
 F 1 "Bluetooth" V 5245 6435 39  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 5150 6475 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 5150 6475 50  0001 C CNN
 F 3 "" H 5150 6475 50  0001 C CNN
 	1    5150 6475
 	0    1    1    0   
 $EndComp
 Text GLabel 5250 6160 1    30   UnSpc Italic 0
 VCC
-NoConn ~ 5350 6275
-NoConn ~ 4850 6275
 $Comp
-L GND #PWR016
+L GND #PWR015
 U 1 1 5BFAA3A6
 P 5150 6000
-F 0 "#PWR016" H 5150 5750 50  0001 C CNN
+F 0 "#PWR015" H 5150 5750 50  0001 C CNN
 F 1 "GND" H 5150 5875 39  0000 C CNN
 F 2 "" H 5150 6000 50  0001 C CNN
 F 3 "" H 5150 6000 50  0001 C CNN
 	1    5150 6000
 	-1   0    0    1   
 $EndComp
-$Comp
-L GS3 J31
-U 1 1 5BFAD09C
-P 4195 6170
-F 0 "J31" H 4195 6370 39  0000 C CNN
-F 1 "GS3" H 4195 5965 39  0000 C CNN
-F 2 "Connectors:GS3" V 4283 6096 50  0001 C CNN
-F 3 "" H 4195 6170 50  0001 C CNN
-	1    4195 6170
-	1    0    0    -1  
-$EndComp
-$Comp
-L GS3 J30
-U 1 1 5BFAD7E8
-P 4195 5585
-F 0 "J30" H 4195 5785 39  0000 C CNN
-F 1 "GS3" H 4195 5390 39  0000 C CNN
-F 2 "Connectors:GS3" V 4283 5511 50  0001 C CNN
-F 3 "" H 4195 5585 50  0001 C CNN
-	1    4195 5585
-	1    0    0    -1  
-$EndComp
-Text GLabel 9055 4235 0    39   Input ~ 0
+Text GLabel 5050 6275 1    39   Input ~ 0
 TxO
-Text GLabel 9055 4335 0    39   Input ~ 0
-RxI
-Text GLabel 4045 5485 0    39   Input ~ 0
-RxI
-Text GLabel 4045 5685 0    39   Input ~ 0
-TxO
-Text GLabel 4045 6270 0    39   Input ~ 0
-TxO
-Text GLabel 4045 6070 0    39   Input ~ 0
+Text GLabel 4950 6275 1    39   Input ~ 0
 RxI
 $Comp
-L GS3 J33
-U 1 1 5BFE0942
-P 9200 3480
-F 0 "J33" V 9200 3280 39  0000 C CNN
-F 1 "Reset Select" V 8975 3480 39  0000 C CNN
-F 2 "Connectors:GS3" V 9288 3406 50  0001 C CNN
-F 3 "" H 9200 3480 50  0001 C CNN
-	1    9200 3480
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR017
+L GND #PWR016
 U 1 1 5BFEA995
 P 10515 2320
-F 0 "#PWR017" H 10515 2070 50  0001 C CNN
+F 0 "#PWR016" H 10515 2070 50  0001 C CNN
 F 1 "GND" H 10515 2170 39  0000 C CNN
 F 2 "" H 10515 2320 50  0001 C CNN
 F 3 "" H 10515 2320 50  0001 C CNN
@@ -667,10 +530,10 @@ F 3 "" H 10515 2320 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR018
+L GND #PWR017
 U 1 1 5BFFAD28
 P 2485 6500
-F 0 "#PWR018" H 2485 6250 50  0001 C CNN
+F 0 "#PWR017" H 2485 6250 50  0001 C CNN
 F 1 "GND" H 2485 6350 39  0000 C CNN
 F 2 "" H 2485 6500 50  0001 C CNN
 F 3 "" H 2485 6500 50  0001 C CNN
@@ -683,12 +546,7 @@ Text GLabel 8740 2495 2    39   Input ~ 0
 +5.5V
 Text GLabel 2185 6295 2    39   Input ~ 0
 +5V
-NoConn ~ 9245 4635
-NoConn ~ 9245 4735
-NoConn ~ 9245 4835
-NoConn ~ 9245 5335
-NoConn ~ 10195 4235
-Text GLabel 9055 5135 0    39   Input ~ 0
+Text GLabel 9880 5905 2    39   Input ~ 0
 EXCLK
 Wire Wire Line
 	2295 2620 2565 2620
@@ -917,36 +775,6 @@ Wire Wire Line
 	6920 1950 6920 2920
 Connection ~ 6920 2920
 Wire Wire Line
-	6620 1295 6620 1550
-Wire Wire Line
-	6720 1550 6720 1295
-Wire Wire Line
-	6820 1295 6820 1550
-Wire Wire Line
-	6920 1295 6920 1550
-Wire Wire Line
-	10310 4635 10195 4635
-Wire Wire Line
-	10195 4735 10310 4735
-Wire Wire Line
-	10195 4835 10310 4835
-Wire Wire Line
-	10195 4935 10310 4935
-Wire Wire Line
-	8215 5475 8415 5475
-Wire Wire Line
-	8415 5475 8415 5385
-Wire Wire Line
-	7915 5475 7655 5475
-Wire Wire Line
-	7655 4535 7655 5650
-Wire Wire Line
-	8415 5085 8415 4935
-Wire Wire Line
-	8415 4935 9245 4935
-Wire Wire Line
-	9245 5135 9055 5135
-Wire Wire Line
 	8625 2410 9335 2410
 Wire Wire Line
 	8625 2580 9335 2580
@@ -957,81 +785,15 @@ Wire Wire Line
 Wire Wire Line
 	9335 2835 8625 2835
 Wire Wire Line
-	10470 4435 10195 4435
+	10105 2750 9990 2750
 Wire Wire Line
-	10470 3660 10470 4435
+	9990 2665 10105 2665
 Wire Wire Line
-	9200 2920 9335 2920
-Wire Wire Line
-	10105 2540 9990 2540
-Wire Wire Line
-	10315 5335 10195 5335
-Wire Wire Line
-	10105 2790 9990 2790
-Wire Wire Line
-	9990 2710 10105 2710
-Wire Wire Line
-	9990 2625 10105 2625
-Wire Wire Line
-	9060 5235 9245 5235
-Wire Wire Line
-	10310 5035 10195 5035
-Wire Wire Line
-	10315 5235 10195 5235
-Wire Wire Line
-	9055 5035 9245 5035
-Wire Wire Line
-	10315 5135 10195 5135
-Wire Wire Line
-	10195 4535 10595 4535
-Wire Wire Line
-	10595 4535 10595 4360
-Wire Wire Line
-	10420 3520 10595 3520
-Wire Wire Line
-	10595 3520 10595 3960
+	9990 2580 10105 2580
 Wire Wire Line
 	5250 6160 5250 6275
 Wire Wire Line
 	5150 6000 5150 6275
-Wire Wire Line
-	4345 6170 4950 6170
-Wire Wire Line
-	4950 6170 4950 6275
-Wire Wire Line
-	4345 5585 5050 5585
-Wire Wire Line
-	5050 5585 5050 6275
-Wire Wire Line
-	9055 4235 9245 4235
-Wire Wire Line
-	9055 4335 9245 4335
-Wire Wire Line
-	7655 4535 9245 4535
-Wire Wire Line
-	8550 4535 8550 3970
-Wire Wire Line
-	8550 3970 10345 3970
-Wire Wire Line
-	10345 3970 10345 4335
-Wire Wire Line
-	10345 4335 10195 4335
-Connection ~ 8550 4535
-Connection ~ 7655 5475
-Wire Wire Line
-	8650 4435 9245 4435
-Wire Wire Line
-	8650 3660 8650 4435
-Wire Wire Line
-	9200 3330 9200 2920
-Wire Wire Line
-	8650 3660 9100 3660
-Wire Wire Line
-	9100 3660 9100 3630
-Wire Wire Line
-	9300 3630 9300 3660
-Wire Wire Line
-	9300 3660 10470 3660
 Wire Wire Line
 	10515 2320 10515 2200
 Wire Wire Line
@@ -1101,4 +863,88 @@ Wire Wire Line
 Wire Wire Line
 	1345 3610 1235 3610
 Connection ~ 1235 3610
+$Comp
+L Conn_02x07_Odd_Even J11
+U 1 1 5C060DB7
+P 9015 5605
+F 0 "J11" H 9065 6005 50  0000 C CNN
+F 1 "ProMini" H 9065 5105 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x07_Pitch2.54mm" H 9015 5605 50  0001 C CNN
+F 3 "" H 9015 5605 50  0001 C CNN
+	1    9015 5605
+	1    0    0    -1  
+$EndComp
+Text GLabel 8415 5305 0    39   Input ~ 0
+TxO
+Wire Wire Line
+	8415 5305 8815 5305
+Text GLabel 9880 5305 2    39   Input ~ 0
+RxI
+Wire Wire Line
+	9880 5305 9315 5305
+Wire Wire Line
+	8415 5405 8815 5405
+Text GLabel 9875 5405 2    39   Input ~ 0
+MOSI
+Wire Wire Line
+	9315 5405 9875 5405
+Text GLabel 8415 5505 0    39   Input ~ 0
+SCL
+Wire Wire Line
+	8415 5505 8815 5505
+Wire Wire Line
+	9875 5505 9315 5505
+$Comp
+L GND #PWR018
+U 1 1 5C08D93A
+P 9875 5605
+F 0 "#PWR018" H 9875 5355 50  0001 C CNN
+F 1 "GND" V 9870 5430 39  0000 C CNN
+F 2 "" H 9875 5605 50  0001 C CNN
+F 3 "" H 9875 5605 50  0001 C CNN
+	1    9875 5605
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10105 2495 9990 2495
+$Comp
+L LED_ALT D2
+U 1 1 5BF4DED8
+P 9785 5805
+F 0 "D2" H 9905 5860 50  0000 C CNN
+F 1 "LED_ALT" H 9845 5710 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 9785 5805 50  0001 C CNN
+F 3 "" H 9785 5805 50  0001 C CNN
+	1    9785 5805
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9315 5605 9875 5605
+Wire Wire Line
+	9635 5805 9625 5805
+Wire Wire Line
+	9315 5805 9325 5805
+Wire Wire Line
+	9935 5805 9990 5805
+Wire Wire Line
+	9990 5805 9990 5690
+Wire Wire Line
+	9990 5690 9890 5690
+Wire Wire Line
+	9890 5690 9890 5660
+Wire Wire Line
+	9890 5660 9790 5660
+Wire Wire Line
+	9790 5660 9790 5605
+Connection ~ 9790 5605
+Wire Wire Line
+	9880 5905 9315 5905
+Wire Wire Line
+	9890 6045 9810 6045
+Wire Wire Line
+	9410 6045 9340 6045
+Wire Wire Line
+	9340 6045 9340 5705
+Wire Wire Line
+	9340 5705 9315 5705
 $EndSCHEMATC
