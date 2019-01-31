@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/fossasia/neurolab-hardware.svg?branch=master)](https://travis-ci.org/fossasia/neurolab-hardware)
 [![Gitter](https://badges.gitter.im/fossasia/pslab.svg)](https://gitter.im/fossasia/pslab?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Mailing List](https://img.shields.io/badge/Mailing%20List-FOSSASIA-blue.svg)](mailto:pslab-fossasia@googlegroups.com)
+[![Twitter Follow](https://img.shields.io/twitter/follow/pslabio.svg?style=social&label=Follow&maxAge=2592000?style=flat-square)](https://twitter.com/pslabio)
 
 We are developing a neuro-device to collect brainwaves as a headband with integrated electronics. This repository holds the PCB schematics and layouts for the Neurolab Hardware. 
 
