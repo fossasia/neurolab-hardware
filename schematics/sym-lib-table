@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name neurolab-rescue)(type Legacy)(uri ${KIPRJMOD}/neurolab-rescue.lib)(options "")(descr ""))
+  (lib (name neuro)(type Legacy)(uri ${KIPRJMOD}/neuro.lib)(options "")(descr ""))
+)

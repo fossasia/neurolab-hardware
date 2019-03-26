@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 11 14
+Sheet 11 15
 Title ""
 Date ""
 Rev ""
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L AD7173 U16
+L neuro:AD7173 U16
 U 1 1 5BF155C3
 P 4450 3670
 F 0 "U16" H 4025 2625 39  0000 C CNN
@@ -65,7 +32,7 @@ Text HLabel 3330 3570 0    39   Input ~ 0
 Text HLabel 2050 5095 0    39   Input ~ 0
 +3.3V
 $Comp
-L C_Small C31
+L neurolab-rescue:C_Small C31
 U 1 1 5BF15E16
 P 5585 4745
 F 0 "C31" H 5595 4815 39  0000 L CNN
@@ -76,7 +43,7 @@ F 3 "" H 5585 4745 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C32
+L neurolab-rescue:C_Small C32
 U 1 1 5BF15EDF
 P 5935 4745
 F 0 "C32" H 5945 4815 39  0000 L CNN
@@ -112,7 +79,7 @@ Wire Wire Line
 	5220 4620 5220 5355
 Connection ~ 5220 5355
 $Comp
-L C_Small C23
+L neurolab-rescue:C_Small C23
 U 1 1 5BF16D21
 P 2540 3520
 F 0 "C23" H 2550 3590 39  0000 L CNN
@@ -123,7 +90,7 @@ F 3 "" H 2540 3520 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C22
+L neurolab-rescue:C_Small C22
 U 1 1 5BF16FBD
 P 2220 3520
 F 0 "C22" H 2230 3590 39  0000 L CNN
@@ -164,9 +131,11 @@ Wire Wire Line
 	3430 3620 3775 3620
 Connection ~ 3430 3570
 $Comp
-L Crystal_GND24_Small Y1
+L neurolab-rescue:Crystal_GND24_Small Y1
 U 1 1 5BF17B3B
 P 3430 3870
+AR Path="/5BF17B3B" Ref="Y1"  Part="1" 
+AR Path="/5BF2F8C6/5BF17B3B" Ref="Y1"  Part="1" 
 F 0 "Y1" V 3460 3965 39  0000 L CNN
 F 1 "FA-20H" V 3465 3555 39  0000 L CNN
 F 2 "Crystals:Crystal_SMD_SeikoEpson_FA238-4pin_3.2x2.5mm" H 3430 3870 50  0001 C CNN
@@ -175,7 +144,7 @@ F 3 "" H 3430 3870 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C24
+L neurolab-rescue:C_Small C24
 U 1 1 5BF17CE4
 P 3160 3715
 F 0 "C24" H 3170 3785 39  0000 L CNN
@@ -186,7 +155,7 @@ F 3 "" H 3160 3715 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C25
+L neurolab-rescue:C_Small C25
 U 1 1 5BF17DB9
 P 3160 4030
 F 0 "C25" H 3170 4100 39  0000 L CNN
@@ -272,7 +241,7 @@ SCL
 Text HLabel 3150 4320 0    39   Input ~ 0
 CS
 $Comp
-L R R42
+L neurolab-rescue:R R42
 U 1 1 5BF1AD0E
 P 3275 4825
 F 0 "R42" V 3355 4825 39  0000 C CNN
@@ -283,7 +252,7 @@ F 3 "" H 3275 4825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R43
+L neurolab-rescue:R R43
 U 1 1 5BF1AE5A
 P 3505 4825
 F 0 "R43" V 3585 4825 39  0000 C CNN
@@ -316,7 +285,7 @@ Wire Wire Line
 NoConn ~ 3775 4420
 Connection ~ 3275 5095
 $Comp
-L ADR445BR U17
+L neuro:ADR445BR U17
 U 1 1 5BF1C793
 P 7875 3590
 F 0 "U17" H 7875 3305 39  0000 C CNN
@@ -329,7 +298,7 @@ $EndComp
 Text HLabel 9485 3790 2    39   Input ~ 8
 VIN
 $Comp
-L L_Small L2
+L neurolab-rescue:L_Small L2
 U 1 1 5BF1CA9E
 P 9075 3790
 F 0 "L2" V 9135 3760 39  0000 L CNN
@@ -342,7 +311,7 @@ $EndComp
 Wire Wire Line
 	9175 3790 9485 3790
 $Comp
-L C_Small C50
+L neurolab-rescue:C_Small C50
 U 1 1 5BF1D133
 P 8455 4025
 F 0 "C50" H 8465 4095 39  0000 L CNN
@@ -353,7 +322,7 @@ F 3 "" H 8455 4025 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C51
+L neurolab-rescue:C_Small C51
 U 1 1 5BF1D2F8
 P 8735 4025
 F 0 "C51" H 8745 4095 39  0000 L CNN
@@ -378,7 +347,7 @@ Connection ~ 6320 5355
 NoConn ~ 8275 3690
 NoConn ~ 7450 3790
 $Comp
-L C_Small C52
+L neurolab-rescue:C_Small C52
 U 1 1 5BF1E4B4
 P 9390 4025
 F 0 "C52" H 9400 4095 39  0000 L CNN
@@ -395,7 +364,7 @@ Wire Wire Line
 	9390 4270 9390 4125
 Connection ~ 8735 4270
 $Comp
-L C_Small C49
+L neurolab-rescue:C_Small C49
 U 1 1 5BF1F144
 P 6980 4025
 F 0 "C49" H 6990 4095 39  0000 L CNN
@@ -406,7 +375,7 @@ F 3 "" H 6980 4025 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C48
+L neurolab-rescue:C_Small C48
 U 1 1 5BF1F3CE
 P 6685 4025
 F 0 "C48" H 6695 4095 39  0000 L CNN

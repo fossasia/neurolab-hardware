@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 12 14
+Sheet 12 15
 Title ""
 Date ""
 Rev ""
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L C_Small C53
+L neurolab-rescue:C_Small C53
 U 1 1 5BF577C3
 P 5285 3380
 F 0 "C53" H 5310 3450 39  0000 L CNN
@@ -59,7 +26,7 @@ F 3 "" H 5285 3380 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C55
+L neurolab-rescue:C_Small C55
 U 1 1 5BF57A5D
 P 5665 3380
 F 0 "C55" H 5690 3450 39  0000 L CNN
@@ -70,7 +37,7 @@ F 3 "" H 5665 3380 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C57
+L neurolab-rescue:C_Small C57
 U 1 1 5BF57B6B
 P 6050 3380
 F 0 "C57" H 6075 3450 39  0000 L CNN
@@ -81,7 +48,7 @@ F 3 "" H 6050 3380 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C59
+L neurolab-rescue:C_Small C59
 U 1 1 5BF57C36
 P 6395 3380
 F 0 "C59" H 6420 3450 39  0000 L CNN
@@ -92,7 +59,7 @@ F 3 "" H 6395 3380 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C61
+L neurolab-rescue:C_Small C61
 U 1 1 5BF57CD8
 P 6760 3380
 F 0 "C61" H 6785 3450 39  0000 L CNN
@@ -103,7 +70,7 @@ F 3 "" H 6760 3380 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C54
+L neurolab-rescue:C_Small C54
 U 1 1 5BF5808B
 P 5285 3815
 F 0 "C54" H 5310 3885 39  0000 L CNN
@@ -114,7 +81,7 @@ F 3 "" H 5285 3815 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C56
+L neurolab-rescue:C_Small C56
 U 1 1 5BF58091
 P 5665 3815
 F 0 "C56" H 5690 3885 39  0000 L CNN
@@ -125,7 +92,7 @@ F 3 "" H 5665 3815 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C58
+L neurolab-rescue:C_Small C58
 U 1 1 5BF58097
 P 6050 3815
 F 0 "C58" H 6075 3885 39  0000 L CNN
@@ -136,7 +103,7 @@ F 3 "" H 6050 3815 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C60
+L neurolab-rescue:C_Small C60
 U 1 1 5BF5809D
 P 6395 3815
 F 0 "C60" H 6420 3885 39  0000 L CNN
@@ -147,7 +114,7 @@ F 3 "" H 6395 3815 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C62
+L neurolab-rescue:C_Small C62
 U 1 1 5BF580A3
 P 6760 3815
 F 0 "C62" H 6785 3885 39  0000 L CNN

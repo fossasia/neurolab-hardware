@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 14
+Sheet 6 15
 Title "FOSSASIA - NeuroLab"
 Date "2018-11-17"
 Rev "1"
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MAX7480ESA+ U5
+L neuro:MAX7480ESA+ U5
 U 1 1 5B10B68A
 P 4770 3365
 F 0 "U5" H 4770 3115 39  0000 C CNN
@@ -59,7 +26,7 @@ F 3 "" H 4820 3265 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX7480ESA+ U6
+L neuro:MAX7480ESA+ U6
 U 1 1 5B10B6BF
 P 4775 4495
 F 0 "U6" H 4775 4245 39  0000 C CNN
@@ -70,7 +37,7 @@ F 3 "" H 4825 4395 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX7480ESA+ U7
+L neuro:MAX7480ESA+ U7
 U 1 1 5B10BE2A
 P 7215 3365
 F 0 "U7" H 7215 3115 39  0000 C CNN
@@ -81,7 +48,7 @@ F 3 "" H 7265 3265 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX7480ESA+ U8
+L neuro:MAX7480ESA+ U8
 U 1 1 5B10BE30
 P 7220 4495
 F 0 "U8" H 7220 4245 39  0000 C CNN
@@ -104,7 +71,7 @@ OUT3
 Text HLabel 7980 4345 2    39   Output ~ 0
 OUT4
 $Comp
-L C C14
+L neurolab-rescue:C C14
 U 1 1 5B10D3B0
 P 3470 3215
 F 0 "C14" H 3495 3315 39  0000 L CNN
@@ -115,7 +82,7 @@ F 3 "" H 3470 3215 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C15
+L neurolab-rescue:C C15
 U 1 1 5B10D6EE
 P 3470 4365
 F 0 "C15" H 3495 4465 39  0000 L CNN
@@ -126,7 +93,7 @@ F 3 "" H 3470 4365 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C16
+L neurolab-rescue:C C16
 U 1 1 5B10DFB3
 P 6075 3240
 F 0 "C16" H 6100 3340 39  0000 L CNN
@@ -137,7 +104,7 @@ F 3 "" H 6075 3240 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C17
+L neurolab-rescue:C C17
 U 1 1 5B10EAFE
 P 6075 4365
 F 0 "C17" H 6100 4465 39  0000 L CNN

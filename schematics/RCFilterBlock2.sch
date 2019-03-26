@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 14
+Sheet 8 15
 Title "FOSSASIA - NeuroLab"
 Date "2018-11-17"
 Rev "1"
@@ -64,7 +31,7 @@ OUT3'
 Text HLabel 6640 4445 2    39   Output ~ 0
 OUT4'
 $Comp
-L R R10
+L neurolab-rescue:R R10
 U 1 1 5B11CA40
 P 5670 1715
 F 0 "R10" V 5750 1715 39  0000 C CNN
@@ -77,7 +44,7 @@ $EndComp
 Wire Wire Line
 	5820 1715 6660 1715
 $Comp
-L R R11
+L neurolab-rescue:R R11
 U 1 1 5B11CF87
 P 5670 2635
 F 0 "R11" V 5750 2635 39  0000 C CNN
@@ -90,7 +57,7 @@ $EndComp
 Wire Wire Line
 	5820 2635 6665 2635
 $Comp
-L R R12
+L neurolab-rescue:R R12
 U 1 1 5B11D8F3
 P 5680 3525
 F 0 "R12" V 5760 3525 39  0000 C CNN
@@ -103,7 +70,7 @@ $EndComp
 Wire Wire Line
 	5830 3525 6615 3525
 $Comp
-L R R13
+L neurolab-rescue:R R13
 U 1 1 5B11D901
 P 5680 4445
 F 0 "R13" V 5760 4445 39  0000 C CNN
@@ -124,7 +91,7 @@ Wire Wire Line
 Wire Wire Line
 	5215 1715 5520 1715
 $Comp
-L GS2 J4
+L neurolab-rescue:GS2 J4
 U 1 1 5B11E5F5
 P 6440 2955
 F 0 "J4" H 6540 3105 39  0000 C CNN
@@ -135,7 +102,7 @@ F 3 "" H 6440 2955 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GS2 J5
+L neurolab-rescue:GS2 J5
 U 1 1 5B11E8D1
 P 6440 4770
 F 0 "J5" H 6540 4920 39  0000 C CNN
@@ -148,7 +115,7 @@ $EndComp
 Text HLabel 5215 5210 0    39   Input ~ 0
 GND
 $Comp
-L C_Feedthrough C12
+L neurolab-rescue:C_Feedthrough C12
 U 1 1 5BF3D42F
 P 6310 2195
 F 0 "C12" H 6310 2495 50  0000 C CNN
@@ -159,7 +126,7 @@ F 3 "" V 6310 2195 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Feedthrough C13
+L neurolab-rescue:C_Feedthrough C13
 U 1 1 5BF3D593
 P 6310 3980
 F 0 "C13" H 6310 4280 50  0000 C CNN

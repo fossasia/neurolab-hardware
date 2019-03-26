@@ -1,0 +1,2827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/knight/Documents/FOSSASIA/NeuroLab/neurolab-hardware/schematics/neurolab.sch</source>
+    <date>Sat 09 Mar 2019 10:31:37 +0530</date>
+    <tool>Eeschema 5.0.2-bee76a0~70~ubuntu16.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>1</rev>
+        <date>2018-11-17</date>
+        <source>neurolab.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/External Power/" tstamps="/5B10060A/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>2</rev>
+        <date>2018-11-17</date>
+        <source>ExternalPower.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Power Regulator/" tstamps="/5B103929/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>2</rev>
+        <date>2018-11-17</date>
+        <source>PowerRegulator.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Attenuator/" tstamps="/5B108F6C/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>2</rev>
+        <date>2018-11-17</date>
+        <source>Attenuator.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/RC Filter 1/" tstamps="/5B112CE8/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>2</rev>
+        <date>2018-11-17</date>
+        <source>RCFilterBlock1.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/MAX7480 Block/" tstamps="/5B10B2AE/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>1</rev>
+        <date>2018-11-17</date>
+        <source>MAX7480Block.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/Clock Block/" tstamps="/5B10D013/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>2</rev>
+        <date>2018-11-17</date>
+        <source>ClockBlock.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="8" name="/RC Filter 2/" tstamps="/5B117A7C/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>1</rev>
+        <date>2018-11-17</date>
+        <source>RCFilterBlock2.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="9" name="/Amplifier Block 1/" tstamps="/5B117C68/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>2</rev>
+        <date>2018-11-17</date>
+        <source>Amplifier.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="10" name="/Amplifier Block 2/" tstamps="/5B117CFE/">
+      <title_block>
+        <title>FOSSASIA - NeuroLab</title>
+        <company/>
+        <rev>2</rev>
+        <date>2018-11-17</date>
+        <source>Amplifier.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="11" name="/ADConverter/" tstamps="/5BF2F8C6/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ADConverter.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="12" name="/Cap Bank/" tstamps="/5BF55BB5/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>CapBank.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="13" name="/USB Power/" tstamps="/5BF6F22D/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>USBPower.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="14" name="/SPI Connector/" tstamps="/5BF6B982/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>SPIConnector.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="15" name="/VoltageDoubler/" tstamps="/5C81F629/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>VoltageDoubler.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J24">
+      <value>GS2</value>
+      <footprint>Connectors:GS2</footprint>
+      <libsource lib="neurolab-rescue" part="GS2" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BFCE92A</tstamp>
+    </comp>
+    <comp ref="R44">
+      <value>5.1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BF4D66A</tstamp>
+    </comp>
+    <comp ref="J34">
+      <value>GS2</value>
+      <footprint>Connectors:GS2</footprint>
+      <libsource lib="neurolab-rescue" part="GS2" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BF8C560</tstamp>
+    </comp>
+    <comp ref="J32">
+      <value>Bluetooth</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
+      <libsource lib="neurolab-rescue" part="Conn_01x04" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BF9F53E</tstamp>
+    </comp>
+    <comp ref="J16">
+      <value>Channel</value>
+      <footprint>Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm</footprint>
+      <libsource lib="neurolab-rescue" part="Conn_01x06_Female" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B188AC3</tstamp>
+    </comp>
+    <comp ref="J11">
+      <value>ProMini</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_2x07_Pitch2.54mm</footprint>
+      <libsource lib="neurolab-rescue" part="Conn_02x07_Odd_Even" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C060DB7</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED_ALT</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="neurolab-rescue" part="LED_ALT" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BF4DED8</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/External Power/" tstamps="/5B10060A/"/>
+      <tstamp>5B1009A5</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/External Power/" tstamps="/5B10060A/"/>
+      <tstamp>5B100AD7</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>Blue</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="neurolab-rescue" part="LED_ALT" description=""/>
+      <sheetpath names="/External Power/" tstamps="/5B10060A/"/>
+      <tstamp>5B100C3A</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>20k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/External Power/" tstamps="/5B10060A/"/>
+      <tstamp>5B100D1D</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>BLM15HB121SN1</value>
+      <footprint>Inductors_SMD:L_0603</footprint>
+      <datasheet>http://pdf.datasheet.live/datasheets-1/murata_manufacturing/BLM15HB121SN1.pdf</datasheet>
+      <libsource lib="neurolab-rescue" part="L" description=""/>
+      <sheetpath names="/External Power/" tstamps="/5B10060A/"/>
+      <tstamp>5B100E56</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/External Power/" tstamps="/5B10060A/"/>
+      <tstamp>5B100F8E</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>ADP1720ARMZ-3.3</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <libsource lib="neuro" part="ADP1720ARMZ-3.3" description=""/>
+      <sheetpath names="/Power Regulator/" tstamps="/5B103929/"/>
+      <tstamp>5B103DCA</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>ADP1720ARMZ-5</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <libsource lib="neuro" part="ADP1720ARMZ-5" description=""/>
+      <sheetpath names="/Power Regulator/" tstamps="/5B103929/"/>
+      <tstamp>5B103FE2</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Power Regulator/" tstamps="/5B103929/"/>
+      <tstamp>5B10497F</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Power Regulator/" tstamps="/5B103929/"/>
+      <tstamp>5B104B30</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>4.7u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Power Regulator/" tstamps="/5B103929/"/>
+      <tstamp>5B105658</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>4.7u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Power Regulator/" tstamps="/5B103929/"/>
+      <tstamp>5B10587A</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Power Regulator/" tstamps="/5B103929/"/>
+      <tstamp>5B105D6E</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>AD8475</value>
+      <footprint>Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm</footprint>
+      <libsource lib="neuro" part="AD8475" description=""/>
+      <sheetpath names="/Attenuator/" tstamps="/5B108F6C/"/>
+      <tstamp>5B109A29</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>AD8475</value>
+      <footprint>Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm</footprint>
+      <libsource lib="neuro" part="AD8475" description=""/>
+      <sheetpath names="/Attenuator/" tstamps="/5B108F6C/"/>
+      <tstamp>5B109B62</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Attenuator/" tstamps="/5B108F6C/"/>
+      <tstamp>5B109DAB</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Attenuator/" tstamps="/5B108F6C/"/>
+      <tstamp>5B10A2FF</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Attenuator/" tstamps="/5B108F6C/"/>
+      <tstamp>5B10A578</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 1/" tstamps="/5B112CE8/"/>
+      <tstamp>5B113089</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 1/" tstamps="/5B112CE8/"/>
+      <tstamp>5B113866</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 1/" tstamps="/5B112CE8/"/>
+      <tstamp>5B1143E4</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 1/" tstamps="/5B112CE8/"/>
+      <tstamp>5B1143F2</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>0.1u</value>
+      <footprint>Neuro:Decouple_Cap_0603</footprint>
+      <datasheet>100X14W104MV4T</datasheet>
+      <libsource lib="neurolab-rescue" part="C_Feedthrough" description=""/>
+      <sheetpath names="/RC Filter 1/" tstamps="/5B112CE8/"/>
+      <tstamp>5BF0F3CE</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>0.1u</value>
+      <footprint>Neuro:Decouple_Cap_0603</footprint>
+      <datasheet>100X14W104MV4T</datasheet>
+      <libsource lib="neurolab-rescue" part="C_Feedthrough" description=""/>
+      <sheetpath names="/RC Filter 1/" tstamps="/5B112CE8/"/>
+      <tstamp>5BF0F79C</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>MAX7480ESA+</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="neuro" part="MAX7480ESA+" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10B68A</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>MAX7480ESA+</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="neuro" part="MAX7480ESA+" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10B6BF</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>MAX7480ESA+</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="neuro" part="MAX7480ESA+" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10BE2A</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>MAX7480ESA+</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="neuro" part="MAX7480ESA+" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10BE30</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10D3B0</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10D6EE</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10DFB3</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/MAX7480 Block/" tstamps="/5B10B2AE/"/>
+      <tstamp>5B10EAFE</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>TLC555CD</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="neurolab-rescue" part="TLC555CD" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10EA13</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10EA36</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>2.2n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10EAEF</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10ECC8</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10ED52</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10EDD6</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10EF28</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10F044</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>2N7002</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="neurolab-rescue" part="2N7002" description=""/>
+      <sheetpath names="/Clock Block/" tstamps="/5B10D013/"/>
+      <tstamp>5B10FF8E</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>470</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5B11CA40</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>470</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5B11CF87</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>470</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5B11D8F3</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>470</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5B11D901</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>GS2</value>
+      <footprint>Connectors:GS2</footprint>
+      <libsource lib="neurolab-rescue" part="GS2" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5B11E5F5</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>GS2</value>
+      <footprint>Connectors:GS2</footprint>
+      <libsource lib="neurolab-rescue" part="GS2" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5B11E8D1</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>0.1u</value>
+      <footprint>Neuro:Decouple_Cap_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Feedthrough" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5BF3D42F</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>0.1u</value>
+      <footprint>Neuro:Decouple_Cap_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Feedthrough" description=""/>
+      <sheetpath names="/RC Filter 2/" tstamps="/5B117A7C/"/>
+      <tstamp>5BF3D593</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B1186B4</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B118769</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>OPA2111KP</value>
+      <footprint>Housings_DIP:DIP-8_W7.62mm</footprint>
+      <libsource lib="neuro" part="OPA2111KP" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B1190A9</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B119A8F</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B119CFF</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11AE4D</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11B329</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11B4CC</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>4.7n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11B6E5</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>4.7n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11B8D1</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>200</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11D4E6</tstamp>
+    </comp>
+    <comp ref="C28">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11EF98</tstamp>
+    </comp>
+    <comp ref="C29">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11F136</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>AD8422ARMZ</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <libsource lib="neuro" part="AD8220" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11D252</tstamp>
+    </comp>
+    <comp ref="C30">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B121838</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B123478</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>4.02k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B123C24</tstamp>
+    </comp>
+    <comp ref="U12">
+      <value>OP4117</value>
+      <footprint>Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm</footprint>
+      <libsource lib="neuro" part="OP4117" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B119D78</tstamp>
+    </comp>
+    <comp ref="C39">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11C2C4</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11CCD7</tstamp>
+    </comp>
+    <comp ref="C38">
+      <value>47p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11DAF2</tstamp>
+    </comp>
+    <comp ref="R33">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B11DF86</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B120716</tstamp>
+    </comp>
+    <comp ref="C40">
+      <value>47p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B12100D</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>4.02k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B123C71</tstamp>
+    </comp>
+    <comp ref="R34">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B12531A</tstamp>
+    </comp>
+    <comp ref="R35">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B125CF3</tstamp>
+    </comp>
+    <comp ref="J12">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B1276DE</tstamp>
+    </comp>
+    <comp ref="J13">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B12AB71</tstamp>
+    </comp>
+    <comp ref="C41">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B12F93E</tstamp>
+    </comp>
+    <comp ref="C42">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5B12FE7F</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>1n</value>
+      <footprint>Neuro:Decouple_Cap_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Feedthrough" description=""/>
+      <sheetpath names="/Amplifier Block 1/" tstamps="/5B117C68/"/>
+      <tstamp>5BF42D31</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B1186B4</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B118769</tstamp>
+    </comp>
+    <comp ref="U13">
+      <value>OPA2111KP</value>
+      <footprint>Housings_DIP:DIP-8_W7.62mm</footprint>
+      <libsource lib="neuro" part="OPA2111KP" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B1190A9</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B119A8F</tstamp>
+    </comp>
+    <comp ref="J10">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B119CFF</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11AE4D</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11B329</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11B4CC</tstamp>
+    </comp>
+    <comp ref="C33">
+      <value>4.7n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11B6E5</tstamp>
+    </comp>
+    <comp ref="C34">
+      <value>4.7n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11B8D1</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>200</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11D4E6</tstamp>
+    </comp>
+    <comp ref="C35">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11EF98</tstamp>
+    </comp>
+    <comp ref="C36">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11F136</tstamp>
+    </comp>
+    <comp ref="U14">
+      <value>AD8422ARMZ</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <libsource lib="neuro" part="AD8220" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11D252</tstamp>
+    </comp>
+    <comp ref="C37">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B121838</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B123478</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>4.02k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B123C24</tstamp>
+    </comp>
+    <comp ref="U15">
+      <value>OP4117</value>
+      <footprint>Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm</footprint>
+      <libsource lib="neuro" part="OP4117" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B119D78</tstamp>
+    </comp>
+    <comp ref="C44">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11C2C4</tstamp>
+    </comp>
+    <comp ref="R37">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11CCD7</tstamp>
+    </comp>
+    <comp ref="C43">
+      <value>47p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11DAF2</tstamp>
+    </comp>
+    <comp ref="R39">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B11DF86</tstamp>
+    </comp>
+    <comp ref="R38">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B120716</tstamp>
+    </comp>
+    <comp ref="C45">
+      <value>47p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B12100D</tstamp>
+    </comp>
+    <comp ref="R36">
+      <value>4.02k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B123C71</tstamp>
+    </comp>
+    <comp ref="R40">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B12531A</tstamp>
+    </comp>
+    <comp ref="R41">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B125CF3</tstamp>
+    </comp>
+    <comp ref="J14">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B1276DE</tstamp>
+    </comp>
+    <comp ref="J15">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B12AB71</tstamp>
+    </comp>
+    <comp ref="C46">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B12F93E</tstamp>
+    </comp>
+    <comp ref="C47">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5B12FE7F</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>1n</value>
+      <footprint>Neuro:Decouple_Cap_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Feedthrough" description=""/>
+      <sheetpath names="/Amplifier Block 2/" tstamps="/5B117CFE/"/>
+      <tstamp>5BF42D31</tstamp>
+    </comp>
+    <comp ref="U16">
+      <value>AD7173</value>
+      <footprint>SMD_Packages:LFCSP-40-1EP</footprint>
+      <libsource lib="neuro" part="AD7173" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF155C3</tstamp>
+    </comp>
+    <comp ref="C31">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF15E16</tstamp>
+    </comp>
+    <comp ref="C32">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF15EDF</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF16D21</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF16FBD</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>FA-20H</value>
+      <footprint>Crystals:Crystal_SMD_SeikoEpson_FA238-4pin_3.2x2.5mm</footprint>
+      <libsource lib="neurolab-rescue" part="Crystal_GND24_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF17B3B</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>8pF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF17CE4</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>8pF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF17DB9</tstamp>
+    </comp>
+    <comp ref="R42">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1AD0E</tstamp>
+    </comp>
+    <comp ref="R43">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1AE5A</tstamp>
+    </comp>
+    <comp ref="U17">
+      <value>ADR445BR</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <libsource lib="neuro" part="ADR445BR" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1C793</tstamp>
+    </comp>
+    <comp ref="L2">
+      <value>BLM15HB121SN1</value>
+      <footprint>Inductors_SMD:L_0603</footprint>
+      <libsource lib="neurolab-rescue" part="L_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1CA9E</tstamp>
+    </comp>
+    <comp ref="C50">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1D133</tstamp>
+    </comp>
+    <comp ref="C51">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1D2F8</tstamp>
+    </comp>
+    <comp ref="C52">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1E4B4</tstamp>
+    </comp>
+    <comp ref="C49">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1F144</tstamp>
+    </comp>
+    <comp ref="C48">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/ADConverter/" tstamps="/5BF2F8C6/"/>
+      <tstamp>5BF1F3CE</tstamp>
+    </comp>
+    <comp ref="C53">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF577C3</tstamp>
+    </comp>
+    <comp ref="C55">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF57A5D</tstamp>
+    </comp>
+    <comp ref="C57">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF57B6B</tstamp>
+    </comp>
+    <comp ref="C59">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF57C36</tstamp>
+    </comp>
+    <comp ref="C61">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF57CD8</tstamp>
+    </comp>
+    <comp ref="C54">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF5808B</tstamp>
+    </comp>
+    <comp ref="C56">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF58091</tstamp>
+    </comp>
+    <comp ref="C58">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF58097</tstamp>
+    </comp>
+    <comp ref="C60">
+      <value>2.2u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF5809D</tstamp>
+    </comp>
+    <comp ref="C62">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Cap Bank/" tstamps="/5BF55BB5/"/>
+      <tstamp>5BF580A3</tstamp>
+    </comp>
+    <comp ref="J18">
+      <value>USB_OTG</value>
+      <footprint>Connectors:USB_Micro-B</footprint>
+      <libsource lib="neurolab-rescue" part="USB_OTG" description=""/>
+      <sheetpath names="/USB Power/" tstamps="/5BF6F22D/"/>
+      <tstamp>5BF6F769</tstamp>
+    </comp>
+    <comp ref="J17">
+      <value>External</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
+      <libsource lib="neurolab-rescue" part="Conn_01x02" description=""/>
+      <sheetpath names="/USB Power/" tstamps="/5BF6F22D/"/>
+      <tstamp>5BF6FEF6</tstamp>
+    </comp>
+    <comp ref="J19">
+      <value>GS3</value>
+      <footprint>Connectors:GS3</footprint>
+      <libsource lib="neurolab-rescue" part="GS3" description=""/>
+      <sheetpath names="/USB Power/" tstamps="/5BF6F22D/"/>
+      <tstamp>5BF7029C</tstamp>
+    </comp>
+    <comp ref="C63">
+      <value>4.7u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="neurolab-rescue" part="C_Small" description=""/>
+      <sheetpath names="/USB Power/" tstamps="/5BF6F22D/"/>
+      <tstamp>5BF76035</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>5.5V</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x01_Male" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/USB Power/" tstamps="/5BF6F22D/"/>
+      <tstamp>5C831E29</tstamp>
+    </comp>
+    <comp ref="R47">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/SPI Connector/" tstamps="/5BF6B982/"/>
+      <tstamp>5BF6BEFB</tstamp>
+    </comp>
+    <comp ref="R48">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/SPI Connector/" tstamps="/5BF6B982/"/>
+      <tstamp>5BF6BF8D</tstamp>
+    </comp>
+    <comp ref="R46">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/SPI Connector/" tstamps="/5BF6B982/"/>
+      <tstamp>5BF6BFF5</tstamp>
+    </comp>
+    <comp ref="R49">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/SPI Connector/" tstamps="/5BF6B982/"/>
+      <tstamp>5BF6C0C0</tstamp>
+    </comp>
+    <comp ref="R45">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/SPI Connector/" tstamps="/5BF6B982/"/>
+      <tstamp>5BF6C106</tstamp>
+    </comp>
+    <comp ref="R50">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="neurolab-rescue" part="R" description=""/>
+      <sheetpath names="/SPI Connector/" tstamps="/5BF6B982/"/>
+      <tstamp>5BF6C19D</tstamp>
+    </comp>
+    <comp ref="U18">
+      <value>TC1240A</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23-6</footprint>
+      <libsource lib="neuro" part="TC1240A" description=""/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C820CBC</tstamp>
+    </comp>
+    <comp ref="C64">
+      <value>100u</value>
+      <footprint>Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C8213C5</tstamp>
+    </comp>
+    <comp ref="C65">
+      <value>100u</value>
+      <footprint>Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C821A9F</tstamp>
+    </comp>
+    <comp ref="U20">
+      <value>7660</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="neuro" part="7660" description=""/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C822DC0</tstamp>
+    </comp>
+    <comp ref="U19">
+      <value>TC1240A</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23-6</footprint>
+      <libsource lib="neuro" part="TC1240A" description=""/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C82347A</tstamp>
+    </comp>
+    <comp ref="C66">
+      <value>100u</value>
+      <footprint>Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C823775</tstamp>
+    </comp>
+    <comp ref="C67">
+      <value>100u</value>
+      <footprint>Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C82421D</tstamp>
+    </comp>
+    <comp ref="C69">
+      <value>100u</value>
+      <footprint>Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C825161</tstamp>
+    </comp>
+    <comp ref="C68">
+      <value>100u</value>
+      <footprint>Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C8254F0</tstamp>
+    </comp>
+    <comp ref="JP1">
+      <value>VoltOut</value>
+      <footprint>Connectors:GS3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C837D7C</tstamp>
+    </comp>
+    <comp ref="JP2">
+      <value>VVV</value>
+      <footprint>Connectors:GS3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <sheetpath names="/VoltageDoubler/" tstamps="/5C81F629/"/>
+      <tstamp>5C82791F</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x01_Male">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_3_Open">
+      <description>Solder Jumper, 3-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_3_Open</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="input"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="7660">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">7660</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BST" type="input"/>
+        <pin num="2" name="C+" type="input"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="C-" type="input"/>
+        <pin num="5" name="VO-" type="input"/>
+        <pin num="6" name="LV" type="input"/>
+        <pin num="7" name="OSC" type="input"/>
+        <pin num="8" name="VCC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="AD7173">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AD7173</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AIN16" type="input"/>
+        <pin num="2" name="AIN0/REF2-" type="input"/>
+        <pin num="3" name="AIN1/REF2+" type="input"/>
+        <pin num="4" name="AIN2" type="input"/>
+        <pin num="5" name="AIN3" type="input"/>
+        <pin num="6" name="REFOUT" type="input"/>
+        <pin num="7" name="REGCAPA" type="input"/>
+        <pin num="8" name="AVSS" type="input"/>
+        <pin num="9" name="AVDD1" type="input"/>
+        <pin num="10" name="AVDD2" type="input"/>
+        <pin num="11" name="PDSW" type="input"/>
+        <pin num="12" name="XTAL1" type="input"/>
+        <pin num="13" name="XTAL2/CLKIO" type="input"/>
+        <pin num="14" name="DOUT/RDY" type="input"/>
+        <pin num="15" name="DIN" type="input"/>
+        <pin num="16" name="SCLK" type="input"/>
+        <pin num="17" name="CS" type="input"/>
+        <pin num="18" name="ERROR" type="input"/>
+        <pin num="19" name="SYNC" type="input"/>
+        <pin num="20" name="IOVDD" type="input"/>
+        <pin num="21" name="DGND" type="input"/>
+        <pin num="22" name="REGCAPD" type="input"/>
+        <pin num="23" name="GPIO0" type="input"/>
+        <pin num="24" name="GPIO1" type="input"/>
+        <pin num="25" name="GPIO2" type="input"/>
+        <pin num="26" name="AIN4" type="input"/>
+        <pin num="27" name="AIN5" type="input"/>
+        <pin num="28" name="AIN6" type="input"/>
+        <pin num="29" name="AIN7" type="input"/>
+        <pin num="30" name="AIN8" type="input"/>
+        <pin num="31" name="AIN9" type="input"/>
+        <pin num="32" name="AIN10" type="input"/>
+        <pin num="33" name="AIN11" type="input"/>
+        <pin num="34" name="AIN12" type="input"/>
+        <pin num="35" name="AIN13" type="input"/>
+        <pin num="36" name="AIN14" type="input"/>
+        <pin num="37" name="AIN15" type="input"/>
+        <pin num="38" name="GPIO3" type="input"/>
+        <pin num="39" name="REF-" type="input"/>
+        <pin num="40" name="REF+" type="input"/>
+        <pin num="41" name="EXP" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="AD8220">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AD8220</field>
+      </fields>
+      <pins>
+        <pin num="1" name="In-" type="input"/>
+        <pin num="2" name="RG1" type="input"/>
+        <pin num="3" name="RG2" type="input"/>
+        <pin num="4" name="In+" type="input"/>
+        <pin num="5" name="-Vs" type="input"/>
+        <pin num="6" name="Ref" type="input"/>
+        <pin num="7" name="Vout" type="input"/>
+        <pin num="8" name="+Vs" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="AD8475">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AD8475</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-IN0.8X" type="input"/>
+        <pin num="2" name="-IN0.4X1" type="input"/>
+        <pin num="3" name="+VS" type="input"/>
+        <pin num="4" name="VCOM" type="input"/>
+        <pin num="5" name="+OUT" type="input"/>
+        <pin num="6" name="-OUT" type="input"/>
+        <pin num="7" name="NC" type="input"/>
+        <pin num="8" name="-VS" type="input"/>
+        <pin num="9" name="+IN0.4X" type="input"/>
+        <pin num="10" name="+IN0.8X" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="ADP1720ARMZ-3.3">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADP1720ARMZ-3.3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="input"/>
+        <pin num="2" name="VIN" type="input"/>
+        <pin num="3" name="VOUT" type="input"/>
+        <pin num="4" name="VIN" type="input"/>
+        <pin num="5" name="GND" type="input"/>
+        <pin num="6" name="GND" type="input"/>
+        <pin num="7" name="GND" type="input"/>
+        <pin num="8" name="GND" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="ADP1720ARMZ-5">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADP1720ARMZ-5</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="input"/>
+        <pin num="2" name="VIN" type="input"/>
+        <pin num="3" name="VOUT" type="input"/>
+        <pin num="4" name="VIN" type="input"/>
+        <pin num="5" name="GND" type="input"/>
+        <pin num="6" name="GND" type="input"/>
+        <pin num="7" name="GND" type="input"/>
+        <pin num="8" name="GND" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="ADR445BR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADR445BR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DNC" type="input"/>
+        <pin num="2" name="VIN" type="input"/>
+        <pin num="3" name="NIC" type="input"/>
+        <pin num="4" name="GND" type="input"/>
+        <pin num="5" name="TRIM" type="input"/>
+        <pin num="6" name="VOUT" type="input"/>
+        <pin num="7" name="NIC" type="input"/>
+        <pin num="8" name="DNC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="MAX7480ESA+">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX7480ESA+</field>
+      </fields>
+      <pins>
+        <pin num="1" name="COM" type="input"/>
+        <pin num="2" name="IN" type="input"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="+5V" type="input"/>
+        <pin num="5" name="OUT" type="input"/>
+        <pin num="6" name="OSA" type="input"/>
+        <pin num="7" name="SHDN" type="input"/>
+        <pin num="8" name="CLK" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="OP4117">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OP4117</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Out" type="input"/>
+        <pin num="2" name="In-" type="input"/>
+        <pin num="3" name="In+" type="input"/>
+        <pin num="4" name="V+" type="input"/>
+        <pin num="5" name="In+" type="input"/>
+        <pin num="6" name="In-" type="input"/>
+        <pin num="7" name="Out" type="input"/>
+        <pin num="8" name="Out" type="input"/>
+        <pin num="9" name="In-" type="input"/>
+        <pin num="10" name="In+" type="input"/>
+        <pin num="11" name="V-" type="input"/>
+        <pin num="12" name="In+" type="input"/>
+        <pin num="13" name="In-" type="input"/>
+        <pin num="14" name="Out" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="OPA2111KP">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA2111KP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Out" type="input"/>
+        <pin num="2" name="In-" type="input"/>
+        <pin num="3" name="In+" type="input"/>
+        <pin num="4" name="-Vcc" type="input"/>
+        <pin num="5" name="In+" type="input"/>
+        <pin num="6" name="In-" type="input"/>
+        <pin num="7" name="Out" type="input"/>
+        <pin num="8" name="+Vcc" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neuro" part="TC1240A">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TC1240A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Vin" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+        <pin num="3" name="C-" type="input"/>
+        <pin num="4" name="SHDN" type="input"/>
+        <pin num="5" name="Vo" type="input"/>
+        <pin num="6" name="C+" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="2N7002">
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N7002</field>
+        <field name="Footprint">TO_SOT_Packages_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="C">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="C_Feedthrough">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Feedthrough</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="C_Small">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="Conn_01x02">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="Conn_01x04">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="Conn_01x06_Female">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="Conn_02x07_Odd_Even">
+      <footprints>
+        <fp>Connector*:*2x??x*mm*</fp>
+        <fp>Connector*:*2x???Pitch*</fp>
+        <fp>Pin_Header_Straight_2X*</fp>
+        <fp>Pin_Header_Angled_2X*</fp>
+        <fp>Socket_Strip_Straight_2X*</fp>
+        <fp>Socket_Strip_Angled_2X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x07_Odd_Even</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="Crystal_GND24_Small">
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_GND24_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="GS2">
+      <footprints>
+        <fp>GS*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">GS2</field>
+        <field name="Footprint">Connectors:GS2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G1" type="passive"/>
+        <pin num="2" name="G2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="GS3">
+      <footprints>
+        <fp>GS*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">GS3</field>
+        <field name="Footprint">Connectors:GS3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G1" type="passive"/>
+        <pin num="2" name="G2" type="passive"/>
+        <pin num="3" name="G3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="L">
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="LED_ALT">
+      <footprints>
+        <fp>LED*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_ALT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="L_Small">
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="R">
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="TLC555CD">
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*Pitch1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*3x3mm*Pitch0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLC555CD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="TR" type="input"/>
+        <pin num="3" name="Q" type="output"/>
+        <pin num="4" name="R" type="input"/>
+        <pin num="5" name="CV" type="input"/>
+        <pin num="6" name="THR" type="input"/>
+        <pin num="7" name="DIS" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="neurolab-rescue" part="USB_OTG">
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_OTG</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_in"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>/usr/share/kicad/library/Jumper.lib</uri>
+    </library>
+    <library logical="neuro">
+      <uri>/home/knight/Documents/FOSSASIA/NeuroLab/neurolab-hardware/schematics/neuro.lib</uri>
+    </library>
+    <library logical="neurolab-rescue">
+      <uri>/home/knight/Documents/FOSSASIA/NeuroLab/neurolab-hardware/schematics/neurolab-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="VCCIO">
+      <node ref="J24" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="U4" pin="3"/>
+      <node ref="U3" pin="3"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C7" pin="1"/>
+    </net>
+    <net code="2" name="/ADConverter/AIN13">
+      <node ref="U16" pin="35"/>
+      <node ref="J24" pin="1"/>
+    </net>
+    <net code="3" name="AD0">
+      <node ref="C11" pin="3"/>
+      <node ref="U16" pin="33"/>
+      <node ref="J11" pin="13"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="4" name="/RC Filter 1/-OUTB'">
+      <node ref="U16" pin="34"/>
+      <node ref="R5" pin="1"/>
+      <node ref="C11" pin="1"/>
+    </net>
+    <net code="5" name="AD1">
+      <node ref="J11" pin="9"/>
+      <node ref="C10" pin="3"/>
+      <node ref="U16" pin="28"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="6" name="/RC Filter 1/-OUTA'">
+      <node ref="R3" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="U16" pin="29"/>
+    </net>
+    <net code="7" name="/ADConverter/AIN4">
+      <node ref="R10" pin="2"/>
+      <node ref="C12" pin="3"/>
+      <node ref="U16" pin="27"/>
+    </net>
+    <net code="8" name="/ADConverter/AIN6">
+      <node ref="R12" pin="2"/>
+      <node ref="C13" pin="3"/>
+      <node ref="U16" pin="32"/>
+    </net>
+    <net code="9" name="+3V">
+      <node ref="U16" pin="20"/>
+      <node ref="R43" pin="2"/>
+      <node ref="U2" pin="3"/>
+      <node ref="J2" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="R42" pin="2"/>
+    </net>
+    <net code="10" name="/ADConverter/CS">
+      <node ref="U16" pin="17"/>
+      <node ref="R48" pin="1"/>
+      <node ref="R47" pin="2"/>
+      <node ref="R42" pin="1"/>
+    </net>
+    <net code="11" name="VCC">
+      <node ref="J34" pin="1"/>
+      <node ref="J32" pin="1"/>
+    </net>
+    <net code="12" name="MOSI">
+      <node ref="J11" pin="4"/>
+      <node ref="U16" pin="14"/>
+    </net>
+    <net code="13" name="/ADConverter/DI">
+      <node ref="U16" pin="15"/>
+      <node ref="R50" pin="1"/>
+      <node ref="R49" pin="2"/>
+    </net>
+    <net code="14" name="/ADConverter/SCL">
+      <node ref="U16" pin="16"/>
+      <node ref="R46" pin="2"/>
+      <node ref="R45" pin="1"/>
+    </net>
+    <net code="15" name="/Attenuator/+OUTB">
+      <node ref="R4" pin="2"/>
+      <node ref="U4" pin="5"/>
+      <node ref="U8" pin="2"/>
+    </net>
+    <net code="16" name="/Attenuator/-OUTB">
+      <node ref="U4" pin="6"/>
+      <node ref="U6" pin="2"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="17" name="/Attenuator/+OUTA">
+      <node ref="U3" pin="5"/>
+      <node ref="R2" pin="2"/>
+      <node ref="U7" pin="2"/>
+    </net>
+    <net code="18" name="/Attenuator/-OUTA">
+      <node ref="U5" pin="2"/>
+      <node ref="U3" pin="6"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="19" name="/Attenuator/+IN0.4XB">
+      <node ref="J14" pin="2"/>
+      <node ref="U4" pin="9"/>
+    </net>
+    <net code="20" name="/Attenuator/-IN0.4XB">
+      <node ref="J15" pin="2"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="21" name="/Attenuator/+IN0.4XA">
+      <node ref="U3" pin="9"/>
+      <node ref="J12" pin="2"/>
+    </net>
+    <net code="22" name="/RC Filter 2/IN4">
+      <node ref="U8" pin="5"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="23" name="/RC Filter 2/IN3">
+      <node ref="R12" pin="1"/>
+      <node ref="U6" pin="5"/>
+    </net>
+    <net code="24" name="/RC Filter 2/IN2">
+      <node ref="U7" pin="5"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="25" name="/RC Filter 2/IN1">
+      <node ref="R10" pin="1"/>
+      <node ref="U5" pin="5"/>
+    </net>
+    <net code="26" name="/Clock Block/CLK">
+      <node ref="J3" pin="2"/>
+      <node ref="U8" pin="8"/>
+      <node ref="U7" pin="8"/>
+      <node ref="U6" pin="8"/>
+      <node ref="U5" pin="8"/>
+    </net>
+    <net code="27" name="Net-(J11-Pad10)">
+      <node ref="J11" pin="10"/>
+      <node ref="J34" pin="2"/>
+    </net>
+    <net code="28" name="Net-(J11-Pad12)">
+      <node ref="J11" pin="12"/>
+      <node ref="R44" pin="1"/>
+    </net>
+    <net code="29" name="Net-(D2-Pad2)">
+      <node ref="R44" pin="2"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="30" name="GND">
+      <node ref="C32" pin="2"/>
+      <node ref="C41" pin="2"/>
+      <node ref="U16" pin="21"/>
+      <node ref="C42" pin="2"/>
+      <node ref="R30" pin="1"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U12" pin="3"/>
+      <node ref="U4" pin="8"/>
+      <node ref="U3" pin="8"/>
+      <node ref="C29" pin="2"/>
+      <node ref="U12" pin="10"/>
+      <node ref="C28" pin="1"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="Y1" pin="4"/>
+      <node ref="C24" pin="2"/>
+      <node ref="C25" pin="2"/>
+      <node ref="C38" pin="2"/>
+      <node ref="C35" pin="1"/>
+      <node ref="C36" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="U12" pin="12"/>
+      <node ref="U9" pin="1"/>
+      <node ref="C21" pin="2"/>
+      <node ref="U17" pin="4"/>
+      <node ref="C43" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C46" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="J5" pin="1"/>
+      <node ref="C11" pin="2"/>
+      <node ref="C47" pin="2"/>
+      <node ref="R36" pin="1"/>
+      <node ref="U15" pin="3"/>
+      <node ref="U15" pin="10"/>
+      <node ref="U15" pin="12"/>
+      <node ref="U16" pin="8"/>
+      <node ref="C49" pin="2"/>
+      <node ref="C48" pin="2"/>
+      <node ref="U8" pin="3"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="U16" pin="39"/>
+      <node ref="U16" pin="41"/>
+      <node ref="U5" pin="3"/>
+      <node ref="U6" pin="3"/>
+      <node ref="U7" pin="3"/>
+      <node ref="C20" pin="2"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="C31" pin="2"/>
+      <node ref="C50" pin="2"/>
+      <node ref="C51" pin="2"/>
+      <node ref="C52" pin="2"/>
+      <node ref="J17" pin="2"/>
+      <node ref="C56" pin="1"/>
+      <node ref="C60" pin="1"/>
+      <node ref="C62" pin="1"/>
+      <node ref="C58" pin="1"/>
+      <node ref="C54" pin="1"/>
+      <node ref="C61" pin="2"/>
+      <node ref="C59" pin="2"/>
+      <node ref="C57" pin="2"/>
+      <node ref="C55" pin="2"/>
+      <node ref="J32" pin="2"/>
+      <node ref="R48" pin="2"/>
+      <node ref="R50" pin="2"/>
+      <node ref="R45" pin="2"/>
+      <node ref="U20" pin="3"/>
+      <node ref="C65" pin="2"/>
+      <node ref="D2" pin="1"/>
+      <node ref="U18" pin="2"/>
+      <node ref="U18" pin="4"/>
+      <node ref="C63" pin="2"/>
+      <node ref="J11" pin="8"/>
+      <node ref="J18" pin="5"/>
+      <node ref="J18" pin="6"/>
+      <node ref="J16" pin="3"/>
+      <node ref="C67" pin="2"/>
+      <node ref="C69" pin="1"/>
+      <node ref="J16" pin="4"/>
+      <node ref="U1" pin="6"/>
+      <node ref="U1" pin="5"/>
+      <node ref="C5" pin="2"/>
+      <node ref="U1" pin="7"/>
+      <node ref="U1" pin="1"/>
+      <node ref="U2" pin="8"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C23" pin="2"/>
+      <node ref="U2" pin="7"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="U1" pin="8"/>
+      <node ref="C22" pin="2"/>
+      <node ref="U2" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U2" pin="6"/>
+      <node ref="R1" pin="2"/>
+      <node ref="U2" pin="5"/>
+      <node ref="C53" pin="2"/>
+    </net>
+    <net code="31" name="+12V">
+      <node ref="U14" pin="8"/>
+      <node ref="C35" pin="2"/>
+      <node ref="U13" pin="8"/>
+      <node ref="U15" pin="4"/>
+      <node ref="U13" pin="8"/>
+      <node ref="U15" pin="4"/>
+      <node ref="U15" pin="4"/>
+      <node ref="U15" pin="4"/>
+      <node ref="JP1" pin="2"/>
+      <node ref="C46" pin="1"/>
+      <node ref="JP2" pin="1"/>
+      <node ref="C55" pin="1"/>
+      <node ref="U12" pin="4"/>
+      <node ref="U10" pin="8"/>
+      <node ref="U11" pin="8"/>
+      <node ref="U10" pin="8"/>
+      <node ref="U12" pin="4"/>
+      <node ref="C61" pin="1"/>
+      <node ref="C57" pin="1"/>
+      <node ref="C59" pin="1"/>
+      <node ref="U12" pin="4"/>
+      <node ref="C53" pin="1"/>
+      <node ref="U12" pin="4"/>
+      <node ref="J1" pin="3"/>
+      <node ref="C28" pin="2"/>
+      <node ref="C41" pin="1"/>
+    </net>
+    <net code="32" name="+5V">
+      <node ref="U18" pin="1"/>
+      <node ref="JP2" pin="3"/>
+      <node ref="U19" pin="2"/>
+      <node ref="U19" pin="4"/>
+      <node ref="U9" pin="8"/>
+      <node ref="U9" pin="4"/>
+      <node ref="C5" pin="1"/>
+      <node ref="J2" pin="3"/>
+      <node ref="U5" pin="4"/>
+      <node ref="U5" pin="7"/>
+      <node ref="U16" pin="9"/>
+      <node ref="U8" pin="4"/>
+      <node ref="U8" pin="7"/>
+      <node ref="U6" pin="7"/>
+      <node ref="U7" pin="4"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U7" pin="7"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="U6" pin="4"/>
+      <node ref="U16" pin="10"/>
+      <node ref="U1" pin="3"/>
+      <node ref="C63" pin="1"/>
+      <node ref="J19" pin="2"/>
+    </net>
+    <net code="33" name="-12V">
+      <node ref="C62" pin="2"/>
+      <node ref="C60" pin="2"/>
+      <node ref="C58" pin="2"/>
+      <node ref="U12" pin="11"/>
+      <node ref="U15" pin="11"/>
+      <node ref="U12" pin="11"/>
+      <node ref="C54" pin="2"/>
+      <node ref="U15" pin="11"/>
+      <node ref="C56" pin="2"/>
+      <node ref="U15" pin="11"/>
+      <node ref="U13" pin="4"/>
+      <node ref="U13" pin="4"/>
+      <node ref="C36" pin="1"/>
+      <node ref="U12" pin="11"/>
+      <node ref="U10" pin="4"/>
+      <node ref="U10" pin="4"/>
+      <node ref="U14" pin="5"/>
+      <node ref="U15" pin="11"/>
+      <node ref="U20" pin="5"/>
+      <node ref="C42" pin="1"/>
+      <node ref="C47" pin="1"/>
+      <node ref="C69" pin="2"/>
+      <node ref="U12" pin="11"/>
+      <node ref="C29" pin="1"/>
+      <node ref="U11" pin="5"/>
+    </net>
+    <net code="34" name="EXCLK">
+      <node ref="Q1" pin="1"/>
+      <node ref="J11" pin="14"/>
+    </net>
+    <net code="35" name="AD3">
+      <node ref="J11" pin="7"/>
+      <node ref="R11" pin="2"/>
+      <node ref="U16" pin="26"/>
+      <node ref="C12" pin="1"/>
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="36" name="CS">
+      <node ref="R47" pin="1"/>
+      <node ref="J11" pin="6"/>
+    </net>
+    <net code="37" name="SCL">
+      <node ref="R46" pin="1"/>
+      <node ref="J11" pin="5"/>
+    </net>
+    <net code="38" name="MISO">
+      <node ref="J11" pin="3"/>
+      <node ref="R49" pin="1"/>
+    </net>
+    <net code="39" name="RxI">
+      <node ref="J11" pin="2"/>
+      <node ref="J32" pin="4"/>
+    </net>
+    <net code="40" name="TxO">
+      <node ref="J11" pin="1"/>
+      <node ref="J32" pin="3"/>
+    </net>
+    <net code="41" name="AD2">
+      <node ref="J5" pin="2"/>
+      <node ref="C13" pin="1"/>
+      <node ref="R13" pin="2"/>
+      <node ref="J11" pin="11"/>
+      <node ref="U16" pin="31"/>
+    </net>
+    <net code="42" name="+5.5V">
+      <node ref="C52" pin="1"/>
+      <node ref="L2" pin="2"/>
+      <node ref="J8" pin="1"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="43" name="/Amplifier Block 2/IN+">
+      <node ref="R22" pin="1"/>
+      <node ref="J16" pin="6"/>
+    </net>
+    <net code="44" name="/Amplifier Block 2/IN-">
+      <node ref="J16" pin="5"/>
+      <node ref="R23" pin="1"/>
+    </net>
+    <net code="45" name="/Amplifier Block 1/IN+">
+      <node ref="J16" pin="2"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="46" name="/Amplifier Block 1/IN-">
+      <node ref="R15" pin="1"/>
+      <node ref="J16" pin="1"/>
+    </net>
+    <net code="47" name="/ADConverter/AIN12">
+      <node ref="U16" pin="30"/>
+    </net>
+    <net code="48" name="/Attenuator/-IN0.4XA">
+      <node ref="J13" pin="2"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="49" name="/External Power/VIN">
+      <node ref="L1" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U1" pin="2"/>
+      <node ref="U2" pin="4"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="50" name="Net-(C1-Pad1)">
+      <node ref="D1" pin="2"/>
+      <node ref="J1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="L1" pin="1"/>
+    </net>
+    <net code="51" name="Net-(D1-Pad1)">
+      <node ref="R1" pin="1"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="52" name="Net-(U3-Pad10)">
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="53" name="Net-(U3-Pad1)">
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="54" name="Net-(U3-Pad7)">
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="55" name="Net-(U4-Pad1)">
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="56" name="Net-(U4-Pad10)">
+      <node ref="U4" pin="10"/>
+    </net>
+    <net code="57" name="Net-(U4-Pad7)">
+      <node ref="U4" pin="7"/>
+    </net>
+    <net code="58" name="Net-(C9-Pad1)">
+      <node ref="U4" pin="4"/>
+      <node ref="C9" pin="1"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="59" name="Net-(C14-Pad1)">
+      <node ref="C14" pin="1"/>
+      <node ref="U5" pin="1"/>
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="60" name="Net-(C15-Pad1)">
+      <node ref="U6" pin="6"/>
+      <node ref="U6" pin="1"/>
+      <node ref="C15" pin="1"/>
+    </net>
+    <net code="61" name="Net-(C17-Pad1)">
+      <node ref="U8" pin="6"/>
+      <node ref="C17" pin="1"/>
+      <node ref="U8" pin="1"/>
+    </net>
+    <net code="62" name="Net-(C16-Pad1)">
+      <node ref="U7" pin="1"/>
+      <node ref="U7" pin="6"/>
+      <node ref="C16" pin="1"/>
+    </net>
+    <net code="63" name="Net-(C18-Pad1)">
+      <node ref="C18" pin="1"/>
+      <node ref="U9" pin="5"/>
+    </net>
+    <net code="64" name="Net-(J3-Pad3)">
+      <node ref="R9" pin="2"/>
+      <node ref="J3" pin="3"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="65" name="Net-(J3-Pad1)">
+      <node ref="J3" pin="1"/>
+      <node ref="R8" pin="2"/>
+      <node ref="U9" pin="3"/>
+    </net>
+    <net code="66" name="Net-(R6-Pad2)">
+      <node ref="U9" pin="7"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="67" name="Net-(C19-Pad1)">
+      <node ref="R7" pin="2"/>
+      <node ref="U9" pin="6"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U9" pin="2"/>
+    </net>
+    <net code="68" name="Net-(C12-Pad2)">
+      <node ref="J4" pin="1"/>
+      <node ref="C12" pin="2"/>
+    </net>
+    <net code="69" name="Net-(C38-Pad1)">
+      <node ref="U12" pin="5"/>
+      <node ref="R21" pin="2"/>
+      <node ref="C38" pin="1"/>
+      <node ref="R31" pin="2"/>
+    </net>
+    <net code="70" name="Net-(C39-Pad2)">
+      <node ref="R31" pin="1"/>
+      <node ref="C39" pin="2"/>
+      <node ref="U12" pin="14"/>
+    </net>
+    <net code="71" name="Net-(C39-Pad1)">
+      <node ref="U12" pin="13"/>
+      <node ref="C39" pin="1"/>
+      <node ref="R33" pin="2"/>
+    </net>
+    <net code="72" name="Net-(R20-Pad1)">
+      <node ref="R20" pin="1"/>
+      <node ref="R21" pin="1"/>
+      <node ref="U11" pin="7"/>
+    </net>
+    <net code="73" name="Net-(R34-Pad1)">
+      <node ref="R35" pin="2"/>
+      <node ref="R34" pin="1"/>
+      <node ref="U12" pin="9"/>
+    </net>
+    <net code="74" name="Net-(C40-Pad2)">
+      <node ref="C40" pin="2"/>
+      <node ref="R30" pin="2"/>
+      <node ref="R32" pin="2"/>
+      <node ref="U12" pin="6"/>
+    </net>
+    <net code="75" name="Net-(C40-Pad1)">
+      <node ref="U12" pin="7"/>
+      <node ref="R33" pin="1"/>
+      <node ref="R32" pin="1"/>
+      <node ref="C40" pin="1"/>
+      <node ref="R34" pin="2"/>
+      <node ref="J12" pin="1"/>
+    </net>
+    <net code="76" name="Net-(J13-Pad1)">
+      <node ref="J13" pin="1"/>
+      <node ref="U11" pin="1"/>
+      <node ref="J6" pin="2"/>
+    </net>
+    <net code="77" name="Net-(R19-Pad1)">
+      <node ref="R19" pin="1"/>
+      <node ref="U11" pin="3"/>
+    </net>
+    <net code="78" name="Net-(C30-Pad1)">
+      <node ref="U12" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="C30" pin="1"/>
+    </net>
+    <net code="79" name="Net-(C30-Pad2)">
+      <node ref="U11" pin="6"/>
+      <node ref="U12" pin="1"/>
+      <node ref="C30" pin="2"/>
+    </net>
+    <net code="80" name="Net-(R19-Pad2)">
+      <node ref="R19" pin="2"/>
+      <node ref="U11" pin="2"/>
+    </net>
+    <net code="81" name="Net-(J13-Pad3)">
+      <node ref="U12" pin="8"/>
+      <node ref="R35" pin="1"/>
+      <node ref="J13" pin="3"/>
+    </net>
+    <net code="82" name="Net-(J12-Pad3)">
+      <node ref="U11" pin="4"/>
+      <node ref="J7" pin="2"/>
+      <node ref="J12" pin="3"/>
+    </net>
+    <net code="83" name="Net-(C20-Pad1)">
+      <node ref="R15" pin="2"/>
+      <node ref="J6" pin="1"/>
+      <node ref="C20" pin="1"/>
+      <node ref="U10" pin="3"/>
+    </net>
+    <net code="84" name="Net-(C26-Pad2)">
+      <node ref="R16" pin="1"/>
+      <node ref="C26" pin="2"/>
+      <node ref="R17" pin="2"/>
+      <node ref="U10" pin="2"/>
+    </net>
+    <net code="85" name="Net-(C27-Pad1)">
+      <node ref="U10" pin="7"/>
+      <node ref="R18" pin="2"/>
+      <node ref="J7" pin="1"/>
+      <node ref="C27" pin="1"/>
+    </net>
+    <net code="86" name="Net-(C27-Pad2)">
+      <node ref="R16" pin="2"/>
+      <node ref="U10" pin="6"/>
+      <node ref="R18" pin="1"/>
+      <node ref="C27" pin="2"/>
+    </net>
+    <net code="87" name="Net-(C26-Pad1)">
+      <node ref="U10" pin="1"/>
+      <node ref="J6" pin="3"/>
+      <node ref="C26" pin="1"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="88" name="Net-(C20-Pad3)">
+      <node ref="C20" pin="3"/>
+      <node ref="U10" pin="5"/>
+      <node ref="J7" pin="3"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="89" name="Net-(C44-Pad2)">
+      <node ref="U15" pin="14"/>
+      <node ref="R37" pin="1"/>
+      <node ref="C44" pin="2"/>
+    </net>
+    <net code="90" name="Net-(C44-Pad1)">
+      <node ref="R39" pin="2"/>
+      <node ref="U15" pin="13"/>
+      <node ref="C44" pin="1"/>
+    </net>
+    <net code="91" name="Net-(C43-Pad1)">
+      <node ref="R37" pin="2"/>
+      <node ref="C43" pin="1"/>
+      <node ref="U15" pin="5"/>
+      <node ref="R29" pin="2"/>
+    </net>
+    <net code="92" name="Net-(R28-Pad1)">
+      <node ref="R29" pin="1"/>
+      <node ref="U14" pin="7"/>
+      <node ref="R28" pin="1"/>
+    </net>
+    <net code="93" name="Net-(C37-Pad1)">
+      <node ref="U15" pin="2"/>
+      <node ref="C37" pin="1"/>
+      <node ref="R28" pin="2"/>
+    </net>
+    <net code="94" name="Net-(R40-Pad1)">
+      <node ref="R41" pin="2"/>
+      <node ref="R40" pin="1"/>
+      <node ref="U15" pin="9"/>
+    </net>
+    <net code="95" name="Net-(C45-Pad2)">
+      <node ref="R38" pin="2"/>
+      <node ref="U15" pin="6"/>
+      <node ref="R36" pin="2"/>
+      <node ref="C45" pin="2"/>
+    </net>
+    <net code="96" name="Net-(C45-Pad1)">
+      <node ref="J14" pin="1"/>
+      <node ref="R38" pin="1"/>
+      <node ref="C45" pin="1"/>
+      <node ref="R40" pin="2"/>
+      <node ref="U15" pin="7"/>
+      <node ref="R39" pin="1"/>
+    </net>
+    <net code="97" name="Net-(J15-Pad1)">
+      <node ref="J9" pin="2"/>
+      <node ref="J15" pin="1"/>
+      <node ref="U14" pin="1"/>
+    </net>
+    <net code="98" name="Net-(R27-Pad1)">
+      <node ref="R27" pin="1"/>
+      <node ref="U14" pin="3"/>
+    </net>
+    <net code="99" name="Net-(C37-Pad2)">
+      <node ref="U14" pin="6"/>
+      <node ref="C37" pin="2"/>
+      <node ref="U15" pin="1"/>
+    </net>
+    <net code="100" name="Net-(R27-Pad2)">
+      <node ref="R27" pin="2"/>
+      <node ref="U14" pin="2"/>
+    </net>
+    <net code="101" name="Net-(J15-Pad3)">
+      <node ref="R41" pin="1"/>
+      <node ref="J15" pin="3"/>
+      <node ref="U15" pin="8"/>
+    </net>
+    <net code="102" name="Net-(J10-Pad2)">
+      <node ref="J10" pin="2"/>
+      <node ref="J14" pin="3"/>
+      <node ref="U14" pin="4"/>
+    </net>
+    <net code="103" name="Net-(C21-Pad1)">
+      <node ref="C21" pin="1"/>
+      <node ref="J9" pin="1"/>
+      <node ref="U13" pin="3"/>
+      <node ref="R23" pin="2"/>
+    </net>
+    <net code="104" name="Net-(C34-Pad1)">
+      <node ref="U13" pin="7"/>
+      <node ref="J10" pin="1"/>
+      <node ref="R26" pin="2"/>
+      <node ref="C34" pin="1"/>
+    </net>
+    <net code="105" name="Net-(C34-Pad2)">
+      <node ref="R26" pin="1"/>
+      <node ref="U13" pin="6"/>
+      <node ref="C34" pin="2"/>
+      <node ref="R24" pin="2"/>
+    </net>
+    <net code="106" name="Net-(C33-Pad2)">
+      <node ref="R25" pin="2"/>
+      <node ref="C33" pin="2"/>
+      <node ref="U13" pin="2"/>
+      <node ref="R24" pin="1"/>
+    </net>
+    <net code="107" name="Net-(C33-Pad1)">
+      <node ref="R25" pin="1"/>
+      <node ref="J9" pin="3"/>
+      <node ref="U13" pin="1"/>
+      <node ref="C33" pin="1"/>
+    </net>
+    <net code="108" name="Net-(C21-Pad3)">
+      <node ref="C21" pin="3"/>
+      <node ref="U13" pin="5"/>
+      <node ref="J10" pin="3"/>
+      <node ref="R22" pin="2"/>
+    </net>
+    <net code="109" name="Net-(R43-Pad1)">
+      <node ref="R43" pin="1"/>
+      <node ref="U16" pin="19"/>
+    </net>
+    <net code="110" name="Net-(U16-Pad18)">
+      <node ref="U16" pin="18"/>
+    </net>
+    <net code="111" name="Net-(U17-Pad1)">
+      <node ref="U17" pin="1"/>
+    </net>
+    <net code="112" name="Net-(U17-Pad3)">
+      <node ref="U17" pin="3"/>
+    </net>
+    <net code="113" name="Net-(U17-Pad5)">
+      <node ref="U17" pin="5"/>
+    </net>
+    <net code="114" name="Net-(U17-Pad7)">
+      <node ref="U17" pin="7"/>
+    </net>
+    <net code="115" name="Net-(U17-Pad8)">
+      <node ref="U17" pin="8"/>
+    </net>
+    <net code="116" name="Net-(U16-Pad38)">
+      <node ref="U16" pin="38"/>
+    </net>
+    <net code="117" name="Net-(U16-Pad11)">
+      <node ref="U16" pin="11"/>
+    </net>
+    <net code="118" name="Net-(U16-Pad23)">
+      <node ref="U16" pin="23"/>
+    </net>
+    <net code="119" name="Net-(U16-Pad24)">
+      <node ref="U16" pin="24"/>
+    </net>
+    <net code="120" name="Net-(U16-Pad25)">
+      <node ref="U16" pin="25"/>
+    </net>
+    <net code="121" name="Net-(U16-Pad36)">
+      <node ref="U16" pin="36"/>
+    </net>
+    <net code="122" name="Net-(U16-Pad37)">
+      <node ref="U16" pin="37"/>
+    </net>
+    <net code="123" name="Net-(U16-Pad6)">
+      <node ref="U16" pin="6"/>
+    </net>
+    <net code="124" name="Net-(U16-Pad5)">
+      <node ref="U16" pin="5"/>
+    </net>
+    <net code="125" name="Net-(U16-Pad4)">
+      <node ref="U16" pin="4"/>
+    </net>
+    <net code="126" name="Net-(U16-Pad3)">
+      <node ref="U16" pin="3"/>
+    </net>
+    <net code="127" name="Net-(U16-Pad2)">
+      <node ref="U16" pin="2"/>
+    </net>
+    <net code="128" name="Net-(U16-Pad1)">
+      <node ref="U16" pin="1"/>
+    </net>
+    <net code="129" name="Net-(C50-Pad1)">
+      <node ref="C50" pin="1"/>
+      <node ref="C51" pin="1"/>
+      <node ref="U17" pin="2"/>
+      <node ref="L2" pin="1"/>
+    </net>
+    <net code="130" name="Net-(C48-Pad1)">
+      <node ref="C49" pin="1"/>
+      <node ref="U17" pin="6"/>
+      <node ref="C48" pin="1"/>
+      <node ref="U16" pin="40"/>
+    </net>
+    <net code="131" name="Net-(C31-Pad1)">
+      <node ref="C32" pin="1"/>
+      <node ref="U16" pin="22"/>
+      <node ref="C31" pin="1"/>
+    </net>
+    <net code="132" name="Net-(C25-Pad1)">
+      <node ref="C25" pin="1"/>
+      <node ref="Y1" pin="3"/>
+      <node ref="U16" pin="13"/>
+    </net>
+    <net code="133" name="Net-(C24-Pad1)">
+      <node ref="C24" pin="1"/>
+      <node ref="U16" pin="12"/>
+      <node ref="Y1" pin="1"/>
+    </net>
+    <net code="134" name="Net-(C22-Pad1)">
+      <node ref="C23" pin="1"/>
+      <node ref="C22" pin="1"/>
+      <node ref="U16" pin="7"/>
+    </net>
+    <net code="135" name="Net-(J17-Pad1)">
+      <node ref="J17" pin="1"/>
+      <node ref="J19" pin="1"/>
+    </net>
+    <net code="136" name="Net-(J18-Pad4)">
+      <node ref="J18" pin="4"/>
+    </net>
+    <net code="137" name="Net-(J18-Pad2)">
+      <node ref="J18" pin="2"/>
+    </net>
+    <net code="138" name="Net-(J18-Pad3)">
+      <node ref="J18" pin="3"/>
+    </net>
+    <net code="139" name="Net-(J18-Pad1)">
+      <node ref="J18" pin="1"/>
+      <node ref="J19" pin="3"/>
+    </net>
+    <net code="140" name="Net-(C68-Pad1)">
+      <node ref="C68" pin="1"/>
+      <node ref="U20" pin="2"/>
+    </net>
+    <net code="141" name="Net-(C68-Pad2)">
+      <node ref="C68" pin="2"/>
+      <node ref="U20" pin="4"/>
+    </net>
+    <net code="142" name="Net-(U20-Pad1)">
+      <node ref="U20" pin="1"/>
+    </net>
+    <net code="143" name="Net-(U20-Pad7)">
+      <node ref="U20" pin="7"/>
+    </net>
+    <net code="144" name="Net-(U20-Pad6)">
+      <node ref="U20" pin="6"/>
+    </net>
+    <net code="145" name="Net-(C67-Pad1)">
+      <node ref="JP1" pin="1"/>
+      <node ref="U19" pin="5"/>
+      <node ref="C67" pin="1"/>
+    </net>
+    <net code="146" name="Net-(JP2-Pad2)">
+      <node ref="U20" pin="8"/>
+      <node ref="JP2" pin="2"/>
+    </net>
+    <net code="147" name="Net-(C64-Pad1)">
+      <node ref="C64" pin="1"/>
+      <node ref="U18" pin="6"/>
+    </net>
+    <net code="148" name="Net-(C64-Pad2)">
+      <node ref="U18" pin="3"/>
+      <node ref="C64" pin="2"/>
+    </net>
+    <net code="149" name="Net-(C65-Pad1)">
+      <node ref="JP1" pin="3"/>
+      <node ref="U19" pin="1"/>
+      <node ref="U18" pin="5"/>
+      <node ref="C65" pin="1"/>
+    </net>
+    <net code="150" name="Net-(C66-Pad1)">
+      <node ref="C66" pin="1"/>
+      <node ref="U19" pin="6"/>
+    </net>
+    <net code="151" name="Net-(C66-Pad2)">
+      <node ref="C66" pin="2"/>
+      <node ref="U19" pin="3"/>
+    </net>
+  </nets>
+</export>
