@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 14
+Sheet 4 15
 Title "FOSSASIA - NeuroLab"
 Date "2018-11-17"
 Rev "2"
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L AD8475 U3
+L neuro:AD8475 U3
 U 1 1 5B109A29
 P 6100 2880
 F 0 "U3" H 6100 2580 39  0000 C CNN
@@ -59,7 +26,7 @@ F 3 "" H 6100 2880 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AD8475 U4
+L neuro:AD8475 U4
 U 1 1 5B109B62
 P 6100 4050
 F 0 "U4" H 6100 3750 39  0000 C CNN
@@ -70,7 +37,7 @@ F 3 "" H 6100 4050 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L neurolab-rescue:C C9
 U 1 1 5B109DAB
 P 5040 4505
 F 0 "C9" H 5065 4605 39  0000 L CNN
@@ -92,7 +59,7 @@ GND
 Wire Wire Line
 	5040 4925 5040 4655
 $Comp
-L C C7
+L neurolab-rescue:C C7
 U 1 1 5B10A2FF
 P 4410 4510
 F 0 "C7" H 4435 4610 39  0000 L CNN
@@ -103,7 +70,7 @@ F 3 "" H 4410 4510 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L neurolab-rescue:C C8
 U 1 1 5B10A578
 P 4730 4510
 F 0 "C8" H 4755 4610 39  0000 L CNN

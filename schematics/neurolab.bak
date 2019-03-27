@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 14
+Sheet 1 15
 Title "FOSSASIA - NeuroLab"
 Date "2018-11-17"
 Rev "1"
@@ -58,7 +25,7 @@ F4 "5.5V" I L 1610 2705 39
 F5 "GND" I R 2295 2705 39 
 $EndSheet
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5B10240C
 P 2425 2745
 F 0 "#PWR01" H 2425 2495 50  0001 C CNN
@@ -186,7 +153,7 @@ Text GLabel 765  745  0    39   Input ~ 0
 Text GLabel 765  900  0    39   Input ~ 0
 +5.5V
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 5B198EFA
 P 765 1250
 F 0 "#PWR02" H 765 1000 50  0001 C CNN
@@ -197,7 +164,7 @@ F 3 "" H 765 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG03
+L power:PWR_FLAG #FLG03
 U 1 1 5B199772
 P 840 1190
 F 0 "#FLG03" H 840 1265 50  0001 C CNN
@@ -208,7 +175,7 @@ F 3 "" H 840 1190 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L PWR_FLAG #FLG04
+L power:PWR_FLAG #FLG04
 U 1 1 5B199CDA
 P 840 900
 F 0 "#FLG04" H 840 975 50  0001 C CNN
@@ -219,7 +186,7 @@ F 3 "" H 840 900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L PWR_FLAG #FLG05
+L power:PWR_FLAG #FLG05
 U 1 1 5B19A242
 P 840 745
 F 0 "#FLG05" H 840 820 50  0001 C CNN
@@ -230,7 +197,7 @@ F 3 "" H 840 745 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L PWR_FLAG #FLG06
+L power:PWR_FLAG #FLG06
 U 1 1 5B19A3D6
 P 840 595
 F 0 "#FLG06" H 840 670 50  0001 C CNN
@@ -245,7 +212,7 @@ Text GLabel 1495 2705 0    39   Input ~ 0
 Text GLabel 1495 2620 0    39   Input ~ 0
 +12V
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 5B1A7762
 P 4020 3085
 F 0 "#PWR07" H 4020 2835 50  0001 C CNN
@@ -264,7 +231,7 @@ Text GLabel 2415 3895 2    39   Input ~ 0
 Text GLabel 2415 3725 2    39   Input ~ 0
 +12V
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 5B1B631E
 P 2725 3195
 F 0 "#PWR08" H 2725 2945 50  0001 C CNN
@@ -275,7 +242,7 @@ F 3 "" H 2725 3195 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 5B1B6BA1
 P 2725 3850
 F 0 "#PWR09" H 2725 3600 50  0001 C CNN
@@ -288,7 +255,7 @@ $EndComp
 Text GLabel 765  1055 0    39   Input ~ 0
 +5V
 $Comp
-L PWR_FLAG #FLG010
+L power:PWR_FLAG #FLG010
 U 1 1 5B1BEBFC
 P 840 1055
 F 0 "#FLG010" H 840 1130 50  0001 C CNN
@@ -303,7 +270,7 @@ Text GLabel 3400 2665 2    39   Input ~ 0
 Text GLabel 4085 3510 0    39   Input ~ 0
 +5V
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 5B1D8B2E
 P 4060 3815
 F 0 "#PWR011" H 4060 3565 50  0001 C CNN
@@ -314,7 +281,7 @@ F 3 "" H 4060 3815 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR012
+L power:GND #PWR012
 U 1 1 5B1FF5E0
 P 6340 3650
 F 0 "#PWR012" H 6340 3400 50  0001 C CNN
@@ -355,7 +322,7 @@ Text GLabel 8880 3005 2    39   Input ~ 0
 Text GLabel 8875 2920 2    39   Input ~ 0
 +3V
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 5BF43BE5
 P 1345 3630
 F 0 "#PWR013" H 1345 3380 50  0001 C CNN
@@ -366,42 +333,40 @@ F 3 "" H 1345 3630 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 1760 5130 520  185 
+S 5805 6915 520  185 
 U 5BF55BB5
 F0 "Cap Bank" 39
 F1 "CapBank.sch" 39
-F2 "+12V" I L 1760 5180 30 
-F3 "-12V" I L 1760 5260 30 
-F4 "GND" I R 2280 5220 30 
+F2 "+12V" I L 5805 6965 30 
+F3 "-12V" I L 5805 7045 30 
+F4 "GND" I R 6325 7005 30 
 $EndSheet
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 5BF5C706
-P 2495 5345
-F 0 "#PWR014" H 2495 5095 50  0001 C CNN
-F 1 "GND" H 2580 5335 39  0000 C CNN
-F 2 "" H 2495 5345 50  0001 C CNN
-F 3 "" H 2495 5345 50  0001 C CNN
-	1    2495 5345
+P 6540 7130
+F 0 "#PWR014" H 6540 6880 50  0001 C CNN
+F 1 "GND" H 6625 7120 39  0000 C CNN
+F 2 "" H 6540 7130 50  0001 C CNN
+F 3 "" H 6540 7130 50  0001 C CNN
+	1    6540 7130
 	1    0    0    -1  
 $EndComp
-Text GLabel 1605 5180 0    39   Input ~ 0
+Text GLabel 5650 6965 0    39   Input ~ 0
 +12V
-Text GLabel 1605 5260 0    39   Input ~ 0
+Text GLabel 5650 7045 0    39   Input ~ 0
 -12V
 $Sheet
-S 1480 6230 560  295 
+S 1180 6890 560  295 
 U 5BF6F22D
 F0 "USB Power" 39
 F1 "USBPower.sch" 39
-F2 "GND" O R 2040 6380 39 
-F3 "5.5V" O R 2040 6460 39 
-F4 "+5V" I R 2040 6295 39 
-F5 "+12V" O L 1480 6335 39 
-F6 "-12V" O L 1480 6420 39 
+F2 "GND" O R 1740 7040 39 
+F3 "5.5V" O R 1740 7120 39 
+F4 "+5V" I R 1740 6955 39 
 $EndSheet
 $Comp
-L GS2 J24
+L neurolab-rescue:GS2 J24
 U 1 1 5BFCE92A
 P 7825 3360
 F 0 "J24" H 7925 3510 39  0000 C CNN
@@ -416,13 +381,13 @@ Text GLabel 3625 2480 0    39   Input ~ 0
 VCCIO
 Text GLabel 7690 3635 0    39   Input ~ 0
 VCCIO
-Text GLabel 9895 5960 0    39   Input ~ 0
+Text GLabel 8815 5605 0    39   Input ~ 0
 AD3
-Text GLabel 9895 6060 0    39   Input ~ 0
+Text GLabel 8815 5805 0    39   Input ~ 0
 AD2
-Text GLabel 9895 6160 0    39   Input ~ 0
+Text GLabel 8815 5705 0    39   Input ~ 0
 AD1
-Text GLabel 9895 6260 0    39   Input ~ 0
+Text GLabel 8815 5905 0    39   Input ~ 0
 AD0
 Text GLabel 6620 1950 1    39   Input ~ 0
 AD3
@@ -433,14 +398,14 @@ AD1
 Text GLabel 6920 1950 1    39   Input ~ 0
 AD0
 $Comp
-L R R44
+L neurolab-rescue:R R44
 U 1 1 5BF4D66A
-P 10555 6160
-F 0 "R44" V 10635 6160 50  0000 C CNN
-F 1 "5.1k" V 10555 6160 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 10485 6160 50  0001 C CNN
-F 3 "" H 10555 6160 50  0001 C CNN
-	1    10555 6160
+P 9475 5805
+F 0 "R44" V 9555 5805 50  0000 C CNN
+F 1 "5.1k" V 9475 5805 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 9405 5805 50  0001 C CNN
+F 3 "" H 9475 5805 50  0001 C CNN
+	1    9475 5805
 	0    -1   -1   0   
 $EndComp
 $Sheet
@@ -455,11 +420,10 @@ F5 "CS'" O R 9990 2495 39
 F6 "MISO'" O R 9990 2665 39 
 F7 "MOSI'" O R 9990 2750 39 
 F8 "GND" I L 9335 2410 39 
-F9 "VCC" I L 9335 2495 39 
-F10 "SCL" I L 9335 2665 39 
-F11 "SCL'" O R 9990 2580 39 
+F9 "SCL" I L 9335 2665 39 
+F10 "SCL'" O R 9990 2580 39 
 $EndSheet
-Text GLabel 10955 5860 2    39   Input ~ 0
+Text GLabel 9875 5505 2    39   Input ~ 0
 CS
 Text GLabel 10105 2495 2    39   Input ~ 0
 CS
@@ -469,57 +433,55 @@ Text GLabel 10105 2665 2    39   Input ~ 0
 MISO
 Text GLabel 10105 2750 2    39   Input ~ 0
 MOSI
-Text GLabel 9495 5760 0    39   Input ~ 0
+Text GLabel 8415 5405 0    39   Input ~ 0
 MISO
-Text Notes 9295 5810 2    30   Italic 0
+Text Notes 8215 5455 2    30   Italic 0
 MOSI (11)\nTeensy 3.2
-Text Notes 11085 5910 0    30   Italic 0
+Text Notes 10005 5555 0    30   Italic 0
 CS (10)\nTeensy 3.2
 $Comp
-L GS2 J34
+L neurolab-rescue:GS2 J34
 U 1 1 5BF8C560
-P 10690 6400
-F 0 "J34" V 10645 6555 39  0000 C CNN
-F 1 "GS2" V 10640 6210 39  0000 C CNN
-F 2 "Connectors:GS2" V 10764 6400 50  0001 C CNN
-F 3 "" H 10690 6400 50  0001 C CNN
-	1    10690 6400
+P 9610 6045
+F 0 "J34" V 9565 6200 39  0000 C CNN
+F 1 "GS2" V 9560 5855 39  0000 C CNN
+F 2 "Connectors:GS2" V 9684 6045 50  0001 C CNN
+F 3 "" H 9610 6045 50  0001 C CNN
+	1    9610 6045
 	0    1    1    0   
 $EndComp
-Text GLabel 9150 2495 0    39   UnSpc Italic 0
-VCC
-Text GLabel 10970 6400 2    30   UnSpc Italic 0
+Text GLabel 9890 6045 2    30   UnSpc Italic 0
 VCC
 $Comp
-L Conn_01x04 J32
+L neurolab-rescue:Conn_01x04 J32
 U 1 1 5BF9F53E
-P 5150 6475
-F 0 "J32" H 5150 6675 39  0000 C CNN
-F 1 "Bluetooth" V 5245 6435 39  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 5150 6475 50  0001 C CNN
-F 3 "" H 5150 6475 50  0001 C CNN
-	1    5150 6475
+P 4850 7135
+F 0 "J32" H 4850 7335 39  0000 C CNN
+F 1 "Bluetooth" V 4945 7095 39  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 4850 7135 50  0001 C CNN
+F 3 "" H 4850 7135 50  0001 C CNN
+	1    4850 7135
 	0    1    1    0   
 $EndComp
-Text GLabel 5250 6160 1    30   UnSpc Italic 0
+Text GLabel 4950 6820 1    30   UnSpc Italic 0
 VCC
 $Comp
-L GND #PWR015
+L power:GND #PWR015
 U 1 1 5BFAA3A6
-P 5150 6000
-F 0 "#PWR015" H 5150 5750 50  0001 C CNN
-F 1 "GND" H 5150 5875 39  0000 C CNN
-F 2 "" H 5150 6000 50  0001 C CNN
-F 3 "" H 5150 6000 50  0001 C CNN
-	1    5150 6000
+P 4850 6660
+F 0 "#PWR015" H 4850 6410 50  0001 C CNN
+F 1 "GND" H 4850 6535 39  0000 C CNN
+F 2 "" H 4850 6660 50  0001 C CNN
+F 3 "" H 4850 6660 50  0001 C CNN
+	1    4850 6660
 	-1   0    0    1   
 $EndComp
-Text GLabel 5050 6275 1    39   Input ~ 0
+Text GLabel 4750 6935 1    39   Input ~ 0
 TxO
-Text GLabel 4950 6275 1    39   Input ~ 0
+Text GLabel 4650 6935 1    39   Input ~ 0
 RxI
 $Comp
-L GND #PWR016
+L power:GND #PWR016
 U 1 1 5BFEA995
 P 10515 2320
 F 0 "#PWR016" H 10515 2070 50  0001 C CNN
@@ -530,28 +492,28 @@ F 3 "" H 10515 2320 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR017
+L power:GND #PWR017
 U 1 1 5BFFAD28
-P 2485 6500
-F 0 "#PWR017" H 2485 6250 50  0001 C CNN
-F 1 "GND" H 2485 6350 39  0000 C CNN
-F 2 "" H 2485 6500 50  0001 C CNN
-F 3 "" H 2485 6500 50  0001 C CNN
-	1    2485 6500
+P 2185 7160
+F 0 "#PWR017" H 2185 6910 50  0001 C CNN
+F 1 "GND" H 2185 7010 39  0000 C CNN
+F 2 "" H 2185 7160 50  0001 C CNN
+F 3 "" H 2185 7160 50  0001 C CNN
+	1    2185 7160
 	1    0    0    -1  
 $EndComp
-Text GLabel 2185 6460 2    39   Input ~ 0
+Text GLabel 1885 7120 2    39   Input ~ 0
 +5.5V
 Text GLabel 8740 2495 2    39   Input ~ 0
 +5.5V
-Text GLabel 2185 6295 2    39   Input ~ 0
+Text GLabel 1885 6955 2    39   Input ~ 0
 +5V
-Text GLabel 10960 6260 2    39   Input ~ 0
+Text GLabel 9880 5905 2    39   Input ~ 0
 EXCLK
 Wire Wire Line
 	2295 2620 2565 2620
 Wire Wire Line
-	2295 2705 2565 2705
+	2295 2705 2425 2705
 Wire Wire Line
 	1310 3240 1605 3240
 Wire Wire Line
@@ -596,11 +558,11 @@ Wire Wire Line
 Wire Wire Line
 	2725 3850 2725 3810
 Wire Wire Line
-	2365 3810 2925 3810
+	2365 3810 2725 3810
 Wire Wire Line
 	2725 3195 2725 3155
 Wire Wire Line
-	2365 3155 2925 3155
+	2365 3155 2725 3155
 Wire Wire Line
 	840  1055 765  1055
 Wire Notes Line
@@ -642,19 +604,19 @@ Wire Wire Line
 	2925 3325 2925 3155
 Connection ~ 2725 3155
 Wire Wire Line
-	4085 3510 4195 3510
+	4085 3510 4135 3510
 Wire Wire Line
 	4060 3815 4060 3680
 Wire Wire Line
 	4060 3680 4195 3680
 Wire Wire Line
-	4775 2665 5430 2665
+	4775 2665 5340 2665
 Wire Wire Line
-	4775 2750 5430 2750
+	4775 2750 5265 2750
 Wire Wire Line
-	4775 2835 5430 2835
+	4775 2835 5190 2835
 Wire Wire Line
-	4775 2920 5430 2920
+	4775 2920 5115 2920
 Wire Wire Line
 	5430 3170 5340 3170
 Wire Wire Line
@@ -695,30 +657,30 @@ Wire Wire Line
 Wire Wire Line
 	6585 3470 6140 3470
 Wire Wire Line
-	6140 3555 6585 3555
+	6140 3555 6340 3555
 Wire Wire Line
 	6340 3650 6340 3555
 Connection ~ 6340 3555
 Wire Wire Line
-	3330 2580 4115 2580
+	3330 2580 3755 2580
 Wire Wire Line
 	3330 2665 3400 2665
 Wire Wire Line
 	3400 2750 3330 2750
 Wire Wire Line
-	2495 5345 2495 5220
+	6540 7130 6540 7005
 Wire Wire Line
-	2495 5220 2280 5220
+	6540 7005 6325 7005
 Wire Wire Line
-	1605 5180 1760 5180
+	5650 6965 5805 6965
 Wire Wire Line
-	1605 5260 1760 5260
+	5650 7045 5805 7045
 Wire Wire Line
 	8875 2920 8625 2920
 Wire Wire Line
 	8625 3005 8880 3005
 Wire Wire Line
-	6720 2580 7975 2580
+	6720 2580 7675 2580
 Wire Wire Line
 	7675 2580 7675 3515
 Wire Wire Line
@@ -730,7 +692,7 @@ Wire Wire Line
 Wire Wire Line
 	7585 2495 7975 2495
 Wire Wire Line
-	6620 2410 7975 2410
+	6620 2410 7495 2410
 Wire Wire Line
 	7495 2410 7495 3340
 Wire Wire Line
@@ -744,11 +706,11 @@ Wire Wire Line
 Wire Wire Line
 	6140 2665 7975 2665
 Wire Wire Line
-	6140 2750 7975 2750
+	6140 2750 6820 2750
 Wire Wire Line
 	6140 2835 7975 2835
 Wire Wire Line
-	6140 2920 7975 2920
+	6140 2920 6920 2920
 Wire Wire Line
 	7975 3090 7825 3090
 Wire Wire Line
@@ -775,7 +737,7 @@ Wire Wire Line
 	6920 1950 6920 2920
 Connection ~ 6920 2920
 Wire Wire Line
-	8625 2410 9335 2410
+	8625 2410 9085 2410
 Wire Wire Line
 	8625 2580 9335 2580
 Wire Wire Line
@@ -791,9 +753,9 @@ Wire Wire Line
 Wire Wire Line
 	9990 2580 10105 2580
 Wire Wire Line
-	5250 6160 5250 6275
+	4950 6820 4950 6935
 Wire Wire Line
-	5150 6000 5150 6275
+	4850 6660 4850 6935
 Wire Wire Line
 	10515 2320 10515 2200
 Wire Wire Line
@@ -802,29 +764,19 @@ Wire Wire Line
 	9085 2200 9085 2410
 Connection ~ 9085 2410
 Wire Wire Line
-	9150 2495 9335 2495
+	1885 7120 1740 7120
 Wire Wire Line
-	2185 6460 2040 6460
+	2185 7160 2185 7040
 Wire Wire Line
-	2485 6500 2485 6380
-Wire Wire Line
-	2485 6380 2040 6380
+	2185 7040 1740 7040
 Wire Wire Line
 	8740 2495 8625 2495
 Wire Wire Line
-	2185 6295 2040 6295
+	1885 6955 1740 6955
 Wire Wire Line
 	4150 3595 4195 3595
 Text GLabel 4150 3595 0    39   Input ~ 0
 EXCLK
-Text GLabel 1320 6335 0    39   Input ~ 0
-+12V
-Text GLabel 1320 6420 0    39   Input ~ 0
--12V
-Wire Wire Line
-	1320 6420 1480 6420
-Wire Wire Line
-	1480 6335 1320 6335
 Wire Wire Line
 	1190 3860 1310 3860
 Wire Wire Line
@@ -834,15 +786,15 @@ Wire Wire Line
 Wire Wire Line
 	1385 3760 1385 3895
 $Comp
-L Conn_01x06_Female J16
+L neurolab-rescue:Conn_01x06_Female J16
 U 1 1 5B188AC3
-P 990 3660
-F 0 "J16" V 1030 3760 39  0000 C CNN
-F 1 "Channel" V 1035 3555 39  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm" H 990 3660 50  0001 C CNN
-F 3 "" H 990 3660 50  0001 C CNN
-	1    990  3660
-	-1   0    0    1   
+P 990 3560
+F 0 "J16" V 1030 3660 39  0000 C CNN
+F 1 "Channel" V 1035 3455 39  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm" H 990 3560 50  0001 C CNN
+F 3 "" H 990 3560 50  0001 C CNN
+	1    990  3560
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	1190 3360 1310 3360
@@ -855,7 +807,7 @@ Wire Wire Line
 Wire Wire Line
 	1190 3560 1235 3560
 Wire Wire Line
-	1235 3560 1235 3660
+	1235 3560 1235 3610
 Wire Wire Line
 	1235 3660 1190 3660
 Wire Wire Line
@@ -864,87 +816,158 @@ Wire Wire Line
 	1345 3610 1235 3610
 Connection ~ 1235 3610
 $Comp
-L Conn_02x07_Odd_Even J11
+L neurolab-rescue:Conn_02x07_Odd_Even J11
 U 1 1 5C060DB7
-P 10095 5960
-F 0 "J11" H 10145 6360 50  0000 C CNN
-F 1 "ProMini" H 10145 5460 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x07_Pitch2.54mm" H 10095 5960 50  0001 C CNN
-F 3 "" H 10095 5960 50  0001 C CNN
-	1    10095 5960
+P 9015 5605
+F 0 "J11" H 9065 6005 50  0000 C CNN
+F 1 "ProMini" H 9065 5105 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x07_Pitch2.54mm" H 9015 5605 50  0001 C CNN
+F 3 "" H 9015 5605 50  0001 C CNN
+	1    9015 5605
 	1    0    0    -1  
 $EndComp
-Text GLabel 9495 5660 0    39   Input ~ 0
+Text GLabel 8415 5305 0    39   Input ~ 0
 TxO
 Wire Wire Line
-	9495 5660 9895 5660
-Text GLabel 10960 5660 2    39   Input ~ 0
+	8415 5305 8815 5305
+Text GLabel 9880 5305 2    39   Input ~ 0
 RxI
 Wire Wire Line
-	10960 5660 10395 5660
+	9880 5305 9315 5305
 Wire Wire Line
-	9495 5760 9895 5760
-Text GLabel 10955 5760 2    39   Input ~ 0
+	8415 5405 8815 5405
+Text GLabel 9875 5405 2    39   Input ~ 0
 MOSI
 Wire Wire Line
-	10395 5760 10955 5760
-Text GLabel 9495 5860 0    39   Input ~ 0
+	9315 5405 9875 5405
+Text GLabel 8415 5505 0    39   Input ~ 0
 SCL
 Wire Wire Line
-	9495 5860 9895 5860
+	8415 5505 8815 5505
 Wire Wire Line
-	10955 5860 10395 5860
+	9875 5505 9315 5505
 $Comp
-L GND #PWR018
+L power:GND #PWR018
 U 1 1 5C08D93A
-P 10955 5960
-F 0 "#PWR018" H 10955 5710 50  0001 C CNN
-F 1 "GND" V 10950 5785 39  0000 C CNN
-F 2 "" H 10955 5960 50  0001 C CNN
-F 3 "" H 10955 5960 50  0001 C CNN
-	1    10955 5960
+P 9875 5605
+F 0 "#PWR018" H 9875 5355 50  0001 C CNN
+F 1 "GND" V 9870 5430 39  0000 C CNN
+F 2 "" H 9875 5605 50  0001 C CNN
+F 3 "" H 9875 5605 50  0001 C CNN
+	1    9875 5605
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	10105 2495 9990 2495
 $Comp
-L LED_ALT D2
+L neurolab-rescue:LED_ALT D2
 U 1 1 5BF4DED8
-P 10865 6160
-F 0 "D2" H 10985 6215 50  0000 C CNN
-F 1 "LED_ALT" H 10925 6065 50  0000 C CNN
-F 2 "LEDs:LED_0603" H 10865 6160 50  0001 C CNN
-F 3 "" H 10865 6160 50  0001 C CNN
-	1    10865 6160
+P 9785 5805
+F 0 "D2" H 9905 5860 50  0000 C CNN
+F 1 "LED_ALT" H 9845 5710 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 9785 5805 50  0001 C CNN
+F 3 "" H 9785 5805 50  0001 C CNN
+	1    9785 5805
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	10395 5960 10955 5960
+	9315 5605 9790 5605
 Wire Wire Line
-	10715 6160 10705 6160
+	9635 5805 9625 5805
 Wire Wire Line
-	10395 6160 10405 6160
+	9315 5805 9325 5805
 Wire Wire Line
-	11015 6160 11070 6160
+	9935 5805 9990 5805
 Wire Wire Line
-	11070 6160 11070 6045
+	9990 5805 9990 5690
 Wire Wire Line
-	11070 6045 10970 6045
+	9990 5690 9890 5690
 Wire Wire Line
-	10970 6045 10970 6015
+	9890 5690 9890 5660
 Wire Wire Line
-	10970 6015 10870 6015
+	9890 5660 9790 5660
 Wire Wire Line
-	10870 6015 10870 5960
-Connection ~ 10870 5960
+	9790 5660 9790 5605
+Connection ~ 9790 5605
 Wire Wire Line
-	10960 6260 10395 6260
+	9880 5905 9315 5905
 Wire Wire Line
-	10970 6400 10890 6400
+	9890 6045 9810 6045
 Wire Wire Line
-	10490 6400 10420 6400
+	9410 6045 9340 6045
 Wire Wire Line
-	10420 6400 10420 6060
+	9340 6045 9340 5705
 Wire Wire Line
-	10420 6060 10395 6060
+	9340 5705 9315 5705
+Wire Wire Line
+	2425 2705 2565 2705
+Wire Wire Line
+	2725 3810 2925 3810
+Wire Wire Line
+	2725 3155 2925 3155
+Wire Wire Line
+	5340 2665 5430 2665
+Wire Wire Line
+	5265 2750 5430 2750
+Wire Wire Line
+	5190 2835 5430 2835
+Wire Wire Line
+	5115 2920 5430 2920
+Wire Wire Line
+	4135 3510 4195 3510
+Wire Wire Line
+	6340 3555 6585 3555
+Wire Wire Line
+	3755 2580 4115 2580
+Wire Wire Line
+	7495 2410 7975 2410
+Wire Wire Line
+	7675 2580 7975 2580
+Wire Wire Line
+	6820 2750 7975 2750
+Wire Wire Line
+	6920 2920 7975 2920
+Wire Wire Line
+	9085 2410 9335 2410
+Wire Wire Line
+	1235 3610 1235 3660
+Wire Wire Line
+	9790 5605 9875 5605
+$Sheet
+S 2985 6875 715  275 
+U 5C81F629
+F0 "VoltageDoubler" 39
+F1 "VoltageDoubler.sch" 39
+F2 "+5V" I L 2985 6960 39 
+F3 "GND" I L 2985 7055 39 
+F4 "+12V" O R 3700 6960 39 
+F5 "-12V" O R 3700 7055 39 
+$EndSheet
+Text GLabel 3750 6960 2    39   Input ~ 0
++12V
+Wire Wire Line
+	3750 6960 3700 6960
+Text GLabel 3750 7055 2    39   Input ~ 0
+-12V
+Wire Wire Line
+	3750 7055 3700 7055
+$Comp
+L power:GND #PWR0101
+U 1 1 5C8432D2
+P 2795 7160
+F 0 "#PWR0101" H 2795 6910 50  0001 C CNN
+F 1 "GND" H 2880 7150 39  0000 C CNN
+F 2 "" H 2795 7160 50  0001 C CNN
+F 3 "" H 2795 7160 50  0001 C CNN
+	1    2795 7160
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2795 7160 2795 7055
+Wire Wire Line
+	2795 7055 2985 7055
+Text GLabel 2955 6960 0    39   Input ~ 0
++5V
+Wire Wire Line
+	2955 6960 2985 6960
 $EndSCHEMATC

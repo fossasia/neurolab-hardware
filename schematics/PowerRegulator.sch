@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 14
+Sheet 3 15
 Title "FOSSASIA - NeuroLab"
 Date "2018-11-17"
 Rev "2"
@@ -56,7 +23,7 @@ Text HLabel 3950 3595 0    39   Output ~ 0
 Text HLabel 7250 4870 2    39   Input ~ 0
 GND
 $Comp
-L ADP1720ARMZ-3.3 U2
+L neuro:ADP1720ARMZ-3.3 U2
 U 1 1 5B103DCA
 P 6480 4350
 F 0 "U2" H 6480 4100 39  0000 C CNN
@@ -67,7 +34,7 @@ F 3 "" H 6480 4350 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ADP1720ARMZ-5 U1
+L neuro:ADP1720ARMZ-5 U1
 U 1 1 5B103FE2
 P 6480 3545
 F 0 "U1" H 6480 3295 39  0000 C CNN
@@ -128,7 +95,7 @@ Wire Wire Line
 Wire Wire Line
 	5925 4500 6030 4500
 $Comp
-L C C3
+L neurolab-rescue:C C3
 U 1 1 5B10497F
 P 5310 3800
 F 0 "C3" H 5335 3900 39  0000 L CNN
@@ -139,7 +106,7 @@ F 3 "" H 5310 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L neurolab-rescue:C C4
 U 1 1 5B104B30
 P 5310 4630
 F 0 "C4" H 5335 4730 39  0000 L CNN
@@ -170,7 +137,7 @@ Connection ~ 5310 4300
 Connection ~ 5020 3495
 Connection ~ 7075 4870
 $Comp
-L C C5
+L neurolab-rescue:C C5
 U 1 1 5B105658
 P 5695 3800
 F 0 "C5" H 5720 3900 39  0000 L CNN
@@ -181,7 +148,7 @@ F 3 "" H 5695 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L neurolab-rescue:C C6
 U 1 1 5B10587A
 P 5695 4630
 F 0 "C6" H 5720 4730 39  0000 L CNN
@@ -206,7 +173,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 3595 6030 3595
 $Comp
-L GS3 J2
+L neurolab-rescue:GS3 J2
 U 1 1 5B105D6E
 P 4290 3980
 F 0 "J2" H 4340 4180 39  0000 C CNN

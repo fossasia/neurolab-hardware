@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:neuro
+EESchema Schematic File Version 4
 LIBS:neurolab-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 14
+Sheet 7 15
 Title "FOSSASIA - NeuroLab"
 Date "2018-11-17"
 Rev "2"
@@ -48,9 +15,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L TLC555CD U9
+L neurolab-rescue:TLC555CD U9
 U 1 1 5B10EA13
 P 5175 3950
+AR Path="/5B10EA13" Ref="U9"  Part="1" 
+AR Path="/5B10D013/5B10EA13" Ref="U9"  Part="1" 
 F 0 "U9" H 4775 4300 39  0000 L CNN
 F 1 "TLC555CD" H 5275 4300 39  0000 L CNN
 F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5175 3950 50  0001 C CNN
@@ -61,7 +30,7 @@ $EndComp
 Text HLabel 4305 3040 0    39   Input ~ 0
 +5V
 $Comp
-L C C18
+L neurolab-rescue:C C18
 U 1 1 5B10EA36
 P 4545 4775
 F 0 "C18" H 4570 4875 39  0000 L CNN
@@ -72,7 +41,7 @@ F 3 "" H 4545 4775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C19
+L neurolab-rescue:C C19
 U 1 1 5B10EAEF
 P 5760 4775
 F 0 "C19" H 5785 4875 39  0000 L CNN
@@ -83,7 +52,7 @@ F 3 "" H 5760 4775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L neurolab-rescue:R R7
 U 1 1 5B10ECC8
 P 5880 4215
 F 0 "R7" V 5960 4215 39  0000 C CNN
@@ -94,7 +63,7 @@ F 3 "" H 5880 4215 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
+L neurolab-rescue:R R8
 U 1 1 5B10ED52
 P 6130 3390
 F 0 "R8" V 6210 3390 39  0000 C CNN
@@ -105,7 +74,7 @@ F 3 "" H 6130 3390 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R6
+L neurolab-rescue:R R6
 U 1 1 5B10EDD6
 P 5880 3395
 F 0 "R6" V 5960 3395 39  0000 C CNN
@@ -116,7 +85,7 @@ F 3 "" H 5880 3395 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GS3 J3
+L neurolab-rescue:GS3 J3
 U 1 1 5B10EF28
 P 6565 3265
 F 0 "J3" H 6615 3465 39  0000 C CNN
@@ -127,7 +96,7 @@ F 3 "" H 6565 3265 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R9
+L neurolab-rescue:R R9
 U 1 1 5B10F044
 P 7260 3290
 F 0 "R9" V 7340 3290 39  0000 C CNN
@@ -157,9 +126,11 @@ Wire Wire Line
 	6665 3515 7260 3515
 Connection ~ 7260 3515
 $Comp
-L 2N7002 Q1
+L neurolab-rescue:2N7002 Q1
 U 1 1 5B10FF8E
 P 7360 3790
+AR Path="/5B10FF8E" Ref="Q1"  Part="1" 
+AR Path="/5B10D013/5B10FF8E" Ref="Q1"  Part="1" 
 F 0 "Q1" H 7560 3865 39  0000 L CNN
 F 1 "2N7002" H 7560 3790 39  0000 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23" H 7560 3715 50  0001 L CIN

@@ -1,0 +1,258 @@
+EESchema Schematic File Version 4
+LIBS:neurolab-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 15 15
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 3310 3520 0    39   Input ~ 0
++5V
+Text HLabel 3310 3620 0    39   Input ~ 0
+GND
+Text HLabel 5225 2475 0    39   Output ~ 0
++12V
+Text HLabel 8075 3845 2    39   Output ~ 0
+-12V
+$Comp
+L neuro:TC1240A U18
+U 1 1 5C820CBC
+P 3810 3620
+F 0 "U18" H 3810 3921 39  0000 C CNN
+F 1 "TC1240A" H 3810 3846 39  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 3810 3620 39  0001 C CNN
+F 3 "" H 3810 3620 39  0001 C CNN
+	1    3810 3620
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C64
+U 1 1 5C8213C5
+P 3825 4205
+F 0 "C64" V 3570 4205 50  0000 C CNN
+F 1 "100u" V 3661 4205 50  0000 C CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 3863 4055 50  0001 C CNN
+F 3 "~" H 3825 4205 50  0001 C CNN
+	1    3825 4205
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3675 4205 3150 4205
+Wire Wire Line
+	3150 4205 3150 3720
+Wire Wire Line
+	3150 3720 3310 3720
+Wire Wire Line
+	4310 3520 4645 3520
+Wire Wire Line
+	4645 3520 4645 4205
+Wire Wire Line
+	4645 4205 3975 4205
+Text HLabel 4310 3720 2    39   Input ~ 0
+GND
+$Comp
+L Device:CP C65
+U 1 1 5C821A9F
+P 4450 3205
+F 0 "C65" H 4332 3159 50  0000 R CNN
+F 1 "100u" H 4332 3250 50  0000 R CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 4488 3055 50  0001 C CNN
+F 3 "~" H 4450 3205 50  0001 C CNN
+	1    4450 3205
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4450 3620 4310 3620
+Text HLabel 4450 3055 1    39   Input ~ 0
+GND
+$Comp
+L neuro:7660 U20
+U 1 1 5C822DC0
+P 7475 3695
+F 0 "U20" H 7475 4046 39  0000 C CNN
+F 1 "7660" H 7475 3971 39  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 7475 3695 39  0001 C CNN
+F 3 "" H 7475 3695 39  0001 C CNN
+	1    7475 3695
+	1    0    0    -1  
+$EndComp
+$Comp
+L neuro:TC1240A U19
+U 1 1 5C82347A
+P 5430 3620
+F 0 "U19" H 5430 3921 39  0000 C CNN
+F 1 "TC1240A" H 5430 3846 39  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 5430 3620 39  0001 C CNN
+F 3 "" H 5430 3620 39  0001 C CNN
+	1    5430 3620
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3355 4450 3390
+Wire Wire Line
+	4450 3620 4755 3620
+Wire Wire Line
+	4755 3620 4755 3520
+Wire Wire Line
+	4755 3520 4930 3520
+Connection ~ 4450 3620
+$Comp
+L Device:CP C66
+U 1 1 5C823775
+P 5420 4205
+F 0 "C66" V 5165 4205 50  0000 C CNN
+F 1 "100u" V 5256 4205 50  0000 C CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 5458 4055 50  0001 C CNN
+F 3 "~" H 5420 4205 50  0001 C CNN
+	1    5420 4205
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5270 4205 4790 4205
+Wire Wire Line
+	4790 4205 4790 3720
+Wire Wire Line
+	4790 3720 4930 3720
+Wire Wire Line
+	5930 3520 6195 3520
+Wire Wire Line
+	6195 3520 6195 4205
+Wire Wire Line
+	6195 4205 5570 4205
+Text HLabel 4930 3620 0    39   Input ~ 0
++5V
+Text HLabel 5930 3720 2    39   Input ~ 0
++5V
+$Comp
+L Device:CP C67
+U 1 1 5C82421D
+P 6045 3205
+F 0 "C67" H 5927 3159 50  0000 R CNN
+F 1 "100u" H 5927 3250 50  0000 R CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 6083 3055 50  0001 C CNN
+F 3 "~" H 6045 3205 50  0001 C CNN
+	1    6045 3205
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6045 3620 5930 3620
+Text HLabel 6045 3055 1    39   Input ~ 0
+GND
+Wire Wire Line
+	8075 3845 8015 3845
+$Comp
+L Device:CP C69
+U 1 1 5C825161
+P 8015 4100
+F 0 "C69" H 7897 4054 50  0000 R CNN
+F 1 "100u" H 7897 4145 50  0000 R CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 8053 3950 50  0001 C CNN
+F 3 "~" H 8015 4100 50  0001 C CNN
+	1    8015 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8015 3950 8015 3845
+Connection ~ 8015 3845
+Wire Wire Line
+	8015 3845 7925 3845
+Text HLabel 8015 4250 3    39   Input ~ 0
+GND
+$Comp
+L Device:CP C68
+U 1 1 5C8254F0
+P 6590 3870
+F 0 "C68" H 6708 3916 50  0000 L CNN
+F 1 "100u" H 6708 3825 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 6628 3720 50  0001 C CNN
+F 3 "~" H 6590 3870 50  0001 C CNN
+	1    6590 3870
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6590 3720 6590 3645
+Wire Wire Line
+	6590 3645 7025 3645
+Wire Wire Line
+	6590 4020 6590 4205
+Wire Wire Line
+	6590 4205 6945 4205
+Wire Wire Line
+	6945 4205 6945 3845
+Wire Wire Line
+	6945 3845 7025 3845
+Text HLabel 7025 3745 0    39   Input ~ 0
+GND
+NoConn ~ 7025 3545
+NoConn ~ 7925 3645
+NoConn ~ 7925 3745
+Wire Wire Line
+	7925 3545 8110 3545
+$Comp
+L Jumper:SolderJumper_3_Open JP1
+U 1 1 5C837D7C
+P 5290 2700
+F 0 "JP1" H 5290 2812 50  0000 C CNN
+F 1 "VoltOut" H 5290 2895 39  0000 C CNN
+F 2 "Connectors:GS3" H 5290 2700 50  0001 C CNN
+F 3 "~" H 5290 2700 50  0001 C CNN
+	1    5290 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6045 3355 6045 3390
+Wire Wire Line
+	6045 3390 6390 3390
+Wire Wire Line
+	6390 3390 6390 2700
+Wire Wire Line
+	6390 2700 5490 2700
+Connection ~ 6045 3390
+Wire Wire Line
+	6045 3390 6045 3620
+Wire Wire Line
+	4450 3390 4245 3390
+Wire Wire Line
+	4245 3390 4245 2700
+Wire Wire Line
+	4245 2700 5090 2700
+Connection ~ 4450 3390
+Wire Wire Line
+	4450 3390 4450 3620
+Connection ~ 5290 2475
+Wire Wire Line
+	5290 2475 5290 2550
+$Comp
+L Jumper:SolderJumper_3_Open JP?
+U 1 1 5C82791F
+P 5290 1950
+F 0 "JP?" H 5290 2062 50  0000 C CNN
+F 1 "VVV" H 5290 2145 39  0000 C CNN
+F 2 "Connectors:GS3" H 5290 1950 50  0001 C CNN
+F 3 "~" H 5290 1950 50  0001 C CNN
+	1    5290 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5225 2475 5290 2475
+Wire Wire Line
+	5290 2150 5290 2475
+Wire Wire Line
+	8110 1950 5440 1950
+Wire Wire Line
+	8110 1950 8110 3545
+Text HLabel 5210 1630 0    39   Input ~ 0
++5V
+Wire Wire Line
+	5210 1630 5290 1630
+Wire Wire Line
+	5290 1630 5290 1750
+$EndSCHEMATC
