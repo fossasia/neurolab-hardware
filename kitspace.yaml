@@ -1,0 +1,5 @@
+color: black
+summary: A neuro-device to collect brainwaves as a headband with integrated electronics.
+website: https://github.com/fossasia/neurolab-hardware
+gerbers: schematics/Gerbers/
+bom: docs/components/NeuroLab_BOM_Sheet.ods
